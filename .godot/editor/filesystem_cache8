@@ -1,3 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1702139775
+::res://::1702144519
 icon.svg::CompressedTexture2D::5554760043338438398::1702139769::1702139775::1::::<><>::
+::res://assets/::1702144530
+::res://assets/bgs/::1702144520
+black.jpg::CompressedTexture2D::5825291278969099568::1702143491::1702144520::1::::<><>::
+::res://assets/persons/::1702146073
+blueDino.png::CompressedTexture2D::6907194455161099638::1702146073::1702146073::1::::<><>::
+::res://panels/::1702144964
+menu.tscn::PackedScene::7543323073322341395::1702144964::0::1::::<><>::uid://co82xw5stw6em::::res://assets/bgs/black.jpg<>uid://c5n5qo7m413g1::::res://assets/persons/blueDino.png

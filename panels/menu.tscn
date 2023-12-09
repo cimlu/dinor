@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfqbot3pat1jb"]
+
+[ext_resource type="Texture2D" uid="uid://co82xw5stw6em" path="res://assets/bgs/black.jpg" id="1_7vehw"]
+[ext_resource type="Script" path="res://scripts/menu.gd" id="1_og6mx"]
+[ext_resource type="Texture2D" uid="uid://c5n5qo7m413g1" path="res://assets/persons/blueDino.png" id="2_4kd83"]
+
+[node name="menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_og6mx")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7vehw")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+
+[node name="blueDino" type="TextureRect" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+texture = ExtResource("2_4kd83")
+
+[connection signal="mouse_entered" from="MarginContainer/HBoxContainer/VBoxContainer/blueDino" to="." method="_on_blue_dino_mouse_entered"]
