@@ -1,2 +1,8 @@
 res://panels/menu.tscn
-res://scripts/menu.gd
+res://panels/hall_end.tscn
+res://interacts/door.tscn
+res://interf/hud.tscn
+res://interf/slot.tscn
+res://panels/teste.tscn
+res://panels/hall_end.gd
+res://scripts/commands.gd

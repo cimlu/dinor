@@ -11,5 +11,8 @@ func _process(delta):
 	pass
 
 
-func _on_blue_dino_mouse_entered():
+func _on_exit_byn_pressed():
 	get_tree().quit()
+
+func _on_play_btn_pressed():
+	get_tree().change_scene_to_file("res://panels/teste.tscn")

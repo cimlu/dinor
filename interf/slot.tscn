@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bde24qcg1xugo"]
+
+[ext_resource type="Texture2D" uid="uid://cmgjk4t3h5mj7" path="res://assets/bgs/slotBG.png" id="1_dywyl"]
+[ext_resource type="Script" path="res://scripts/slot.gd" id="1_e4fu7"]
+[ext_resource type="Texture2D" uid="uid://buooq32a6ux5k" path="res://assets/bgs/borderSelect.png" id="2_f0gq2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hpeod"]
+size = Vector2(16, 16)
+
+[node name="slot" type="Node2D"]
+script = ExtResource("1_e4fu7")
+
+[node name="bg" type="Sprite2D" parent="."]
+texture = ExtResource("1_dywyl")
+
+[node name="border" type="Sprite2D" parent="."]
+texture = ExtResource("2_f0gq2")
+
+[node name="item" type="Sprite2D" parent="."]
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area"]
+shape = SubResource("RectangleShape2D_hpeod")

@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cs7pxb0mpmo28"]
+
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_db2nu"]
+[ext_resource type="Texture2D" uid="uid://ceisv47efig7s" path="res://assets/sprites/door_staff_close.png" id="1_w7r2f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1hhok"]
+size = Vector2(32, 58)
+
+[node name="door" type="Node2D"]
+script = ExtResource("1_db2nu")
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+position = Vector2(0, -29)
+shape = SubResource("RectangleShape2D_1hhok")
+
+[node name="sprite" type="Sprite2D" parent="."]
+position = Vector2(0, -23)
+texture = ExtResource("1_w7r2f")
+
+[connection signal="mouse_entered" from="area" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="area" to="." method="_on_area_mouse_exited"]

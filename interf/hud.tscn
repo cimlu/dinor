@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://g3ahjd2ix47l"]
+
+[ext_resource type="Script" path="res://scripts/hud.gd" id="1_cgwg7"]
+[ext_resource type="PackedScene" uid="uid://bde24qcg1xugo" path="res://interf/slot.tscn" id="1_g8khb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4od70"]
+size = Vector2(116, 20)
+
+[node name="hud" type="Node2D"]
+script = ExtResource("1_cgwg7")
+
+[node name="slots" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="slots"]
+shape = SubResource("RectangleShape2D_4od70")
+
+[node name="slot_01" parent="slots/collision" instance=ExtResource("1_g8khb")]
+position = Vector2(-48, 0)
+
+[node name="slot_02" parent="slots/collision" instance=ExtResource("1_g8khb")]
+position = Vector2(-32, 0)
+
+[node name="slot_03" parent="slots/collision" instance=ExtResource("1_g8khb")]
+position = Vector2(-16, 0)
+
+[node name="slot_04" parent="slots/collision" instance=ExtResource("1_g8khb")]
+
+[node name="slot_05" parent="slots/collision" instance=ExtResource("1_g8khb")]
+position = Vector2(16, 0)
+
+[node name="slot_06" parent="slots/collision" instance=ExtResource("1_g8khb")]
+position = Vector2(32, 0)
+
+[node name="slot_07" parent="slots/collision" instance=ExtResource("1_g8khb")]
+position = Vector2(48, 0)
+
+[connection signal="input_event" from="slots" to="." method="_on_slots_input_event"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwps63iy084k1"]
+
+[ext_resource type="PackedScene" uid="uid://chqsb15tgjsl3" path="res://panels/hall_end.tscn" id="1_mwatn"]
+
+[node name="teste" type="Node2D"]
+
+[node name="hall_end" parent="." instance=ExtResource("1_mwatn")]
