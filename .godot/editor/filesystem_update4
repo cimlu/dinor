@@ -1,8 +1,13 @@
+res://panels/inventory.tscn
 res://panels/menu.tscn
 res://panels/hall_end.tscn
 res://interacts/door.tscn
 res://interf/hud.tscn
 res://interf/slot.tscn
 res://panels/teste.tscn
+res://interacts/item.tscn
+res://scripts/item.gd
+res://scripts/slot.gd
 res://panels/hall_end.gd
-res://scripts/commands.gd
+res://panels/_3.tscn
+res://scripts/door.gd

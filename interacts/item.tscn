@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dnkkc3km63w8g"]
+
+[ext_resource type="Texture2D" uid="uid://bxy4j2ylw4gyq" path="res://assets/sprites/banana.png" id="1_bik4y"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_v2irq"]
+
+[node name="item" type="Node2D"]
+script = ExtResource("1_v2irq")
+
+[node name="sprite" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.998703, 1)
+texture = ExtResource("1_bik4y")
+expand_mode = 2
+metadata/_edit_use_anchors_ = true

@@ -37,6 +37,7 @@ texture = ExtResource("1_4wywc")
 
 [node name="door" parent="objects" instance=ExtResource("2_ymah0")]
 position = Vector2(0, 26)
+destiny = "res://panels/_3.tscn"
 
 [node name="cam" type="Camera2D" parent="."]
 zoom = Vector2(7.21, 7.21)
