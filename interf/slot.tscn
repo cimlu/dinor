@@ -1,22 +1,45 @@
-[gd_scene load_steps=4 format=3 uid="uid://bde24qcg1xugo"]
+[gd_scene load_steps=5 format=3 uid="uid://bde24qcg1xugo"]
 
 [ext_resource type="Texture2D" uid="uid://cmgjk4t3h5mj7" path="res://assets/bgs/slotBG.png" id="1_dywyl"]
+[ext_resource type="Script" path="res://scripts/slot.gd" id="1_v4kfm"]
 [ext_resource type="Texture2D" uid="uid://buooq32a6ux5k" path="res://assets/bgs/borderSelect.png" id="2_f0gq2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hpeod"]
 size = Vector2(16, 16)
 
 [node name="slot" type="Node2D"]
+script = ExtResource("1_v4kfm")
 
 [node name="bg" type="Sprite2D" parent="."]
 texture = ExtResource("1_dywyl")
 
+[node name="item" type="Sprite2D" parent="."]
+
 [node name="border" type="Sprite2D" parent="."]
 texture = ExtResource("2_f0gq2")
 
-[node name="item" type="Sprite2D" parent="."]
-
 [node name="area" type="Area2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="area"]
+[node name="collision_click" type="CollisionShape2D" parent="area"]
 shape = SubResource("RectangleShape2D_hpeod")
+
+[node name="control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+mouse_filter = 2
+
+[node name="texture" type="TextureRect" parent="control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 4
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

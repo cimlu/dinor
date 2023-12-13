@@ -23,8 +23,6 @@ func _on_area_mouse_exited():
 
 
 func _on_area_input_event(viewport, event, shape_idx):
-	print("ola")
-	print(event)
 	if event.is_action_pressed("click"):
 		get_tree().change_scene_to_file(destiny)
-		print ("CLICA")
+

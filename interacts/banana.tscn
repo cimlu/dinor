@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bjyq6lc50uyc2"]
+
+[ext_resource type="PackedScene" uid="uid://dnkkc3km63w8g" path="res://interacts/item.tscn" id="1_c3u3f"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1fbyv"]
+
+[node name="banana" type="Node2D"]
+
+[node name="item" parent="." instance=ExtResource("1_c3u3f")]
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision_click" type="CollisionShape2D" parent="area"]
+shape = SubResource("CircleShape2D_1fbyv")
+
+[node name="control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+
+[node name="sprite" type="TextureRect" parent="control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+expand_mode = 1

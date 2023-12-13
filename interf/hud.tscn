@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bde24qcg1xugo" path="res://interf/slot.tscn" id="1_g8khb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4od70"]
-size = Vector2(116, 20)
+size = Vector2(21.3333, 125.333)
 
 [node name="hud" type="Node2D"]
 script = ExtResource("1_cgwg7")
@@ -12,26 +12,38 @@ script = ExtResource("1_cgwg7")
 [node name="slots" type="Area2D" parent="."]
 
 [node name="collision" type="CollisionShape2D" parent="slots"]
+position = Vector2(1.90735e-06, 1.43051e-06)
+scale = Vector2(0.75, 0.75)
 shape = SubResource("RectangleShape2D_4od70")
 
-[node name="slot_01" parent="slots/collision" instance=ExtResource("1_g8khb")]
-position = Vector2(-48, 0)
+[node name="sl" type="Node2D" parent="."]
 
-[node name="slot_02" parent="slots/collision" instance=ExtResource("1_g8khb")]
-position = Vector2(-32, 0)
+[node name="slot_01" parent="sl" instance=ExtResource("1_g8khb")]
+position = Vector2(0, -39)
+scale = Vector2(0.75, 0.75)
 
-[node name="slot_03" parent="slots/collision" instance=ExtResource("1_g8khb")]
-position = Vector2(-16, 0)
+[node name="slot_02" parent="sl" instance=ExtResource("1_g8khb")]
+position = Vector2(-2.28882e-05, -26)
+scale = Vector2(0.75, 0.75)
 
-[node name="slot_04" parent="slots/collision" instance=ExtResource("1_g8khb")]
+[node name="slot_03" parent="sl" instance=ExtResource("1_g8khb")]
+position = Vector2(2.28882e-05, -13)
+scale = Vector2(0.75, 0.75)
 
-[node name="slot_05" parent="slots/collision" instance=ExtResource("1_g8khb")]
-position = Vector2(16, 0)
+[node name="slot_04" parent="sl" instance=ExtResource("1_g8khb")]
+position = Vector2(-5.72204e-06, 0)
+scale = Vector2(0.75, 0.75)
 
-[node name="slot_06" parent="slots/collision" instance=ExtResource("1_g8khb")]
-position = Vector2(32, 0)
+[node name="slot_05" parent="sl" instance=ExtResource("1_g8khb")]
+position = Vector2(0, 13)
+scale = Vector2(0.75, 0.75)
 
-[node name="slot_07" parent="slots/collision" instance=ExtResource("1_g8khb")]
-position = Vector2(48, 0)
+[node name="slot_06" parent="sl" instance=ExtResource("1_g8khb")]
+position = Vector2(0, 26)
+scale = Vector2(0.75, 0.75)
+
+[node name="slot_07" parent="sl" instance=ExtResource("1_g8khb")]
+position = Vector2(0, 39)
+scale = Vector2(0.75, 0.75)
 
 [connection signal="input_event" from="slots" to="." method="_on_slots_input_event"]

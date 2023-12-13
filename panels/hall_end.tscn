@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://chqsb15tgjsl3"]
+[gd_scene load_steps=9 format=3 uid="uid://chqsb15tgjsl3"]
 
 [ext_resource type="Script" path="res://panels/hall_end.gd" id="1_1yjee"]
 [ext_resource type="Texture2D" uid="uid://ch1nwkof5brpc" path="res://assets/bgs/sceneBase.png" id="1_4wywc"]
 [ext_resource type="PackedScene" uid="uid://cs7pxb0mpmo28" path="res://interacts/door.tscn" id="2_ymah0"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="3_sbugo"]
+[ext_resource type="PackedScene" uid="uid://rhpeab1aq7qh" path="res://interacts/lantern.tscn" id="4_5ff0e"]
+[ext_resource type="PackedScene" uid="uid://c50i3lbghp4xf" path="res://interacts/battery.tscn" id="5_aqbdy"]
+[ext_resource type="PackedScene" uid="uid://rh42h1qsuee0" path="res://interacts/cabra.tscn" id="5_rwet4"]
+[ext_resource type="PackedScene" uid="uid://bkkuex6mjht3v" path="res://interacts/helio_3_battery.tscn" id="7_yu44p"]
 
 [node name="hall_end" type="Control"]
 layout_mode = 3
@@ -31,7 +36,18 @@ offset_right = 80.0
 offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("1_4wywc")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(7.21, 7.21)
+
+[node name="hud" parent="." instance=ExtResource("3_sbugo")]
+position = Vector2(-73, 0)
+scale = Vector2(0.75, 0.75)
+
+[node name="helio3battery" parent="hud" instance=ExtResource("7_yu44p")]
+position = Vector2(97.3333, 0)
 
 [node name="objects" type="Node2D" parent="."]
 
@@ -39,5 +55,12 @@ texture = ExtResource("1_4wywc")
 position = Vector2(0, 26)
 destiny = "res://panels/_3.tscn"
 
-[node name="cam" type="Camera2D" parent="."]
-zoom = Vector2(7.21, 7.21)
+[node name="battery" parent="." instance=ExtResource("5_aqbdy")]
+position = Vector2(-41, 19)
+
+[node name="cabra" parent="." instance=ExtResource("5_rwet4")]
+position = Vector2(-36, -23)
+
+[node name="lantern" parent="." instance=ExtResource("4_5ff0e")]
+position = Vector2(49, -5)
+scale = Vector2(0.75, 0.75)
