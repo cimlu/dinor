@@ -1,37 +1,18 @@
-[gd_scene load_steps=5 format=3 uid="uid://rhpeab1aq7qh"]
+[gd_scene load_steps=4 format=3 uid="uid://rhpeab1aq7qh"]
 
-[ext_resource type="PackedScene" uid="uid://dnkkc3km63w8g" path="res://interacts/item.tscn" id="1_1cf88"]
-[ext_resource type="Script" path="res://scripts/item.gd" id="1_cplkg"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_umb66"]
 [ext_resource type="Texture2D" uid="uid://sk1wj6y3stc3" path="res://assets/sprites/lantern.png" id="2_73i35"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_klmtv"]
-size = Vector2(16, 16)
+size = Vector2(18.125, 10)
 
 [node name="lantern" type="Node2D"]
-position = Vector2(75, 67)
-script = ExtResource("1_cplkg")
-
-[node name="item" parent="." instance=ExtResource("1_1cf88")]
-
-[node name="sprite2" type="TextureRect" parent="."]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -8.0
-offset_top = -4.0
-offset_right = 8.0
-offset_bottom = 4.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("2_73i35")
-expand_mode = 1
+script = ExtResource("1_umb66")
 
 [node name="area" type="Area2D" parent="."]
 
 [node name="collision_click" type="CollisionShape2D" parent="area"]
+position = Vector2(-0.0625, 0)
 shape = SubResource("RectangleShape2D_klmtv")
 
 [node name="control" type="Control" parent="."]
@@ -57,11 +38,13 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -8.0
-offset_top = -8.0
+offset_top = -4.0
 offset_right = 8.0
+offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-expand_mode = 3
+texture = ExtResource("2_73i35")
+expand_mode = 5
 
-[connection signal="input_event" from="area" to="item" method="_on_area_input_event"]
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

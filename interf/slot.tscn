@@ -40,6 +40,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-expand_mode = 4
+expand_mode = 2
 
 [connection signal="input_event" from="area" to="." method="_on_area_input_event"]

@@ -1,17 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://bkkuex6mjht3v"]
+[gd_scene load_steps=4 format=3 uid="uid://bkkuex6mjht3v"]
 
-[ext_resource type="PackedScene" uid="uid://dnkkc3km63w8g" path="res://interacts/item.tscn" id="1_hdq1e"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_o614y"]
+[ext_resource type="Texture2D" uid="uid://b585wyfsfpd8h" path="res://assets/sprites/helio3battery.png" id="2_2elw1"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_brnje"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kc367"]
+size = Vector2(66, 30)
 
 [node name="helio3battery" type="Node2D"]
-
-[node name="item" parent="." instance=ExtResource("1_hdq1e")]
+script = ExtResource("1_o614y")
 
 [node name="area" type="Area2D" parent="."]
 
 [node name="collision_click" type="CollisionShape2D" parent="area"]
-shape = SubResource("CircleShape2D_brnje")
+shape = SubResource("RectangleShape2D_kc367")
 
 [node name="control" type="Control" parent="."]
 layout_mode = 3
@@ -23,10 +24,15 @@ offset_bottom = 20.0
 mouse_filter = 2
 
 [node name="sprite" type="TextureRect" parent="control"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
-expand_mode = 1
+texture = ExtResource("2_2elw1")
 
-[connection signal="input_event" from="area" to="item" method="_on_area_input_event"]
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

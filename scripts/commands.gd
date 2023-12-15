@@ -1,26 +1,45 @@
 extends Node
 
 var selectedSlot = null
-
 var inventory = [null,null,null,null,null,null,null]
-
 var i = 0
+var slotsel = null
+var invfull = null
+
+func _ready():
+	Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
 
 func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
-		print("a")
+		pass
 
 func collect(item):
-	print(item)
-	var hud = get_tree().get_nodes_in_group("hud")
-	var sl
 	for i in 7:
 		if inventory[i] == null:
-			sl = i
+			slotsel = i
+			i = 0
 			break
-		elif inventory[i] != null:
+		elif i != 6:
 			i=i+1
-	inventory[sl]=item
-			
-	print(inventory)
+		else:
+			invfull = true
+
+	inventory[slotsel] = item.name
 	
+	if invfull == true:
+		print("INVENTORY FULL")
+	else:
+		print(inventory)
+
+func mousechange(item):
+	if item.texture != null and selectedSlot:
+		if selectedSlot != null:
+			Input.set_custom_mouse_cursor(item.texture)
+		else:
+			Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
+		print(item.texture)
+		
+	if selectedSlot == null:
+		Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
+
+

@@ -1,12 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://45pyoqc5ob1k"]
 
-[ext_resource type="PackedScene" uid="uid://dnkkc3km63w8g" path="res://interacts/item.tscn" id="1_5bij6"]
+[ext_resource type="Texture2D" uid="uid://csmfxa2i45rfp" path="res://assets/sprites/blueBanana.png" id="2_jbpl8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_fn6pq"]
+radius = 24.0832
 
 [node name="blueBanana" type="Node2D"]
-
-[node name="item" parent="." instance=ExtResource("1_5bij6")]
 
 [node name="area" type="Area2D" parent="."]
 
@@ -26,4 +25,5 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+texture = ExtResource("2_jbpl8")
 expand_mode = 1

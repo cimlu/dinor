@@ -1,12 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://dxoxk48cuu5sf"]
 
-[ext_resource type="PackedScene" uid="uid://dnkkc3km63w8g" path="res://interacts/item.tscn" id="1_rws61"]
+[ext_resource type="Texture2D" uid="uid://dm6736j6aus7e" path="res://assets/sprites/cell.png" id="1_fnfpl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wan6m"]
+radius = 7.0
 
 [node name="cell" type="Node2D"]
-
-[node name="item" parent="." instance=ExtResource("1_rws61")]
 
 [node name="area" type="Area2D" parent="."]
 
@@ -24,7 +23,9 @@ mouse_filter = 2
 
 [node name="sprite" type="TextureRect" parent="control"]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 15.0
+offset_top = 14.0
+offset_right = 26.0
+offset_bottom = 25.0
 mouse_filter = 2
-expand_mode = 1
+texture = ExtResource("1_fnfpl")

@@ -1,12 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://bjyq6lc50uyc2"]
+[gd_scene load_steps=4 format=3 uid="uid://bjyq6lc50uyc2"]
 
-[ext_resource type="PackedScene" uid="uid://dnkkc3km63w8g" path="res://interacts/item.tscn" id="1_c3u3f"]
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_1n7hn"]
+[ext_resource type="Texture2D" uid="uid://bxy4j2ylw4gyq" path="res://assets/sprites/banana.png" id="2_lfkp6"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1fbyv"]
+radius = 24.0208
 
 [node name="banana" type="Node2D"]
-
-[node name="item" parent="." instance=ExtResource("1_c3u3f")]
+script = ExtResource("1_1n7hn")
 
 [node name="area" type="Area2D" parent="."]
 
@@ -20,10 +21,14 @@ offset_left = -20.0
 offset_top = -20.0
 offset_right = 20.0
 offset_bottom = 20.0
+mouse_filter = 2
 
 [node name="sprite" type="TextureRect" parent="control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+texture = ExtResource("2_lfkp6")
 expand_mode = 1
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

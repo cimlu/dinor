@@ -1,17 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://rh42h1qsuee0"]
 
-[ext_resource type="PackedScene" uid="uid://dnkkc3km63w8g" path="res://interacts/item.tscn" id="1_id1hu"]
+[ext_resource type="Texture2D" uid="uid://sh6nrotb1tms" path="res://assets/sprites/cabra.png" id="2_vtafa"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_6l68y"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nlgcc"]
+size = Vector2(20, 54.4472)
 
 [node name="cabra" type="Node2D"]
-
-[node name="item" parent="." instance=ExtResource("1_id1hu")]
 
 [node name="area" type="Area2D" parent="."]
 
 [node name="collision_click" type="CollisionShape2D" parent="area"]
-shape = SubResource("CircleShape2D_6l68y")
+position = Vector2(0.25, -0.25)
+rotation = 0.785398
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_nlgcc")
 
 [node name="control" type="Control" parent="."]
 layout_mode = 3
@@ -27,4 +29,5 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+texture = ExtResource("2_vtafa")
 expand_mode = 1

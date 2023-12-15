@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcvsbm002oxij"]
+
+[ext_resource type="Script" path="res://scripts/sprite.gd" id="1_nmxt0"]
+[ext_resource type="Texture2D" uid="uid://b1f44ajn8vmrh" path="res://assets/sprites/blueEgg.png" id="1_vavdr"]
+
+[node name="dragTest2" type="Node2D"]
+
+[node name="sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_vavdr")
+script = ExtResource("1_nmxt0")
+
+[node name="btn" type="Button" parent="sprite"]
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="button_down" from="sprite/btn" to="sprite" method="_on_btn_button_down"]
+[connection signal="button_up" from="sprite/btn" to="sprite" method="_on_btn_button_up"]
+[connection signal="pressed" from="sprite/btn" to="sprite" method="_on_btn_pressed"]
