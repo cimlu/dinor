@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 Commands="*res://scripts/commands.gd"
 
+[display]
+
+window/size/mode=2
+
 [dotnet]
 
 project/assembly_name="Dinor"

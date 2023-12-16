@@ -1,14 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://chqsb15tgjsl3"]
+[gd_scene load_steps=8 format=3 uid="uid://chqsb15tgjsl3"]
 
 [ext_resource type="Script" path="res://panels/hall_end.gd" id="1_1yjee"]
-[ext_resource type="Texture2D" uid="uid://ch1nwkof5brpc" path="res://assets/bgs/sceneBase.png" id="1_4wywc"]
+[ext_resource type="Texture2D" uid="uid://c5y1we6d1lej6" path="res://assets/bgs/sceneBase2x.png" id="2_g3p4q"]
 [ext_resource type="PackedScene" uid="uid://cs7pxb0mpmo28" path="res://interacts/door.tscn" id="2_ymah0"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="3_sbugo"]
 [ext_resource type="PackedScene" uid="uid://rhpeab1aq7qh" path="res://interacts/lantern.tscn" id="4_5ff0e"]
 [ext_resource type="PackedScene" uid="uid://bjyq6lc50uyc2" path="res://interacts/banana.tscn" id="4_y8i7i"]
 [ext_resource type="PackedScene" uid="uid://bkkuex6mjht3v" path="res://interacts/helio_3_battery.tscn" id="7_yu44p"]
-[ext_resource type="PackedScene" uid="uid://d3tl06tao0d7w" path="res://interacts/drag_test.tscn" id="8_q4s4j"]
-[ext_resource type="PackedScene" uid="uid://dcvsbm002oxij" path="res://interacts/drag_test_2.tscn" id="8_wxjst"]
 
 [node name="hall_end" type="Control"]
 layout_mode = 3
@@ -39,60 +37,57 @@ offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_4wywc")
+texture = ExtResource("2_g3p4q")
 
 [node name="cam" type="Camera2D" parent="."]
-zoom = Vector2(7.21, 7.21)
+zoom = Vector2(6, 6)
 
 [node name="hud" parent="." instance=ExtResource("3_sbugo")]
-position = Vector2(0, 38)
-scale = Vector2(0.75, 0.75)
+position = Vector2(0, 77)
+scale = Vector2(1.5, 1.5)
 
 [node name="objects" type="Node2D" parent="."]
 
 [node name="door" parent="objects" instance=ExtResource("2_ymah0")]
-position = Vector2(0, 26)
+position = Vector2(-1, 52)
+scale = Vector2(2, 2)
 destiny = "res://panels/_3.tscn"
 
-[node name="lantern" parent="." instance=ExtResource("4_5ff0e")]
+[node name="itens" type="Node2D" parent="."]
+visible = false
+
+[node name="lantern" parent="itens" instance=ExtResource("4_5ff0e")]
 position = Vector2(9, -40)
 scale = Vector2(0.75, 0.75)
 
-[node name="helio3battery" parent="." instance=ExtResource("7_yu44p")]
+[node name="helio3battery" parent="itens" instance=ExtResource("7_yu44p")]
 position = Vector2(-54, 13)
 scale = Vector2(0.75, 0.75)
 
-[node name="banana" parent="." instance=ExtResource("4_y8i7i")]
+[node name="banana" parent="itens" instance=ExtResource("4_y8i7i")]
 position = Vector2(31, -1)
 scale = Vector2(0.75, 0.75)
 
-[node name="lantern2" parent="." instance=ExtResource("4_5ff0e")]
+[node name="lantern2" parent="itens" instance=ExtResource("4_5ff0e")]
 position = Vector2(-6, -40)
 scale = Vector2(0.75, 0.75)
 
-[node name="helio3battery2" parent="." instance=ExtResource("7_yu44p")]
+[node name="helio3battery2" parent="itens" instance=ExtResource("7_yu44p")]
 position = Vector2(-54, -10)
 scale = Vector2(0.75, 0.75)
 
-[node name="banana2" parent="." instance=ExtResource("4_y8i7i")]
+[node name="banana2" parent="itens" instance=ExtResource("4_y8i7i")]
 position = Vector2(61, -26)
 scale = Vector2(0.75, 0.75)
 
-[node name="lantern3" parent="." instance=ExtResource("4_5ff0e")]
+[node name="lantern3" parent="itens" instance=ExtResource("4_5ff0e")]
 position = Vector2(-21, -40)
 scale = Vector2(0.75, 0.75)
 
-[node name="helio3battery3" parent="." instance=ExtResource("7_yu44p")]
+[node name="helio3battery3" parent="itens" instance=ExtResource("7_yu44p")]
 position = Vector2(-54, -33)
 scale = Vector2(0.75, 0.75)
 
-[node name="dragTest" parent="." instance=ExtResource("8_q4s4j")]
-position = Vector2(-52, 36)
-scale = Vector2(0.75, 0.75)
-
-[node name="banana3" parent="." instance=ExtResource("4_y8i7i")]
+[node name="banana3" parent="itens" instance=ExtResource("4_y8i7i")]
 position = Vector2(64, 23)
 scale = Vector2(0.75, 0.75)
-
-[node name="dragTest2" parent="." instance=ExtResource("8_wxjst")]
-position = Vector2(31, -33)

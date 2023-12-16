@@ -1,11 +1,12 @@
-Button
-Sprite2D
-TextureRect
+Control
+CollisionPolygon2D
 CollisionShape2D
 Area2D
-Marker2D
-Control
 Node2D
+TextureRect
+Button
+Sprite2D
+Marker2D
 Camera2D
 Container
 TextEdit
