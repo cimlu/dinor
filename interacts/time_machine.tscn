@@ -1,0 +1,41 @@
+[gd_scene load_steps=3 format=3 uid="uid://ctxqi66twin7s"]
+
+[ext_resource type="Script" path="res://scripts/time_machine.gd" id="1_5o5ql"]
+[ext_resource type="Texture2D" uid="uid://7do7sepkjse1" path="res://assets/sprites/timeCaps.png" id="1_d7rqf"]
+
+[node name="timeMachine" type="Node2D"]
+script = ExtResource("1_5o5ql")
+
+[node name="control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -27.0
+offset_top = -39.0
+offset_right = 27.0
+offset_bottom = 34.0
+mouse_filter = 2
+
+[node name="sprite" type="TextureRect" parent="control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -36.5
+offset_right = 27.0
+offset_bottom = 36.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_d7rqf")
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionPolygon2D" parent="area"]
+polygon = PackedVector2Array(-9, -16, -6, -18, 6, -18, 9, -16, 11, -13, 11, 15, 7, 17, -7, 17, -11, 15, -11, -13)
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]
+[connection signal="mouse_entered" from="area" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_exited" from="area" to="." method="_on_area_mouse_exited"]

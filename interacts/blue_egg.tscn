@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://cypvae7lqjjso"]
+[gd_scene load_steps=4 format=3 uid="uid://cypvae7lqjjso"]
 
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_4t6la"]
 [ext_resource type="Texture2D" uid="uid://b1f44ajn8vmrh" path="res://assets/sprites/blueEgg.png" id="2_esq52"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_li7k5"]
 radius = 9.0
 
 [node name="blueEgg" type="Node2D"]
+script = ExtResource("1_4t6la")
 
 [node name="area" type="Area2D" parent="."]
 
@@ -30,3 +32,5 @@ offset_bottom = 28.0
 mouse_filter = 2
 texture = ExtResource("2_esq52")
 expand_mode = 1
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

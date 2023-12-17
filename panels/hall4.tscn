@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://b00ma2gp8ip52"]
+
+[ext_resource type="Texture2D" uid="uid://d1q5g15vvpw3b" path="res://assets/bgs/hallDown2.png" id="1_n76a1"]
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_qel1b"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="2_hwfhe"]
+[ext_resource type="Script" path="res://scripts/cscene.gd" id="3_4jfs3"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="4_upy4e"]
+
+[node name="hall4" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_qel1b")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_n76a1")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+editor_draw_drag_margin = true
+
+[node name="returnArrow" parent="." instance=ExtResource("2_hwfhe")]
+position = Vector2(-125, 5)
+scale = Vector2(0.969451, 0.857143)
+destiny = "hall3"
+
+[node name="door_hall" type="Area2D" parent="."]
+position = Vector2(36, 0)
+scale = Vector2(0.748418, 0.589872)
+script = ExtResource("3_4jfs3")
+destiny = "hall"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_hall"]
+polygon = PackedVector2Array(-70.816, -27.1245, -25.3869, -27.1245, -25.3869, 64.4208, -70.816, 64.4208)
+
+[node name="hud" parent="." instance=ExtResource("4_upy4e")]
+position = Vector2(0, 80)
+
+[connection signal="input_event" from="door_hall" to="door_hall" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_hall" to="door_hall" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_hall" to="door_hall" method="_on_mouse_exited"]

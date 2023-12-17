@@ -1,14 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dx4nman0o3txt"]
+[gd_scene load_steps=5 format=3 uid="uid://dx4nman0o3txt"]
 
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_fxuqd"]
 [ext_resource type="Texture2D" uid="uid://cff4vc7fb21o3" path="res://assets/bgs/storage.png" id="1_u447w"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_rhkrm"]
-[ext_resource type="Script" path="res://scripts/cscene.gd" id="3_45eg1"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="4_pnfsa"]
 
 [node name="storage" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+script = ExtResource("1_fxuqd")
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 1
@@ -27,16 +29,11 @@ mouse_filter = 2
 texture = ExtResource("1_u447w")
 
 [node name="cam" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(3.6, 3.6)
 
 [node name="hud" parent="." instance=ExtResource("2_rhkrm")]
 position = Vector2(0, 80)
 
-[node name="door_hall" type="Area2D" parent="."]
-script = ExtResource("3_45eg1")
-destiny = "hall"
-
-[node name="collision" type="CollisionPolygon2D" parent="door_hall"]
-polygon = PackedVector2Array(-148, -70, -110, -46, -110, 86, -114, 90, -148, 90)
-
-[connection signal="input_event" from="door_hall" to="door_hall" method="_on_input_event"]
+[node name="returnArrow" parent="." instance=ExtResource("4_pnfsa")]
+position = Vector2(-126, 7)
+destiny = "storage_front"

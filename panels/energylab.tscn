@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=3 uid="uid://clx5xhaydme47"]
+
+[ext_resource type="Texture2D" uid="uid://b0nbeeocs7qnk" path="res://assets/bgs/energylab.png" id="1_20d8j"]
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_eh3cr"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="2_44u2a"]
+[ext_resource type="PackedScene" uid="uid://bkkuex6mjht3v" path="res://interacts/helio_3_battery.tscn" id="3_nqpmk"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="4_uem5j"]
+
+[node name="energylab" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_eh3cr")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_20d8j")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+editor_draw_drag_margin = true
+
+[node name="returnArrow" parent="." instance=ExtResource("2_44u2a")]
+position = Vector2(123, 6)
+scale = Vector2(-0.910549, 0.857143)
+destiny = "hall3"
+
+[node name="helio3battery" parent="." instance=ExtResource("3_nqpmk")]
+position = Vector2(22, 31)
+
+[node name="hud" parent="." instance=ExtResource("4_uem5j")]
+position = Vector2(0, 80)

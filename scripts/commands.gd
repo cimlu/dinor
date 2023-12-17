@@ -2,9 +2,9 @@ extends Node
 
 var selectedSlot = null
 var inventory = [null,null,null,null,null,null,null]
-var i = 0
 var slotsel = null
 var invfull = null
+var texture = load("res://assets/sprites/hand.png")
 
 func _ready():
 	Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
@@ -17,12 +17,13 @@ func collect(item):
 	for i in 7:
 		if inventory[i] == null:
 			slotsel = i
-			i = 0
+			print(inventory[i])
 			break
 		elif i != 6:
 			i=i+1
 		else:
 			invfull = true
+			break
 
 	inventory[slotsel] = item.name
 	
@@ -35,8 +36,10 @@ func mousechange(item):
 	if item.texture != null and selectedSlot:
 		if selectedSlot != null:
 			Input.set_custom_mouse_cursor(item.texture)
+			texture = item.texture
 		else:
 			Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
+			texture = load("res://assets/sprites/hand.png")
 		print(item.texture)
 		
 	if selectedSlot == null:

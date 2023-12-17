@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dvenshvwibs5u"]
+[gd_scene load_steps=6 format=3 uid="uid://dvenshvwibs5u"]
 
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_c8ecq"]
 [ext_resource type="Texture2D" uid="uid://crc2judpb3dqb" path="res://assets/bgs/bath.png" id="1_q4omn"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="3_3gqdq"]
 [ext_resource type="Script" path="res://scripts/cscene.gd" id="3_448du"]
+[ext_resource type="Texture2D" uid="uid://dujakifqehtbv" path="res://assets/sprites/olhom.png" id="5_bv8fg"]
 
 [node name="bath" type="Control"]
 layout_mode = 3
@@ -10,6 +12,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+script = ExtResource("1_c8ecq")
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 1
@@ -28,7 +31,7 @@ mouse_filter = 2
 texture = ExtResource("1_q4omn")
 
 [node name="cam" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(3.6, 3.6)
 
 [node name="hud" parent="." instance=ExtResource("3_3gqdq")]
 position = Vector2(0, 80)
@@ -40,4 +43,11 @@ destiny = "hall"
 [node name="collision" type="CollisionPolygon2D" parent="door_hall"]
 polygon = PackedVector2Array(-148, -70, -110, -46, -110, 86, -114, 90, -148, 90)
 
+[node name="Olhom" type="Sprite2D" parent="."]
+position = Vector2(-127, -26)
+scale = Vector2(2.02576, 1.9869)
+texture = ExtResource("5_bv8fg")
+
 [connection signal="input_event" from="door_hall" to="door_hall" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_hall" to="door_hall" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_hall" to="door_hall" method="_on_mouse_exited"]

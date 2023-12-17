@@ -22,6 +22,7 @@ Commands="*res://scripts/commands.gd"
 [display]
 
 window/size/mode=2
+window/stretch/mode="viewport"
 
 [dotnet]
 

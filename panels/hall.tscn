@@ -1,17 +1,18 @@
 [gd_scene load_steps=6 format=3 uid="uid://bkumoav7bb5st"]
 
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_74tb0"]
 [ext_resource type="Texture2D" uid="uid://dm2ur4isqn5cy" path="res://assets/bgs/hall.png" id="1_x27x3"]
-[ext_resource type="PackedScene" uid="uid://bkkuex6mjht3v" path="res://interacts/helio_3_battery.tscn" id="2_jmdyr"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="3_0kstq"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="3_2f7wl"]
-[ext_resource type="PackedScene" uid="uid://bjyq6lc50uyc2" path="res://interacts/banana.tscn" id="3_3yail"]
 [ext_resource type="Script" path="res://scripts/cscene.gd" id="3_sr3x7"]
 
-[node name="Control" type="Control"]
+[node name="hall" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+script = ExtResource("1_74tb0")
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 1
@@ -30,16 +31,13 @@ mouse_filter = 2
 texture = ExtResource("1_x27x3")
 
 [node name="cam" type="Camera2D" parent="."]
-zoom = Vector2(6, 6)
+zoom = Vector2(3.6, 3.6)
+editor_draw_drag_margin = true
 
-[node name="helio3battery" parent="." instance=ExtResource("2_jmdyr")]
-position = Vector2(9, 6)
-
-[node name="banana" parent="." instance=ExtResource("3_3yail")]
-position = Vector2(9, 6)
-
-[node name="hud" parent="." instance=ExtResource("3_2f7wl")]
-position = Vector2(0, 80)
+[node name="returnArrow" parent="." instance=ExtResource("3_0kstq")]
+position = Vector2(123, 6)
+scale = Vector2(-0.910549, 0.857143)
+destiny = "hall2"
 
 [node name="door_hall" type="Area2D" parent="."]
 position = Vector2(36, 0)
@@ -60,5 +58,22 @@ destiny = "storage"
 position = Vector2(43, -36)
 polygon = PackedVector2Array(34, -26, 0, -1, 0, 88, 34, 122)
 
+[node name="hud" parent="." instance=ExtResource("3_2f7wl")]
+position = Vector2(0, 80)
+
+[node name="door_timelab" type="Area2D" parent="."]
+script = ExtResource("3_sr3x7")
+destiny = "timelab"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_timelab"]
+polygon = PackedVector2Array(-17, -16, 17, -16, 17, 38, -17, 38)
+
 [connection signal="input_event" from="door_hall" to="door_hall" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_hall" to="door_hall" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_hall" to="door_hall" method="_on_mouse_exited"]
 [connection signal="input_event" from="door_storage" to="door_storage" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_storage" to="door_storage" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_storage" to="door_storage" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_timelab" to="door_timelab" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_timelab" to="door_timelab" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_timelab" to="door_timelab" method="_on_mouse_exited"]

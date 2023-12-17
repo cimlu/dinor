@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://chjae5w1qutod"]
+
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_68dbk"]
+[ext_resource type="Texture2D" uid="uid://tta6fjar8b8j" path="res://assets/bgs/timelab.png" id="1_ilyl6"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_ab0l4"]
+[ext_resource type="PackedScene" uid="uid://ctxqi66twin7s" path="res://interacts/time_machine.tscn" id="5_wcaq4"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="6_5rhlu"]
+
+[node name="timelab" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_68dbk")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_ilyl6")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+
+[node name="hud" parent="." instance=ExtResource("2_ab0l4")]
+position = Vector2(0, 80)
+
+[node name="timeMachine" parent="." instance=ExtResource("5_wcaq4")]
+modulate = Color(0.458824, 0.458824, 0.458824, 1)
+position = Vector2(0, 22)
+
+[node name="returnArrow" parent="." instance=ExtResource("6_5rhlu")]
+position = Vector2(-133, -1)
+rotation = 3.14159
+scale = Vector2(-0.969451, -0.857143)
+destiny = "hall"

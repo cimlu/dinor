@@ -4,11 +4,8 @@ extends Node2D
 
 var slots
 var current_slot = null
-var i = 0
 
-func _ready():
-	var slqtd = collision.get_child_count()
-		
+func _ready():		
 	for i in 7:
 		collision.get_child(i).border.visible = false
 		collision.get_child(i).selected.connect(disselect)
@@ -19,3 +16,4 @@ func disselect():
 		collision.get_child(i).border.visible = false
 		i=i+1
 		Commands.selectedSlot.border.visible = true
+		Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))

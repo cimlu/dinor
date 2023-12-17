@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://di4sguj2wh8fh"]
+
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_6yx1c"]
+[ext_resource type="Texture2D" uid="uid://sho54st5jk4m" path="res://assets/bgs/hallDown.png" id="1_by3y2"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="2_swuer"]
+[ext_resource type="Script" path="res://scripts/cscene.gd" id="3_i4wei"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="4_gm118"]
+
+[node name="hall3" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_6yx1c")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_by3y2")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+editor_draw_drag_margin = true
+
+[node name="returnArrow" parent="." instance=ExtResource("2_swuer")]
+position = Vector2(123, 6)
+scale = Vector2(-0.910549, 0.857143)
+destiny = "hall4"
+
+[node name="door_energylab" type="Area2D" parent="."]
+position = Vector2(36, 0)
+scale = Vector2(0.748418, 0.589872)
+script = ExtResource("3_i4wei")
+destiny = "energylab"
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_energylab"]
+position = Vector2(-148.313, -81.3736)
+polygon = PackedVector2Array(-7.62939e-06, 7.62939e-06, 38.7484, 35.6009, 38.7484, 171.224, -7.62939e-06, 218.691)
+
+[node name="hud" parent="." instance=ExtResource("4_gm118")]
+position = Vector2(0, 80)
+
+[connection signal="input_event" from="door_energylab" to="door_energylab" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_energylab" to="door_energylab" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_energylab" to="door_energylab" method="_on_mouse_exited"]
