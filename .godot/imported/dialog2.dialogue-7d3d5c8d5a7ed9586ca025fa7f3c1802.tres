@@ -1,0 +1,271 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_0t6e1"]
+
+[resource]
+script = ExtResource("1_0t6e1")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Catapimbas")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"next_id_after": "16",
+"parent_id": "8",
+"responses": PackedStringArray("10", "12"),
+"tags": PackedStringArray(),
+"text": "O que é esse laboratório confidencial?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "O que é esse laboratório confidencial?",
+"type": "response"
+},
+"11": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "16",
+"parent_id": "10",
+"tags": PackedStringArray(),
+"text": "Está fazendo perguntas demais.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Está fazendo perguntas demais.",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "16",
+"next_id_after": "16",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Certo...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Certo...",
+"type": "response"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"next_id_after": "16",
+"tags": PackedStringArray(),
+"text": "Passa o zap?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Passa o zap?",
+"type": "response"
+},
+"14": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "16",
+"parent_id": "13",
+"tags": PackedStringArray(),
+"text": "?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "?",
+"type": "dialogue"
+},
+"16": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"tags": PackedStringArray(),
+"text": "Eu te chamei aqui pois eu preciso que você pegue uma banana pra mim. Estou com fome :3.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eu te chamei aqui pois eu preciso que você pegue uma banana pra mim. Estou com fome :3.",
+"type": "dialogue"
+},
+"17": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"tags": PackedStringArray(),
+"text": "Você faz isso pra mim, estagiário?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Você faz isso pra mim, estagiário?",
+"type": "dialogue"
+},
+"18": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "20",
+"next_id_after": "20",
+"responses": PackedStringArray("18"),
+"tags": PackedStringArray(),
+"text": "Claro...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Claro...",
+"type": "response"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 3
+}])
+},
+"next_id": "21",
+"type": "mutation"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Catapimbas"
+}])
+},
+"next_id": "22",
+"type": "mutation"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "24",
+"type": "mutation"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "4",
+"type": "mutation"
+},
+"4": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "[[Oieeee! Bom dia, estagiário.|Bom dia novato!]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Oieeee! Bom dia, estagiário.|Bom dia novato!]]",
+"type": "dialogue"
+},
+"5": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "Veja o que eu encontrei!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Veja o que eu encontrei!",
+"type": "dialogue"
+},
+"6": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"tags": PackedStringArray(),
+"text": "* Catapimbas mostra um ovo azul gigante *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Catapimbas mostra um ovo azul gigante *",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "16",
+"responses": PackedStringArray("8", "13"),
+"tags": PackedStringArray(),
+"text": "Onde conseguiu isso?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Onde conseguiu isso?",
+"type": "response"
+},
+"9": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Eu achei no laboratório confidencial. Não conta pro Gary que eu peguei ein!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Eu achei no laboratório confidencial. Não conta pro Gary que eu peguei ein!",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

@@ -1,0 +1,11 @@
+~ this_is_a_node_title
+
+- Não encontrei Gary.
+	set Globals.cataInt = true
+	Catapimbas: Procurou no laboratório temporal? Ele quase sempre está lá.
+	- Que laboratório é esse?
+		Catapimbas: É o que tem um sinal de alerta pequeno na porta. Aqui, toma as chaves.
+		set Globals.cataInt = false
+		=> END
+		
+=> END

@@ -1,0 +1,6 @@
+~ this_is_a_node_title
+
+set Globals.garyInt = true
+Gary: [[...|O que você quer?|Sai.|Tá sem nada pra fazer?]]
+set Globals.garyInt = false
+=> END

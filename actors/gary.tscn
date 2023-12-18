@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3 uid="uid://3y4ob6er52s1"]
+
+[ext_resource type="Texture2D" uid="uid://b8vg2jhldfs25" path="res://assets/persons/GaryKasparv.png" id="1_2ck08"]
+[ext_resource type="Script" path="res://scripts/gary.gd" id="1_cj6s5"]
+[ext_resource type="Texture2D" uid="uid://cl6ownxylhyb7" path="res://assets/persons/garyInt.png" id="2_yvghq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g77pj"]
+size = Vector2(42, 112)
+
+[node name="gary" type="Node2D"]
+script = ExtResource("1_cj6s5")
+
+[node name="sprite" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -21.5
+offset_top = -57.5
+offset_right = 21.5
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("2_yvghq")
+metadata/_edit_use_anchors_ = true
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+position = Vector2(0.5, 1)
+shape = SubResource("RectangleShape2D_g77pj")
+
+[node name="spriteDialog" type="TextureRect" parent="."]
+visible = false
+offset_left = -271.0
+offset_top = -57.0
+offset_right = -143.0
+offset_bottom = 71.0
+texture = ExtResource("1_2ck08")
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

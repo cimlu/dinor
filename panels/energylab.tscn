@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://clx5xhaydme47"]
+[gd_scene load_steps=7 format=3 uid="uid://clx5xhaydme47"]
 
 [ext_resource type="Texture2D" uid="uid://b0nbeeocs7qnk" path="res://assets/bgs/energylab.png" id="1_20d8j"]
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_eh3cr"]
 [ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="2_44u2a"]
 [ext_resource type="PackedScene" uid="uid://bkkuex6mjht3v" path="res://interacts/helio_3_battery.tscn" id="3_nqpmk"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="4_uem5j"]
+[ext_resource type="PackedScene" uid="uid://bjaulahpil1hj" path="res://actors/catapimbas.tscn" id="6_0ern2"]
 
 [node name="energylab" type="Control"]
 layout_mode = 3
@@ -44,3 +45,9 @@ position = Vector2(22, 31)
 
 [node name="hud" parent="." instance=ExtResource("4_uem5j")]
 position = Vector2(0, 80)
+
+[node name="catapimbas" parent="." instance=ExtResource("6_0ern2")]
+visible = false
+position = Vector2(77, 33)
+scale = Vector2(0.8, 0.8)
+dimension = 0.75

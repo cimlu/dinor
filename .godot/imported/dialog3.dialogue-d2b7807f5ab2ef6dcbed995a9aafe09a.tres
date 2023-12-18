@@ -1,0 +1,471 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_5b13b"]
+
+[resource]
+script = ExtResource("1_5b13b")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Catapimbas", "Você", "task")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "Você",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Esso ovo é do que?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Esso ovo é do que?",
+"type": "dialogue"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "12",
+"parent_id": "6",
+"type": "mutation"
+},
+"12": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Dinoss... er... galinhas são dinossauros, né? É ovo de galinha.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dinoss... er... galinhas são dinossauros, né? É ovo de galinha.",
+"type": "dialogue"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "14",
+"parent_id": "6",
+"type": "mutation"
+},
+"14": {
+"character": "Você",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Galinhas não botam ovos azuis.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Galinhas não botam ovos azuis.",
+"type": "dialogue"
+},
+"15": {
+"id": "15",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "16",
+"parent_id": "6",
+"type": "mutation"
+},
+"16": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Claro que botam. Olha, vai lá com o Gary e pede pra ele te dar a banana azul.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Claro que botam. Olha, vai lá com o Gary e pede pra ele te dar a banana azul.",
+"type": "dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...",
+"type": "dialogue"
+},
+"18": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Ela tem gosto de mentos...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ela tem gosto de mentos...",
+"type": "dialogue"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "20",
+"parent_id": "6",
+"type": "mutation"
+},
+"20": {
+"character": "task",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Vá pegar a banana azul com Gary Karparv",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vá pegar a banana azul com Gary Karparv",
+"type": "dialogue"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 4
+}])
+},
+"next_id": "22",
+"parent_id": "6",
+"type": "mutation"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Catapimbas"
+}])
+},
+"next_id": "32",
+"parent_id": "6",
+"type": "mutation"
+},
+"23": {
+"id": "23",
+"next_conditional_id": "32",
+"next_id": "24",
+"next_id_after": "32",
+"parent_id": "5",
+"type": "condition"
+},
+"24": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "25",
+"parent_id": "23",
+"tags": PackedStringArray(),
+"text": "Pegou nada. Vai lá pegar.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pegou nada. Vai lá pegar.",
+"type": "dialogue"
+},
+"25": {
+"id": "25",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "26",
+"parent_id": "23",
+"type": "mutation"
+},
+"26": {
+"id": "26",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "23",
+"type": "goto"
+},
+"27": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "27",
+"next_id": "28",
+"next_id_after": "32",
+"tags": PackedStringArray(),
+"text": "Não",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Não",
+"type": "response"
+},
+"28": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"parent_id": "27",
+"tags": PackedStringArray(),
+"text": "Então vai lá pegar.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Então vai lá pegar.",
+"type": "dialogue"
+},
+"29": {
+"id": "29",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "30",
+"parent_id": "27",
+"type": "mutation"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "4",
+"type": "mutation"
+},
+"30": {
+"id": "30",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "27",
+"type": "goto"
+},
+"32": {
+"id": "32",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Olá, pegou a banana?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Olá, pegou a banana?",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "32",
+"responses": PackedStringArray("5", "27"),
+"tags": PackedStringArray(),
+"text": "Sim",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sim",
+"type": "response"
+},
+"6": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Commands"
+}, {
+"type": "dot"
+}, {
+"function": "tem",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "banana"
+}])])
+}, {
+"type": "colon"
+}])
+},
+"id": "6",
+"next_conditional_id": "23",
+"next_id": "7",
+"next_id_after": "32",
+"parent_id": "5",
+"type": "condition"
+},
+"7": {
+"character": "Catapimbas",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Obrigada!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Obrigada!",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "9",
+"parent_id": "6",
+"type": "mutation"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "* Catapimbas começa a comera a banana *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Catapimbas começa a comera a banana *",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

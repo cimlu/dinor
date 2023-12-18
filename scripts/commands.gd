@@ -45,4 +45,9 @@ func mousechange(item):
 	if selectedSlot == null:
 		Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
 
-
+func tem(item):
+	for i in 7:
+		if inventory[i] == item:
+			return true
+			print("TEM")
+	return false

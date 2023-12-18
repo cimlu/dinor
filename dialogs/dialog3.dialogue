@@ -1,0 +1,32 @@
+~ this_is_a_node_title
+
+set Globals.cataInt = true
+Catapimbas: Olá, pegou a banana?
+- Sim
+	if Commands.tem("banana"):
+		Catapimbas: Obrigada!
+		set Globals.cataInt = false
+		* Catapimbas começa a comera a banana *
+		Você: Esso ovo é do que?
+		set Globals.cataInt = true
+		Catapimbas: Dinoss... er... galinhas são dinossauros, né? É ovo de galinha.
+		set Globals.cataInt = false
+		Você: Galinhas não botam ovos azuis.
+		set Globals.cataInt = true
+		Catapimbas: Claro que botam. Olha, vai lá com o Gary e pede pra ele te dar a banana azul.
+		...
+		Catapimbas: Ela tem gosto de mentos...
+		set Globals.cataInt = false
+		task: Vá pegar a banana azul com Gary Karparv
+		set Globals.nextDialog = 4
+		set Globals.nextPerson = "Catapimbas"
+	else:
+		Catapimbas: Pegou nada. Vai lá pegar.
+		set Globals.cataInt = false
+		=> END
+- Não
+	Então vai lá pegar.
+	set Globals.cataInt = false
+	=> END
+
+=> END

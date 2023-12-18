@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjaulahpil1hj"]
+
+[ext_resource type="Script" path="res://scripts/catapimbas.gd" id="1_vqa0q"]
+[ext_resource type="Texture2D" uid="uid://brrf2wkaaphkp" path="res://assets/persons/catapimbas.png" id="2_3s85f"]
+[ext_resource type="Texture2D" uid="uid://difqq0i7ii4t2" path="res://assets/persons/catapimbasInt.png" id="2_xlunv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oic1k"]
+size = Vector2(43, 128)
+
+[node name="catapimbas" type="Node2D"]
+script = ExtResource("1_vqa0q")
+
+[node name="sprite" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -22.0
+offset_top = -72.0
+offset_right = 21.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+texture = ExtResource("2_xlunv")
+metadata/_edit_use_anchors_ = true
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+position = Vector2(-0.5, -8)
+shape = SubResource("RectangleShape2D_oic1k")
+
+[node name="spriteDialog" type="TextureRect" parent="."]
+offset_left = -271.0
+offset_top = -57.0
+offset_right = -143.0
+offset_bottom = 71.0
+texture = ExtResource("2_3s85f")
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event" flags=18]

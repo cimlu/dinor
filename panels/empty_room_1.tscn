@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://p4x1mp8ln0g3"]
+[gd_scene load_steps=6 format=3 uid="uid://p4x1mp8ln0g3"]
 
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_6p8c1"]
 [ext_resource type="Texture2D" uid="uid://tta6fjar8b8j" path="res://assets/bgs/timelab.png" id="1_y7e8e"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_jv1b2"]
 [ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="3_js8h5"]
+[ext_resource type="PackedScene" uid="uid://bjyq6lc50uyc2" path="res://interacts/banana.tscn" id="5_4bvqa"]
 
 [node name="emptyRoom1" type="Control"]
 layout_mode = 3
@@ -38,3 +39,7 @@ position = Vector2(0, 80)
 [node name="returnArrow" parent="." instance=ExtResource("3_js8h5")]
 position = Vector2(-126, 7)
 destiny = "hall2"
+
+[node name="banana" parent="." instance=ExtResource("5_4bvqa")]
+position = Vector2(43, 40)
+scale = Vector2(0.5, 0.5)
