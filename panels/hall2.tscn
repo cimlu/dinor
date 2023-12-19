@@ -47,16 +47,36 @@ destiny = "empty_room_1"
 [node name="collision" type="CollisionPolygon2D" parent="door_er1"]
 polygon = PackedVector2Array(-86, 90, -83, 90, -52, 59, -52, -31, -86, -56)
 
-[node name="door_er2" type="Area2D" parent="."]
+[node name="door_er3" type="Area2D" parent="."]
+script = ExtResource("4_31m5i")
+destiny = "empty_room_3"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_er3"]
+polygon = PackedVector2Array(46, -27, 75, -48, 75, 81, 46, 53)
+
+[node name="door_er4" type="Area2D" parent="."]
+script = ExtResource("4_31m5i")
+destiny = "empty_room_4"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_er4"]
+polygon = PackedVector2Array(94, -61, 135, -90, 160, -90, 160, 90, 94, 90)
+
+[node name="door_stairsdown" type="Area2D" parent="."]
 script = ExtResource("4_31m5i")
 destiny = "hall3"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_er2"]
+[node name="collision" type="CollisionPolygon2D" parent="door_stairsdown"]
 polygon = PackedVector2Array(-17, -16, 17, -16, 17, 38, -17, 38)
 
 [connection signal="input_event" from="door_er1" to="door_er1" method="_on_input_event"]
 [connection signal="mouse_entered" from="door_er1" to="door_er1" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="door_er1" to="door_er1" method="_on_mouse_exited"]
-[connection signal="input_event" from="door_er2" to="door_er2" method="_on_input_event"]
-[connection signal="mouse_entered" from="door_er2" to="door_er2" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="door_er2" to="door_er2" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_er3" to="door_er3" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_er3" to="door_er3" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_er3" to="door_er3" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_er4" to="door_er4" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_er4" to="door_er4" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_er4" to="door_er4" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_stairsdown" to="door_stairsdown" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_stairsdown" to="door_stairsdown" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_stairsdown" to="door_stairsdown" method="_on_mouse_exited"]

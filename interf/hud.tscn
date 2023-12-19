@@ -21,6 +21,7 @@ shape = SubResource("RectangleShape2D_4od70")
 [node name="slot_01" parent="sl" instance=ExtResource("1_g8khb")]
 position = Vector2(-39, 0)
 scale = Vector2(0.75, 0.75)
+id = 0
 
 [node name="slot_02" parent="sl" instance=ExtResource("1_g8khb")]
 position = Vector2(-26, 0)
@@ -29,19 +30,24 @@ scale = Vector2(0.75, 0.75)
 [node name="slot_03" parent="sl" instance=ExtResource("1_g8khb")]
 position = Vector2(-13, 0)
 scale = Vector2(0.75, 0.75)
+id = 2
 
 [node name="slot_04" parent="sl" instance=ExtResource("1_g8khb")]
 position = Vector2(-5.72204e-06, 0)
 scale = Vector2(0.75, 0.75)
+id = 3
 
 [node name="slot_05" parent="sl" instance=ExtResource("1_g8khb")]
 position = Vector2(13, 0)
 scale = Vector2(0.75, 0.75)
+id = 4
 
 [node name="slot_06" parent="sl" instance=ExtResource("1_g8khb")]
 position = Vector2(26, 0)
 scale = Vector2(0.75, 0.75)
+id = 5
 
 [node name="slot_07" parent="sl" instance=ExtResource("1_g8khb")]
 position = Vector2(39, 0)
 scale = Vector2(0.75, 0.75)
+id = 6

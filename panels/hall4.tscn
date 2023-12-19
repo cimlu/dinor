@@ -39,18 +39,54 @@ position = Vector2(-125, 5)
 scale = Vector2(0.969451, 0.857143)
 destiny = "hall3"
 
-[node name="door_hall" type="Area2D" parent="."]
+[node name="door_stairsup" type="Area2D" parent="."]
 position = Vector2(36, 0)
 scale = Vector2(0.748418, 0.589872)
 script = ExtResource("3_4jfs3")
 destiny = "hall"
 
-[node name="collision" type="CollisionPolygon2D" parent="door_hall"]
+[node name="collision" type="CollisionPolygon2D" parent="door_stairsup"]
 polygon = PackedVector2Array(-70.816, -27.1245, -25.3869, -27.1245, -25.3869, 64.4208, -70.816, 64.4208)
+
+[node name="door_er5" type="Area2D" parent="."]
+position = Vector2(36, 0)
+scale = Vector2(0.748418, 0.589872)
+script = ExtResource("3_4jfs3")
+destiny = "empty_room_5"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_er5"]
+polygon = PackedVector2Array(13.3615, -45.7726, 52.1099, -81.3736, 52.1099, 137.318, 13.3615, 89.85)
+
+[node name="door_er6" type="Area2D" parent="."]
+position = Vector2(36, 0)
+scale = Vector2(0.748418, 0.589872)
+script = ExtResource("3_4jfs3")
+destiny = "empty_room_6"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_er6"]
+polygon = PackedVector2Array(77.4968, -103.412, 132.279, -152.575, 165.683, -152.575, 165.683, 152.575, 77.4968, 152.575)
+
+[node name="door_er7" type="Area2D" parent="."]
+position = Vector2(36, 0)
+scale = Vector2(0.748418, 0.589872)
+script = ExtResource("3_4jfs3")
+destiny = "empty_room_7"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_er7"]
+polygon = PackedVector2Array(-163.011, -94.9359, -117.581, -52.5538, -117.581, 100.022, -159.002, 152.575, -163.011, 152.575)
 
 [node name="hud" parent="." instance=ExtResource("4_upy4e")]
 position = Vector2(0, 80)
 
-[connection signal="input_event" from="door_hall" to="door_hall" method="_on_input_event"]
-[connection signal="mouse_entered" from="door_hall" to="door_hall" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="door_hall" to="door_hall" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_stairsup" to="door_stairsup" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_stairsup" to="door_stairsup" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_stairsup" to="door_stairsup" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_er5" to="door_er5" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_er5" to="door_er5" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_er5" to="door_er5" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_er6" to="door_er6" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_er6" to="door_er6" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_er6" to="door_er6" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_er7" to="door_er7" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_er7" to="door_er7" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_er7" to="door_er7" method="_on_mouse_exited"]

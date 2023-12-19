@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg6khoq4p77g0"]
+
+[ext_resource type="Texture2D" uid="uid://12akiunp7rhj" path="res://assets/sprites/box.png" id="1_cp36p"]
+
+[node name="box" type="Node2D"]
+
+[node name="sprite" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_cp36p")

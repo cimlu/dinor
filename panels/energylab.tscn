@@ -35,13 +35,15 @@ texture = ExtResource("1_20d8j")
 zoom = Vector2(3.6, 3.6)
 editor_draw_drag_margin = true
 
-[node name="returnArrow" parent="." instance=ExtResource("2_44u2a")]
-position = Vector2(123, 6)
-scale = Vector2(-0.910549, 0.857143)
-destiny = "hall3"
-
 [node name="helio3battery" parent="." instance=ExtResource("3_nqpmk")]
-position = Vector2(22, 31)
+position = Vector2(31, 40)
+rotation = 3.14159
+scale = Vector2(1.5, -1.476)
+
+[node name="returnArrow" parent="." instance=ExtResource("2_44u2a")]
+position = Vector2(121, 1)
+scale = Vector2(-0.870549, 0.857143)
+destiny = "hall3"
 
 [node name="hud" parent="." instance=ExtResource("4_uem5j")]
 position = Vector2(0, 80)

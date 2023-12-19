@@ -37,11 +37,11 @@ zoom = Vector2(3.6, 3.6)
 [node name="hud" parent="." instance=ExtResource("3_3gqdq")]
 position = Vector2(0, 80)
 
-[node name="door_hall" type="Area2D" parent="."]
+[node name="door_bath" type="Area2D" parent="."]
 script = ExtResource("3_448du")
 destiny = "hall"
 
-[node name="collision" type="CollisionPolygon2D" parent="door_hall"]
+[node name="collision" type="CollisionPolygon2D" parent="door_bath"]
 polygon = PackedVector2Array(-148, -70, -110, -46, -110, 86, -114, 90, -148, 90)
 
 [node name="Olhom" type="Sprite2D" parent="."]
@@ -51,6 +51,6 @@ texture = ExtResource("5_bv8fg")
 
 [node name="banana" parent="." instance=ExtResource("6_1k5ue")]
 
-[connection signal="input_event" from="door_hall" to="door_hall" method="_on_input_event"]
-[connection signal="mouse_entered" from="door_hall" to="door_hall" method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="door_hall" to="door_hall" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_bath" to="door_bath" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_bath" to="door_bath" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_bath" to="door_bath" method="_on_mouse_exited"]

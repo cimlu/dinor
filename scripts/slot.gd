@@ -2,6 +2,7 @@ extends Node2D
 
 @onready var border = $border
 @onready var texture = $control/texture
+@export var id = 1
 
 signal selected(name)
 signal discelected
@@ -10,6 +11,16 @@ signal discelected
 func _on_area_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
 		selectf(true)
+
+func textureClear():
+	texture.texture = null
+
+func _process(delta):
+	if Commands.inventory[id] == null and texture.texture != null:
+		texture.texture = null
+	
+	if Input.is_action_pressed("ui_cancel"):
+		Commands.discollect(Commands.inventory[id])
 
 func spritechange(sprite):
 	texture.texture = sprite

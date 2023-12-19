@@ -1,0 +1,59 @@
+[gd_scene load_steps=8 format=3 uid="uid://bggnvyveuf30e"]
+
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_wpt8r"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="2_o2rtx"]
+[ext_resource type="Texture2D" uid="uid://7n805rmpyolp" path="res://assets/bgs/biolab.png" id="2_xojf8"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="4_vyl8u"]
+[ext_resource type="PackedScene" uid="uid://bjaulahpil1hj" path="res://actors/catapimbas.tscn" id="6_7x71q"]
+[ext_resource type="PackedScene" uid="uid://cg6khoq4p77g0" path="res://interacts/box.tscn" id="6_mu76s"]
+[ext_resource type="PackedScene" uid="uid://dccrf4oryr1i0" path="res://interacts/torneira.tscn" id="7_4ce5w"]
+
+[node name="biolab" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_wpt8r")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_xojf8")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+editor_draw_drag_margin = true
+
+[node name="returnArrow" parent="." instance=ExtResource("2_o2rtx")]
+position = Vector2(-118, 0)
+scale = Vector2(0.929452, 0.857143)
+destiny = "hall3"
+
+[node name="hud" parent="." instance=ExtResource("4_vyl8u")]
+position = Vector2(0, 80)
+
+[node name="box" parent="." instance=ExtResource("6_mu76s")]
+position = Vector2(-6, 40)
+scale = Vector2(1.5, 1.5)
+
+[node name="catapimbas" parent="." instance=ExtResource("6_7x71q")]
+visible = false
+position = Vector2(-61, 17)
+scale = Vector2(0.75, 0.75)
+dimension = 0.75
+
+[node name="torneira" parent="." instance=ExtResource("7_4ce5w")]
+position = Vector2(114, 34)
+scale = Vector2(2, 2)

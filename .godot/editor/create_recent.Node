@@ -1,11 +1,11 @@
-CollisionShape2D
-TextureRect
-TextEdit
-CollisionPolygon2D
-Area2D
 Control
-Polygon2D
+CollisionPolygon2D
+TextureRect
 Node2D
+CollisionShape2D
+TextEdit
+Area2D
+Polygon2D
 Button
 Sprite2D
 Marker2D

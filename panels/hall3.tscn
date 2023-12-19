@@ -45,9 +45,36 @@ scale = Vector2(0.748418, 0.589872)
 script = ExtResource("3_i4wei")
 destiny = "energylab"
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="door_energylab"]
+[node name="collision" type="CollisionPolygon2D" parent="door_energylab"]
 position = Vector2(-148.313, -81.3736)
 polygon = PackedVector2Array(-7.62939e-06, 7.62939e-06, 38.7484, 35.6009, 38.7484, 171.224, -7.62939e-06, 218.691)
+
+[node name="door_biolab" type="Area2D" parent="."]
+position = Vector2(36, 0)
+scale = Vector2(0.748418, 0.589872)
+script = ExtResource("3_i4wei")
+destiny = "biolab"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_biolab"]
+polygon = PackedVector2Array(21.3784, -52.5538, 66.8076, -94.9359, 66.8076, 152.575, 62.7991, 152.575, 21.3784, 100.022)
+
+[node name="door_exit" type="Area2D" parent="."]
+position = Vector2(36, 0)
+scale = Vector2(0.748418, 0.589872)
+script = ExtResource("3_i4wei")
+destiny = "exit"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_exit"]
+polygon = PackedVector2Array(-70.816, -27.1245, -25.3869, -27.1245, -25.3869, 64.4208, -70.816, 64.4208)
+
+[node name="door_er8" type="Area2D" parent="."]
+position = Vector2(36, 0)
+scale = Vector2(0.748418, 0.589872)
+script = ExtResource("3_i4wei")
+destiny = "empty_room_8"
+
+[node name="collision" type="CollisionPolygon2D" parent="door_er8"]
+polygon = PackedVector2Array(-228.482, -152.575, -173.7, -103.412, -173.7, 152.575, -261.886, 152.575, -261.886, -152.575)
 
 [node name="hud" parent="." instance=ExtResource("4_gm118")]
 position = Vector2(0, 80)
@@ -55,3 +82,12 @@ position = Vector2(0, 80)
 [connection signal="input_event" from="door_energylab" to="door_energylab" method="_on_input_event"]
 [connection signal="mouse_entered" from="door_energylab" to="door_energylab" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="door_energylab" to="door_energylab" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_biolab" to="door_biolab" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_biolab" to="door_biolab" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_biolab" to="door_biolab" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_exit" to="door_exit" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_exit" to="door_exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_exit" to="door_exit" method="_on_mouse_exited"]
+[connection signal="input_event" from="door_er8" to="door_er8" method="_on_input_event"]
+[connection signal="mouse_entered" from="door_er8" to="door_er8" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="door_er8" to="door_er8" method="_on_mouse_exited"]

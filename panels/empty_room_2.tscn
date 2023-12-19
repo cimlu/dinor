@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6c8ci8ehvr7q"]
+
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_7h1cb"]
+[ext_resource type="Texture2D" uid="uid://tta6fjar8b8j" path="res://assets/bgs/timelab.png" id="1_eec4f"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_hhd4t"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="3_ty02m"]
+
+[node name="emptyRoom2" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_7h1cb")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_eec4f")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+
+[node name="hud" parent="." instance=ExtResource("2_hhd4t")]
+position = Vector2(0, 80)
+
+[node name="returnArrow" parent="." instance=ExtResource("3_ty02m")]
+position = Vector2(-126, 7)
+destiny = "hall"

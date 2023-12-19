@@ -16,4 +16,4 @@ func disselect():
 		collision.get_child(i).border.visible = false
 		i=i+1
 		Commands.selectedSlot.border.visible = true
-		Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
+	Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))

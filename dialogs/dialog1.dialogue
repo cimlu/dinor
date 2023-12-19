@@ -11,7 +11,8 @@ Gary: Vá lá ajudá-lo.
 
 set Globals.nextDialog = 2
 set Globals.nextPerson = "Catapimbas"
+set Globals.door_stairsdown = "open"
 set Globals.garyInt = false
-set Globals.aparent1 = ["catapimbas", "energylab"]
+set Globals.aparent1 = ["catapimbas", "biolab"]
 
 => END

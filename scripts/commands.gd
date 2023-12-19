@@ -17,14 +17,13 @@ func collect(item):
 	for i in 7:
 		if inventory[i] == null:
 			slotsel = i
-			print(inventory[i])
 			break
 		elif i != 6:
 			i=i+1
 		else:
 			invfull = true
 			break
-
+	
 	inventory[slotsel] = item.name
 	
 	if invfull == true:
@@ -32,6 +31,12 @@ func collect(item):
 	else:
 		print(inventory)
 
+func discollect(item):
+	for i in 7:
+		if inventory[i] == item:
+			inventory[i] = null
+			selectedSlot.textureClear()
+			
 func mousechange(item):
 	if item.texture != null and selectedSlot:
 		if selectedSlot != null:
