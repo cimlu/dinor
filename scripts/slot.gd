@@ -8,6 +8,13 @@ signal selected(name)
 signal discelected
 @onready var control = $control
 
+func _ready():
+	Commands.toClear.connect(witchClear)
+
+func witchClear():
+	if Commands.toCollect == Commands.inventory[id]:
+		textureClear()
+
 func _on_area_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
 		selectf(true)

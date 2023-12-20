@@ -1,6 +1,7 @@
 extends Control
 
 @onready var hud = $hud
+var pickup = preload("res://sounds/pickup.mp3")
 
 func _ready():
 	Input.set_custom_mouse_cursor(preload("res://assets/sprites/hand.png"))
@@ -16,3 +17,8 @@ func _ready():
 			var texture = load("res://assets/sprites/"+Commands.inventory[i]+".png")
 			hud.get_child(1).get_child(i).spritechange(texture)
 
+	var audioPickup = AudioStreamPlayer2D.new()
+	audioPickup.stream = pickup
+	audioPickup.name = "pickup"
+	add_child(audioPickup)
+	

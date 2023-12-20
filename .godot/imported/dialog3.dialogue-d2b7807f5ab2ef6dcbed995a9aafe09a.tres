@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_5b13b"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jpmqt"]
 
 [resource]
-script = ExtResource("1_5b13b")
+script = ExtResource("1_jpmqt")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
 }
-character_names = PackedStringArray("Catapimbas", "Você", "task")
+character_names = PackedStringArray("Catapimbas", "Você", "Task")
 first_title = "3"
 lines = {
 "1": {
@@ -18,10 +18,22 @@ lines = {
 "type": "title"
 },
 "10": {
-"character": "Você",
+"character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "10",
 "next_id": "11",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "* Catapimbas começa a comera a banana *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Catapimbas começa a comera a banana *",
+"type": "dialogue"
+},
+"11": {
+"character": "Você",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
 "parent_id": "6",
 "tags": PackedStringArray(),
 "text": "Esso ovo é do que?",
@@ -29,8 +41,8 @@ lines = {
 "translation_key": "Esso ovo é do que?",
 "type": "dialogue"
 },
-"11": {
-"id": "11",
+"12": {
+"id": "12",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -48,15 +60,15 @@ lines = {
 "value": "true"
 }])
 },
-"next_id": "12",
+"next_id": "13",
 "parent_id": "6",
 "type": "mutation"
 },
-"12": {
+"13": {
 "character": "Catapimbas",
 "character_replacements": Array[Dictionary]([]),
-"id": "12",
-"next_id": "13",
+"id": "13",
+"next_id": "14",
 "parent_id": "6",
 "tags": PackedStringArray(),
 "text": "Dinoss... er... galinhas são dinossauros, né? É ovo de galinha.",
@@ -64,8 +76,8 @@ lines = {
 "translation_key": "Dinoss... er... galinhas são dinossauros, né? É ovo de galinha.",
 "type": "dialogue"
 },
-"13": {
-"id": "13",
+"14": {
+"id": "14",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -83,15 +95,15 @@ lines = {
 "value": "false"
 }])
 },
-"next_id": "14",
+"next_id": "15",
 "parent_id": "6",
 "type": "mutation"
 },
-"14": {
+"15": {
 "character": "Você",
 "character_replacements": Array[Dictionary]([]),
-"id": "14",
-"next_id": "15",
+"id": "15",
+"next_id": "16",
 "parent_id": "6",
 "tags": PackedStringArray(),
 "text": "Galinhas não botam ovos azuis.",
@@ -99,8 +111,8 @@ lines = {
 "translation_key": "Galinhas não botam ovos azuis.",
 "type": "dialogue"
 },
-"15": {
-"id": "15",
+"16": {
+"id": "16",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -118,45 +130,35 @@ lines = {
 "value": "true"
 }])
 },
-"next_id": "16",
+"next_id": "17",
 "parent_id": "6",
 "type": "mutation"
 },
-"16": {
-"character": "Catapimbas",
-"character_replacements": Array[Dictionary]([]),
-"id": "16",
-"next_id": "17",
-"parent_id": "6",
-"tags": PackedStringArray(),
-"text": "Claro que botam. Olha, vai lá com o Gary e pede pra ele te dar a banana azul.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Claro que botam. Olha, vai lá com o Gary e pede pra ele te dar a banana azul.",
-"type": "dialogue"
-},
 "17": {
-"character": "",
+"character": "Catapimbas",
 "character_replacements": Array[Dictionary]([]),
 "id": "17",
 "next_id": "18",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "...",
+"text": "Claro que botam. Olha, quer lavar esses frascos para mim?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "...",
+"translation_key": "Claro que botam. Olha, quer lavar esses frascos para mim?",
 "type": "dialogue"
 },
 "18": {
-"character": "Catapimbas",
+"character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "18",
 "next_id": "19",
+"next_id_after": "19",
 "parent_id": "6",
+"responses": PackedStringArray("18"),
 "tags": PackedStringArray(),
-"text": "Ela tem gosto de mentos...",
+"text": "Claro.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Ela tem gosto de mentos...",
-"type": "dialogue"
+"translation_key": "Claro.",
+"type": "response"
 },
 "19": {
 "id": "19",
@@ -182,15 +184,15 @@ lines = {
 "type": "mutation"
 },
 "20": {
-"character": "task",
+"character": "Task",
 "character_replacements": Array[Dictionary]([]),
 "id": "20",
 "next_id": "21",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "Vá pegar a banana azul com Gary Karparv",
+"text": "Lave os frascos.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Vá pegar a banana azul com Gary Karparv",
+"translation_key": "Lave os frascos.",
 "type": "dialogue"
 },
 "21": {
@@ -456,16 +458,27 @@ lines = {
 "type": "mutation"
 },
 "9": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
 "id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Commands"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "toCollect"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "banana"
+}])
+},
 "next_id": "10",
 "parent_id": "6",
-"tags": PackedStringArray(),
-"text": "* Catapimbas começa a comera a banana *",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "* Catapimbas começa a comera a banana *",
-"type": "dialogue"
+"type": "mutation"
 }
 }
 metadata/dialogue_manager_version = "2.31.0"

@@ -5,15 +5,22 @@ var inventory = [null,null,null,null,null,null,null]
 var slotsel = null
 var invfull = null
 var texture = load("res://assets/sprites/hand.png")
+var toCollect
+
+signal toClear
 
 func _ready():
 	Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
+
+func _process(delta):
+	if toCollect != null:
+		discollect(toCollect)
 
 func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
 		pass
 
-func collect(item):
+func collect(item, pickup):
 	for i in 7:
 		if inventory[i] == null:
 			slotsel = i
@@ -25,7 +32,7 @@ func collect(item):
 			break
 	
 	inventory[slotsel] = item.name
-	
+	pickup.play()
 	if invfull == true:
 		print("INVENTORY FULL")
 	else:
@@ -34,9 +41,13 @@ func collect(item):
 func discollect(item):
 	for i in 7:
 		if inventory[i] == item:
+			if selectedSlot != null:
+				selectedSlot.selectf(false)
+			emit_signal("toClear")
 			inventory[i] = null
-			selectedSlot.textureClear()
+			toCollect = null
 			
+
 func mousechange(item):
 	if item.texture != null and selectedSlot:
 		if selectedSlot != null:

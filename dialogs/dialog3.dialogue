@@ -6,6 +6,7 @@ Catapimbas: Olá, pegou a banana?
 	if Commands.tem("banana"):
 		Catapimbas: Obrigada!
 		set Globals.cataInt = false
+		set Commands.toCollect = "banana"
 		* Catapimbas começa a comera a banana *
 		Você: Esso ovo é do que?
 		set Globals.cataInt = true
@@ -13,11 +14,10 @@ Catapimbas: Olá, pegou a banana?
 		set Globals.cataInt = false
 		Você: Galinhas não botam ovos azuis.
 		set Globals.cataInt = true
-		Catapimbas: Claro que botam. Olha, vai lá com o Gary e pede pra ele te dar a banana azul.
-		...
-		Catapimbas: Ela tem gosto de mentos...
+		Catapimbas: Claro que botam. Olha, quer lavar esses frascos para mim?
+		- Claro.
 		set Globals.cataInt = false
-		task: Vá pegar a banana azul com Gary Karparv
+		Task: Lave os frascos.
 		set Globals.nextDialog = 4
 		set Globals.nextPerson = "Catapimbas"
 	else:

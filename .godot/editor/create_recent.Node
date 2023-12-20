@@ -1,10 +1,11 @@
-Control
-CollisionPolygon2D
-TextureRect
-Node2D
 CollisionShape2D
-TextEdit
 Area2D
+TextureRect
+AudioStreamPlayer2D
+CollisionPolygon2D
+Control
+Node2D
+TextEdit
 Polygon2D
 Button
 Sprite2D

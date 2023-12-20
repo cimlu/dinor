@@ -1,8 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dccrf4oryr1i0"]
+[gd_scene load_steps=5 format=3 uid="uid://dccrf4oryr1i0"]
 
 [ext_resource type="Texture2D" uid="uid://but2r7oglrmrc" path="res://assets/sprites/torneira.png" id="1_ji6vh"]
+[ext_resource type="Script" path="res://scripts/torneira.gd" id="1_xj54t"]
+[ext_resource type="Texture2D" uid="uid://bjuo7ixijuogd" path="res://assets/sprites/frascos.png" id="3_g83s4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8hg32"]
+radius = 17.0
 
 [node name="torneira" type="Node2D"]
+script = ExtResource("1_xj54t")
 
 [node name="sprite" type="TextureRect" parent="."]
 anchors_preset = 8
@@ -17,4 +23,32 @@ offset_bottom = 13.5
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+mouse_default_cursor_shape = 5
 texture = ExtResource("1_ji6vh")
+
+[node name="frascos" type="TextureRect" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.2
+offset_top = -19.6
+offset_right = -16.2
+offset_bottom = -1.6
+grow_horizontal = 0
+grow_vertical = 0
+texture = ExtResource("3_g83s4")
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+shape = SubResource("CircleShape2D_8hg32")
+
+[node name="fcollision" type="CollisionPolygon2D" parent="area"]
+position = Vector2(-3.2, 4.4)
+polygon = PackedVector2Array(-15, -20, -15, -19, -16, -19, -16, -16, -15, -16, -15, -14, -14, -14, -14, -13, -13, -13, -13, -9, -16, -6, -20, -6, -22, -8, -26, -8, -29, -11, -29, -15, -26, -18, -26, -20, -27, -21, -27, -22, -26, -23, -22, -24, -18, -24, -17, -23, -17, -22, -18, -21, -16, -21)
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]
+[connection signal="mouse_entered" from="area" to="." method="_on_area_mouse_entered"]
+[connection signal="mouse_exited" from="area" to="." method="_on_area_mouse_exited"]
