@@ -32,7 +32,7 @@ func collect(item, pickup):
 			break
 	
 	inventory[slotsel] = item.name
-	pickup.play()
+
 	if invfull == true:
 		print("INVENTORY FULL")
 	else:

@@ -18,7 +18,7 @@ func _ready():
 			pickup = pickup[i]
 			print("a     ",pickup)
 			break
-	
+
 	for i in 7:
 		if Commands.inventory[i] == self.name:
 			queue_free()
@@ -38,4 +38,5 @@ func collect(item):
 		slot.selectf(false)
 		slot.spritechange(self.sprite.texture)
 		item.queue_free()
+		Sound.playSong("pickup")
 	

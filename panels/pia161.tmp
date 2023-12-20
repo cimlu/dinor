@@ -1,0 +1,94 @@
+[gd_scene load_steps=8 format=3 uid="uid://dnhb6yl304hso"]
+
+[ext_resource type="Texture2D" uid="uid://4w4sepdp6gwo" path="res://assets/bgs/pia.png" id="1_3iwn0"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_2de1g"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="3_sje4r"]
+[ext_resource type="PackedScene" uid="uid://dolfm6cs5onje" path="res://interacts/frasco_gg.tscn" id="4_5dpvi"]
+[ext_resource type="Script" path="res://scripts/agua.gd" id="5_ejdln"]
+[ext_resource type="Texture2D" uid="uid://dhovv2mlmcpgm" path="res://assets/sprites/lavando.png" id="6_4tiwy"]
+[ext_resource type="PackedScene" uid="uid://dlpcfq43w6wcp" path="res://interacts/frascos.tscn" id="7_10acu"]
+
+[node name="pia" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = -90.0
+offset_right = 160.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_3iwn0")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+
+[node name="hud" parent="." instance=ExtResource("2_2de1g")]
+position = Vector2(0, 80)
+
+[node name="returnArrow" parent="." instance=ExtResource("3_sje4r")]
+position = Vector2(-132, -66)
+destiny = "biolab"
+
+[node name="frascoGG" parent="." instance=ExtResource("4_5dpvi")]
+position = Vector2(-139, 60)
+scale = Vector2(2, 2)
+
+[node name="frascoGG2" parent="." instance=ExtResource("4_5dpvi")]
+position = Vector2(-101, 0)
+scale = Vector2(2, 2)
+
+[node name="frascoGG3" parent="." instance=ExtResource("4_5dpvi")]
+position = Vector2(-139, 0)
+scale = Vector2(2, 2)
+
+[node name="frascoGG4" parent="." instance=ExtResource("4_5dpvi")]
+position = Vector2(-101, 60)
+scale = Vector2(2, 2)
+
+[node name="agua" type="Marker2D" parent="."]
+position = Vector2(0, 44)
+script = ExtResource("5_ejdln")
+
+[node name="agua" type="TextureRect" parent="agua"]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -85.0
+offset_right = 2.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+mouse_filter = 2
+texture = ExtResource("6_4tiwy")
+
+[node name="frascos" parent="." instance=ExtResource("7_10acu")]
+position = Vector2(-1053, -124)
+scale = Vector2(4, 4)
+
+[node name="spawnFrascos" type="Marker2D" parent="."]
+position = Vector2(110, 6)

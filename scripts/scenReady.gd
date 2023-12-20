@@ -5,7 +5,6 @@ var pickup = preload("res://sounds/pickup.mp3")
 
 func _ready():
 	Input.set_custom_mouse_cursor(preload("res://assets/sprites/hand.png"))
-	
 	if Globals.aparent1[1] == self.name:
 		for i in self.get_child_count():
 			print(self.get_child(i).name)

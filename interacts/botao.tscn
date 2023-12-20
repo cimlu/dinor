@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://54xoum2k8sbh"]
+
+[ext_resource type="Texture2D" uid="uid://dyjpai7lhgmix" path="res://assets/sprites/A.png" id="1_2xf6d"]
+[ext_resource type="Script" path="res://scripts/botao.gd" id="1_ttgmk"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x3qja"]
+size = Vector2(15, 15)
+
+[node name="botao" type="Node2D"]
+position = Vector2(-1, -1)
+script = ExtResource("1_ttgmk")
+
+[node name="letra" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -7.0
+offset_top = -7.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_2xf6d")
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision" type="CollisionShape2D" parent="area"]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_x3qja")
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

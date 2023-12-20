@@ -23,6 +23,7 @@ offset_top = -20.0
 offset_right = 20.0
 offset_bottom = 20.0
 mouse_filter = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="sprite" type="TextureRect" parent="control"]
 layout_mode = 0
@@ -31,5 +32,6 @@ offset_bottom = 40.0
 mouse_filter = 2
 texture = ExtResource("2_lfkp6")
 expand_mode = 1
+metadata/_edit_use_anchors_ = true
 
 [connection signal="input_event" from="area" to="." method="_on_area_input_event"]

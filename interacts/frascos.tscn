@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlpcfq43w6wcp"]
+
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_3i3ji"]
+[ext_resource type="Texture2D" uid="uid://bjuo7ixijuogd" path="res://assets/sprites/frascos.png" id="2_1rjg1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ahw5"]
+size = Vector2(18, 20)
+
+[node name="frascos" type="Node2D"]
+script = ExtResource("1_3i3ji")
+
+[node name="area" type="Area2D" parent="."]
+
+[node name="collision_click" type="CollisionShape2D" parent="area"]
+shape = SubResource("RectangleShape2D_1ahw5")
+
+[node name="control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+mouse_filter = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="sprite" type="TextureRect" parent="control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -9.0
+offset_right = 8.0
+offset_bottom = 9.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_1rjg1")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

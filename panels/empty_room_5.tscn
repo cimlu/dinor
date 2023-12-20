@@ -1,9 +1,12 @@
-[gd_scene load_steps=5 format=3 uid="uid://b42ot083qfjg"]
+[gd_scene load_steps=8 format=3 uid="uid://b42ot083qfjg"]
 
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_kd72n"]
 [ext_resource type="Texture2D" uid="uid://tta6fjar8b8j" path="res://assets/bgs/timelab.png" id="1_vsvt5"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_i8gvs"]
 [ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="3_21kac"]
+[ext_resource type="PackedScene" uid="uid://iuyg4poxwxih" path="res://interacts/maleta_item.tscn" id="5_hdo2b"]
+[ext_resource type="PackedScene" uid="uid://dn4rnjv7damb0" path="res://interacts/key_ye.tscn" id="6_hrfoh"]
+[ext_resource type="Script" path="res://scripts/chaveEnergia.gd" id="7_uwxle"]
 
 [node name="emptyRoom5" type="Control"]
 layout_mode = 3
@@ -39,4 +42,12 @@ position = Vector2(0, 80)
 position = Vector2(-126, 7)
 destiny = "hall4"
 
-[node name="pickup" type="AudioStreamPlayer2D" parent="."]
+[node name="maletaItem" parent="." instance=ExtResource("5_hdo2b")]
+position = Vector2(19, 49)
+
+[node name="keyYe" parent="." instance=ExtResource("6_hrfoh")]
+position = Vector2(-514, -236)
+
+[node name="chaveEnergia" type="Marker2D" parent="."]
+position = Vector2(-39, 47)
+script = ExtResource("7_uwxle")

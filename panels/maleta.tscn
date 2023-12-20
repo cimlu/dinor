@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=3 uid="uid://pipix2g6mbno"]
+
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_63a17"]
+[ext_resource type="Texture2D" uid="uid://c50nf4g2axhhp" path="res://assets/bgs/maleta.png" id="1_ua257"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_j0u2f"]
+[ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="3_rp3q4"]
+[ext_resource type="PackedScene" uid="uid://54xoum2k8sbh" path="res://interacts/botao.tscn" id="4_apijl"]
+[ext_resource type="Script" path="res://scripts/botoes.gd" id="4_clic3"]
+
+[node name="maleta" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_63a17")
+
+[node name="bg" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_ua257")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+
+[node name="hud" parent="." instance=ExtResource("2_j0u2f")]
+position = Vector2(0, 80)
+
+[node name="returnArrow" parent="." instance=ExtResource("3_rp3q4")]
+position = Vector2(-126, -60)
+destiny = "empty_room_5"
+
+[node name="botoes" type="Node2D" parent="."]
+script = ExtResource("4_clic3")
+
+[node name="botao" parent="botoes" instance=ExtResource("4_apijl")]
+position = Vector2(-78, -4)
+scale = Vector2(2, 2)
+
+[node name="botao2" parent="botoes" instance=ExtResource("4_apijl")]
+position = Vector2(-32, -4)
+scale = Vector2(2, 2)
+id = 1
+
+[node name="botao3" parent="botoes" instance=ExtResource("4_apijl")]
+position = Vector2(20, -4)
+scale = Vector2(2, 2)
+id = 2
+
+[node name="botao4" parent="botoes" instance=ExtResource("4_apijl")]
+position = Vector2(66, -4)
+scale = Vector2(2, 2)
+id = 3

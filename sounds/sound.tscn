@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://cpm1knq6tpydc"]
+
+[ext_resource type="Script" path="res://scripts/sound.gd" id="1_g8vu8"]
+[ext_resource type="AudioStream" uid="uid://voan1oeev5hq" path="res://sounds/pickup.mp3" id="2_pb5lg"]
+[ext_resource type="AudioStream" uid="uid://bn31mdfxwbw7" path="res://sounds/arrow.mp3" id="3_bydrl"]
+[ext_resource type="AudioStream" uid="uid://csjpq6kxfthfn" path="res://sounds/door.mp3" id="4_gslh0"]
+[ext_resource type="AudioStream" uid="uid://bves77pcxtuuk" path="res://sounds/locked.mp3" id="5_btqnq"]
+[ext_resource type="AudioStream" uid="uid://0y5ok26dp80d" path="res://sounds/lava.mp3" id="6_t1xm4"]
+[ext_resource type="AudioStream" uid="uid://dfystnuefvkhq" path="res://sounds/bgmusic.mp3" id="6_tpfa0"]
+
+[node name="sound" type="Node2D"]
+script = ExtResource("1_g8vu8")
+
+[node name="pickup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_pb5lg")
+
+[node name="arrow" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_bydrl")
+volume_db = 9.0
+
+[node name="door" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_gslh0")
+
+[node name="locked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_btqnq")
+volume_db = 8.0
+
+[node name="lava" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_t1xm4")
+volume_db = 5.0
+
+[node name="bgmusic" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_tpfa0")
+volume_db = -20.0
