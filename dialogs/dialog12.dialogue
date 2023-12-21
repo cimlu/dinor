@@ -1,0 +1,17 @@
+~ this_is_a_node_title
+
+set Globals.cataInt = true
+Júlia: Olá, pegou a banana?
+- Sim
+	if Commands.tem("banana"):
+		Júlia: Tó o ovo. Nem quero mais.
+		set Globals.cataInt = false
+		set Globals.ovo = true
+		set Commands.toCollect = "banana"
+	else:
+		Júlia: Pegou nada. Vai lá pegar
+		set Globals.cataInt = false
+- Não
+	Júlia: Então vai lá pegar.
+	set Globals.cataInt = false
+=> END

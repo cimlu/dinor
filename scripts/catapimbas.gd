@@ -24,4 +24,4 @@ func _on_area_input_event(_viewport, event, _shape_idx):
 		if Globals.nextPerson == "Catapimbas":
 			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/dialog"+str(Globals.nextDialog)+".dialogue"))
 		else:
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/garySai.dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/cataSai.dialogue"))

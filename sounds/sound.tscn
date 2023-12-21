@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://cpm1knq6tpydc"]
+[gd_scene load_steps=10 format=3 uid="uid://cpm1knq6tpydc"]
 
 [ext_resource type="Script" path="res://scripts/sound.gd" id="1_g8vu8"]
 [ext_resource type="AudioStream" uid="uid://voan1oeev5hq" path="res://sounds/pickup.mp3" id="2_pb5lg"]
@@ -7,6 +7,8 @@
 [ext_resource type="AudioStream" uid="uid://bves77pcxtuuk" path="res://sounds/locked.mp3" id="5_btqnq"]
 [ext_resource type="AudioStream" uid="uid://0y5ok26dp80d" path="res://sounds/lava.mp3" id="6_t1xm4"]
 [ext_resource type="AudioStream" uid="uid://dfystnuefvkhq" path="res://sounds/bgmusic.mp3" id="6_tpfa0"]
+[ext_resource type="AudioStream" uid="uid://b276e2gv5gipf" path="res://sounds/jumpscare.mp3" id="7_w5o2n"]
+[ext_resource type="AudioStream" uid="uid://b5jg8w83dqrri" path="res://sounds/foots.mp3" id="8_uakdl"]
 
 [node name="sound" type="Node2D"]
 script = ExtResource("1_g8vu8")
@@ -27,6 +29,14 @@ volume_db = 8.0
 
 [node name="lava" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_t1xm4")
+volume_db = 5.0
+
+[node name="jumpscare" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("7_w5o2n")
+volume_db = 5.0
+
+[node name="foots" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_uakdl")
 volume_db = 5.0
 
 [node name="bgmusic" type="AudioStreamPlayer2D" parent="."]

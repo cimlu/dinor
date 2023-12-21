@@ -3,11 +3,11 @@
 set Globals.garyInt = true
 Gary: Olá, Jack.
 Gary: Como você está?
-- bem
-- [[ótimo|sim]]	
+- sim
+- [[ótimo|bem]]	
 Gary: Tá.
-Gary: Catapimbas está precisando de ajuda. Ela está no laboratório de Biologia.
-Gary: Vá lá ajudá-lo.
+Gary: Júlia está precisando de ajuda. Ela está no laboratório de Biologia.
+Gary: Vá lá ajudá-la.
 
 set Globals.nextDialog = 2
 set Globals.nextPerson = "Catapimbas"

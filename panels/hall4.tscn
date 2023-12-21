@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://b00ma2gp8ip52"]
+[gd_scene load_steps=7 format=3 uid="uid://b00ma2gp8ip52"]
 
 [ext_resource type="Texture2D" uid="uid://d1q5g15vvpw3b" path="res://assets/bgs/hallDown2.png" id="1_n76a1"]
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_qel1b"]
 [ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="2_hwfhe"]
 [ext_resource type="Script" path="res://scripts/cscene.gd" id="3_4jfs3"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="4_upy4e"]
+[ext_resource type="PackedScene" uid="uid://wguwn68qij0w" path="res://actors/mila.tscn" id="6_mse3t"]
 
 [node name="hall4" type="Control"]
 layout_mode = 3
@@ -77,6 +78,12 @@ polygon = PackedVector2Array(-163.011, -94.9359, -117.581, -52.5538, -117.581, 1
 
 [node name="hud" parent="." instance=ExtResource("4_upy4e")]
 position = Vector2(0, 80)
+
+[node name="mila" parent="." instance=ExtResource("6_mse3t")]
+visible = false
+position = Vector2(-33, 22)
+scale = Vector2(0.7, 0.7)
+dimension = 0.7
 
 [connection signal="input_event" from="door_stairsup" to="door_stairsup" method="_on_input_event"]
 [connection signal="mouse_entered" from="door_stairsup" to="door_stairsup" method="_on_mouse_entered"]

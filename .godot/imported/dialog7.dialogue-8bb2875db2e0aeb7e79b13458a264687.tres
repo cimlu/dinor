@@ -1,0 +1,254 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_vv3em"]
+
+[resource]
+script = ExtResource("1_vv3em")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Mila")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"id": "10",
+"next_conditional_id": "15",
+"next_id": "11",
+"next_id_after": "15",
+"type": "condition"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "12",
+"parent_id": "10",
+"type": "mutation"
+},
+"12": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"parent_id": "10",
+"tags": PackedStringArray(),
+"text": "Vamos lá no armazém.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vamos lá no armazém.",
+"type": "dialogue"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "15",
+"parent_id": "10",
+"type": "mutation"
+},
+"15": {
+"id": "15",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "local"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "dictionary_reference",
+"value": Array[Dictionary]([{
+"type": "number",
+"value": 1
+}]),
+"variable": "aparent1"
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "10",
+"next_id": "4",
+"next_id_after": "15",
+"type": "condition"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "5",
+"parent_id": "3",
+"type": "mutation"
+},
+"5": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Pronto, agora está aberto.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pronto, agora está aberto.",
+"type": "dialogue"
+},
+"6": {
+"id": "6",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "door_storage"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "open"
+}])
+},
+"next_id": "7",
+"parent_id": "3",
+"type": "mutation"
+},
+"7": {
+"id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "8",
+"parent_id": "3",
+"type": "mutation"
+},
+"8": {
+"id": "8",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 8
+}])
+},
+"next_id": "9",
+"parent_id": "3",
+"type": "mutation"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "door_stairsdown"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "milaFala"
+}])
+},
+"next_id": "15",
+"parent_id": "3",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

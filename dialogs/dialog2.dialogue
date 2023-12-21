@@ -1,20 +1,20 @@
 ~ this_is_a_node_title
 
 set Globals.cataInt = true
-Catapimbas: [[Oieeee! Bom dia, estagiário.|Bom dia novato!]]
-Catapimbas: Veja o que eu encontrei!
-Catapimbas: * Catapimbas mostra um ovo azul gigante *
+Júlia: [[Oieeee! Bom dia, estagiário.|Bom dia novato!]]
+Júlia: Veja o que eu encontrei!
+Júlia: * Júlia mostra um ovo azul gigante *
 
 - Onde conseguiu isso?
-	Catapimbas: Eu achei no laboratório confidencial. Não conta pro Gary que eu peguei ein!
+	Júlia: Eu achei no laboratório confidencial. Não conta pro Gary que eu peguei ein!
 	- O que é esse laboratório confidencial?
-		Catapimbas: Está fazendo perguntas demais.
+		Júlia: Está fazendo perguntas demais.
 	- Certo...
 - Passa o zap?
-	Catapimbas: ?
+	Júlia: ?
 
-Catapimbas: Eu te chamei aqui pois eu preciso que você pegue uma banana pra mim. Estou com fome :3.
-Catapimbas: Você faz isso pra mim, estagiário? 
+Júlia: Eu te chamei aqui pois eu preciso que você pegue uma banana pra mim. Estou com fome :3.
+Júlia: Você faz isso pra mim, estagiário? 
 - Claro...
 
 set Globals.nextDialog = 3

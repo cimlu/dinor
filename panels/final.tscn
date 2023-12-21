@@ -1,0 +1,117 @@
+[gd_scene load_steps=9 format=3 uid="uid://b8qdb4whiq364"]
+
+[ext_resource type="Script" path="res://scripts/final.gd" id="1_8veqg"]
+[ext_resource type="Texture2D" uid="uid://tta6fjar8b8j" path="res://assets/bgs/timelab.png" id="1_blwg8"]
+[ext_resource type="Texture2D" uid="uid://b8vg2jhldfs25" path="res://assets/persons/GaryKasparv.png" id="2_5cn0h"]
+[ext_resource type="Texture2D" uid="uid://bj078o3l5ula" path="res://assets/sprites/mila.png" id="2_vlb3p"]
+[ext_resource type="Texture2D" uid="uid://brrf2wkaaphkp" path="res://assets/persons/catapimbas.png" id="3_3u826"]
+[ext_resource type="Texture2D" uid="uid://b1f44ajn8vmrh" path="res://assets/sprites/blueEgg.png" id="6_qfgmy"]
+[ext_resource type="Script" path="res://scripts/ovo.gd" id="7_k4bpp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ktpx4"]
+radius = 25.0
+
+[node name="final" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_8veqg")
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_blwg8")
+
+[node name="bg4" type="TextureRect" parent="."]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -192.0
+offset_top = -108.0
+offset_right = 128.0
+offset_bottom = 72.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_5cn0h")
+
+[node name="bg2" type="TextureRect" parent="."]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -294.0
+offset_top = -101.0
+offset_right = 26.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("2_vlb3p")
+
+[node name="bg3" type="TextureRect" parent="."]
+modulate = Color(0.270588, 0.270588, 0.270588, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -57.0
+offset_top = -80.0
+offset_right = 263.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("3_3u826")
+
+[node name="ovo" type="TextureRect" parent="."]
+modulate = Color(0.415686, 0.415686, 0.415686, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 108.0
+offset_top = -85.0
+offset_right = 108.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("6_qfgmy")
+expand_mode = 1
+script = ExtResource("7_k4bpp")
+
+[node name="area" type="Area2D" parent="ovo"]
+position = Vector2(-108, 85)
+
+[node name="collision" type="CollisionShape2D" parent="ovo/area"]
+position = Vector2(128, -64)
+shape = SubResource("CircleShape2D_ktpx4")
+debug_color = Color(0, 0.6, 0.701961, 0.419608)
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+
+[connection signal="input_event" from="ovo/area" to="ovo" method="_on_area_input_event"]

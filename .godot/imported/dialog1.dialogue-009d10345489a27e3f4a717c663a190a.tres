@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ddlaj"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_wck4d"]
 
 [resource]
-script = ExtResource("1_ddlaj")
+script = ExtResource("1_wck4d")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
@@ -23,9 +23,9 @@ lines = {
 "id": "10",
 "next_id": "12",
 "tags": PackedStringArray(),
-"text": "Vá lá ajudá-lo.",
+"text": "Vá lá ajudá-la.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Vá lá ajudá-lo.",
+"translation_key": "Vá lá ajudá-la.",
 "type": "dialogue"
 },
 "12": {
@@ -202,9 +202,9 @@ lines = {
 "next_id_after": "8",
 "responses": PackedStringArray("6", "7"),
 "tags": PackedStringArray(),
-"text": "bem",
+"text": "sim",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "bem",
+"translation_key": "sim",
 "type": "response"
 },
 "7": {
@@ -214,9 +214,9 @@ lines = {
 "next_id": "8",
 "next_id_after": "8",
 "tags": PackedStringArray(),
-"text": "[[ótimo|sim]]",
+"text": "[[ótimo|bem]]",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "[[ótimo|sim]]",
+"translation_key": "[[ótimo|bem]]",
 "type": "response"
 },
 "8": {
@@ -236,9 +236,9 @@ lines = {
 "id": "9",
 "next_id": "10",
 "tags": PackedStringArray(),
-"text": "Catapimbas está precisando de ajuda. Ela está no laboratório de Biologia.",
+"text": "Júlia está precisando de ajuda. Ela está no laboratório de Biologia.",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Catapimbas está precisando de ajuda. Ela está no laboratório de Biologia.",
+"translation_key": "Júlia está precisando de ajuda. Ela está no laboratório de Biologia.",
 "type": "dialogue"
 }
 }

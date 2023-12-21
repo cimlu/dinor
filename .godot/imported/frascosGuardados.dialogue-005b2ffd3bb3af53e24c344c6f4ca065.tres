@@ -1,0 +1,38 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_w4el6"]
+
+[resource]
+script = ExtResource("1_w4el6")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Parabéns, os frascos foram guardados. Agora retorne até o laboratório de biologia informando que guardou os frascos.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Parabéns, os frascos foram guardados. Agora retorne até o laboratório de biologia informando que guardou os frascos.",
+"type": "dialogue"
+},
+"5": {
+"id": "5",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

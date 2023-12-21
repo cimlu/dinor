@@ -1,0 +1,13 @@
+~ this_is_a_node_title
+
+Você: Terminei de lavar os frascos.
+set Globals.cataInt = true
+Júlia: Agora vá guardá-los no estoque. Se estiver trancado, procure por Mila. Ela sempre está com a chave de lá.
+set Globals.cataInt = false
+Você: Ok.
+
+set Globals.nextDialog = 6
+set Globals.door_storage = "close"
+set Globals.nextPerson = "Mila"
+set Globals.aparent1 = ["mila", "hall4"]
+=> END

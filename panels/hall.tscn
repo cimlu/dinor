@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bkumoav7bb5st"]
+[gd_scene load_steps=8 format=3 uid="uid://bkumoav7bb5st"]
 
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_74tb0"]
 [ext_resource type="Texture2D" uid="uid://dm2ur4isqn5cy" path="res://assets/bgs/hall.png" id="1_x27x3"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="3_2f7wl"]
 [ext_resource type="Script" path="res://scripts/cscene.gd" id="3_sr3x7"]
 [ext_resource type="PackedScene" uid="uid://3y4ob6er52s1" path="res://actors/gary.tscn" id="6_6ncgc"]
+[ext_resource type="PackedScene" uid="uid://wguwn68qij0w" path="res://actors/mila.tscn" id="7_d6nhv"]
 
 [node name="hall" type="Control"]
 layout_mode = 3
@@ -81,6 +82,12 @@ visible = false
 position = Vector2(20, 13)
 scale = Vector2(0.75, 0.75)
 dimension = 0.75
+
+[node name="mila" parent="." instance=ExtResource("7_d6nhv")]
+visible = false
+position = Vector2(33, 23)
+scale = Vector2(0.6, 0.6)
+dimension = 0.6
 
 [connection signal="input_event" from="door_bath" to="door_bath" method="_on_input_event"]
 [connection signal="mouse_entered" from="door_bath" to="door_bath" method="_on_mouse_entered"]

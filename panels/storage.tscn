@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dx4nman0o3txt"]
+[gd_scene load_steps=6 format=3 uid="uid://dx4nman0o3txt"]
 
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_fxuqd"]
 [ext_resource type="Texture2D" uid="uid://cff4vc7fb21o3" path="res://assets/bgs/storage.png" id="1_u447w"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_rhkrm"]
 [ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="4_pnfsa"]
+[ext_resource type="PackedScene" uid="uid://b5r4c61y7jpsg" path="res://interacts/frasco_box.tscn" id="5_sou2m"]
 
 [node name="storage" type="Control"]
 layout_mode = 3
@@ -37,3 +38,6 @@ position = Vector2(0, 80)
 [node name="returnArrow" parent="." instance=ExtResource("4_pnfsa")]
 position = Vector2(-126, 7)
 destiny = "storage_front"
+
+[node name="frascoBox" parent="." instance=ExtResource("5_sou2m")]
+position = Vector2(-2, 41)

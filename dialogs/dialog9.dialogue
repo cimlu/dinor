@@ -1,0 +1,20 @@
+~ this_is_a_node_title
+
+
+
+if Globals.local == Globals.aparent1[1]:
+	set Globals.milaInt = true
+	Mila: AAAAAAAAAAAAH
+	Mila: O que é isso?
+	*Mila começa a chorar*
+	Mila: Vamos entrar, vai que não é sangue...
+
+	set Globals.door_biolab = "open"
+	set Globals.nextPerson = "Mila"
+	set Globals.nextDialog = 10
+	set Globals.milaInt = false
+	set Globals.aparent1 = ["mila", "biolab"]
+
+
+
+=> END

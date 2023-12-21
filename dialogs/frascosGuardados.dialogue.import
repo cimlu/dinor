@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dvg7shvok5uxa"
+path="res://.godot/imported/frascosGuardados.dialogue-005b2ffd3bb3af53e24c344c6f4ca065.tres"
+
+[deps]
+
+source_file="res://dialogs/frascosGuardados.dialogue"
+dest_files=["res://.godot/imported/frascosGuardados.dialogue-005b2ffd3bb3af53e24c344c6f4ca065.tres"]
+
+[params]
+
+defaults=true

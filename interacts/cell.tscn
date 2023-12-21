@@ -1,11 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://dxoxk48cuu5sf"]
+[gd_scene load_steps=4 format=3 uid="uid://dxoxk48cuu5sf"]
 
+[ext_resource type="Script" path="res://scripts/item.gd" id="1_7o4iq"]
 [ext_resource type="Texture2D" uid="uid://dm6736j6aus7e" path="res://assets/sprites/cell.png" id="1_fnfpl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wan6m"]
 radius = 7.0
 
 [node name="cell" type="Node2D"]
+script = ExtResource("1_7o4iq")
 
 [node name="area" type="Area2D" parent="."]
 
@@ -29,3 +31,5 @@ offset_right = 26.0
 offset_bottom = 25.0
 mouse_filter = 2
 texture = ExtResource("1_fnfpl")
+
+[connection signal="input_event" from="area" to="." method="_on_area_input_event"]

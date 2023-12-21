@@ -1,0 +1,13 @@
+~ this_is_a_node_title
+
+Gary Morrendo: Jack... Não tenho muito tempo de explicar.
+Gary Morrendo: Um dinossauro saiu dessa máquina a alguns minutos atrás.
+Gary Morrendo: Pegue o ovo azul e leve de volta para o passado.
+set Dinor.apatrulhar = true
+
+set Globals.nextPerson = "Catapimbas"
+set Globals.nextDialog = 11
+set Globals.milaInt = false
+set Globals.aparent1 = ["catapimbas", "biolab"]
+
+=> END

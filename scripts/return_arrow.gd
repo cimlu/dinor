@@ -6,6 +6,11 @@ func _on_area_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
 		get_tree().change_scene_to_file("res://panels/"+destiny+".tscn")
 		Sound.playSong("arrow")
+		Globals.local = destiny
+		if Globals.cooldown != 0:
+			Globals.cooldown -= 1
+		if Dinor.patrulha:
+			Dinor.movement()
 
 func _on_area_mouse_entered():
 	Input.set_custom_mouse_cursor(preload("res://assets/sprites/cursorExit.png"))

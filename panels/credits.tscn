@@ -1,12 +1,19 @@
-[gd_scene load_steps=2 format=3 uid="uid://8wutifys4g61"]
+[gd_scene load_steps=6 format=3 uid="uid://8wutifys4g61"]
 
-[ext_resource type="Texture2D" uid="uid://c50nf4g2axhhp" path="res://assets/bgs/maleta.png" id="1_3lorc"]
+[ext_resource type="Texture2D" uid="uid://b13rlwxhs822s" path="res://assets/bgs/credits0.png" id="1_b2d8o"]
+[ext_resource type="Script" path="res://panels/setad.gd" id="2_1fbcn"]
+[ext_resource type="Texture2D" uid="uid://bbv1x7rcyxosj" path="res://assets/sprites/seta.png" id="2_2m0j3"]
+[ext_resource type="Script" path="res://scripts/setae.gd" id="4_2wxi2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qy277"]
+size = Vector2(50, 39)
 
 [node name="credits" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 1
@@ -22,7 +29,43 @@ offset_bottom = 70.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
-texture = ExtResource("1_3lorc")
+texture = ExtResource("1_b2d8o")
 
 [node name="cam" type="Camera2D" parent="."]
 zoom = Vector2(3.6, 3.6)
+
+[node name="setad" type="Node2D" parent="."]
+position = Vector2(105, -85)
+script = ExtResource("2_1fbcn")
+
+[node name="area" type="Area2D" parent="setad"]
+
+[node name="collision" type="CollisionShape2D" parent="setad/area"]
+position = Vector2(20, 19.5)
+shape = SubResource("RectangleShape2D_qy277")
+
+[node name="sprite" type="TextureRect" parent="setad"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("2_2m0j3")
+
+[node name="setae" type="Node2D" parent="."]
+position = Vector2(90, -85)
+scale = Vector2(-1.04, 1)
+script = ExtResource("4_2wxi2")
+
+[node name="area" type="Area2D" parent="setae"]
+
+[node name="collision" type="CollisionShape2D" parent="setae/area"]
+position = Vector2(20, 19.5)
+shape = SubResource("RectangleShape2D_qy277")
+
+[node name="sprite" type="TextureRect" parent="setae"]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("2_2m0j3")
+
+[connection signal="input_event" from="setad/area" to="setad" method="_on_area_input_event"]
+[connection signal="input_event" from="setae/area" to="setae" method="_on_area_input_event"]

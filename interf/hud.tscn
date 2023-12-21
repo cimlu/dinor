@@ -1,10 +1,15 @@
-[gd_scene load_steps=4 format=3 uid="uid://g3ahjd2ix47l"]
+[gd_scene load_steps=7 format=3 uid="uid://g3ahjd2ix47l"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_cgwg7"]
 [ext_resource type="PackedScene" uid="uid://bde24qcg1xugo" path="res://interf/slot.tscn" id="1_g8khb"]
+[ext_resource type="Script" path="res://scripts/tempoCell.gd" id="3_knb63"]
+[ext_resource type="Texture2D" uid="uid://dm6736j6aus7e" path="res://assets/sprites/cell.png" id="4_ie6wx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4od70"]
 size = Vector2(125.333, 21.3333)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lxv3q"]
+radius = 24.0208
 
 [node name="hud" type="Node2D"]
 script = ExtResource("1_cgwg7")
@@ -51,3 +56,22 @@ id = 5
 position = Vector2(39, 0)
 scale = Vector2(0.75, 0.75)
 id = 6
+
+[node name="tempoCell" type="Node2D" parent="."]
+script = ExtResource("3_knb63")
+
+[node name="cellButton" type="TextureRect" parent="tempoCell"]
+offset_left = 112.0
+offset_top = -160.0
+offset_right = 152.0
+offset_bottom = -120.0
+mouse_filter = 2
+texture = ExtResource("4_ie6wx")
+
+[node name="area" type="Area2D" parent="tempoCell"]
+
+[node name="collision" type="CollisionShape2D" parent="tempoCell/area"]
+position = Vector2(132, -140)
+shape = SubResource("CircleShape2D_lxv3q")
+
+[connection signal="input_event" from="tempoCell/area" to="tempoCell" method="_on_area_input_event"]

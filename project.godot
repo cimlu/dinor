@@ -22,9 +22,11 @@ DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Globals="*res://scripts/globals.gd"
 Sound="*res://sounds/sound.tscn"
 Chro="*res://interf/chro.tscn"
+Dinor="*res://panels/dinor.tscn"
 
 [display]
 
+window/size/mode=3
 window/stretch/mode="viewport"
 
 [dotnet]
@@ -50,7 +52,7 @@ pause={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogs/teste.dialogue", "res://dialogs/dialog1.dialogue", "res://dialogs/dialog2.dialogue", "res://dialogs/garySai.dialogue", "res://dialogs/dialog3.dialogue", "res://dialogs/dialog4.dialogue", "res://dialogs/inventarioCheio.dialogue", "res://dialogs/trancado.dialogue", "res://dialogs/faleGary.dialogue", "res://dialogs/frascosLavados.dialogue", "res://dialogs/maletaAbriu.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogs/teste.dialogue", "res://dialogs/dialog1.dialogue", "res://dialogs/dialog2.dialogue", "res://dialogs/garySai.dialogue", "res://dialogs/dialog3.dialogue", "res://dialogs/dialog4.dialogue", "res://dialogs/inventarioCheio.dialogue", "res://dialogs/trancado.dialogue", "res://dialogs/faleGary.dialogue", "res://dialogs/frascosLavados.dialogue", "res://dialogs/maletaAbriu.dialogue", "res://dialogs/frascosGuardados.dialogue", "res://dialogs/dialog5.dialogue", "res://dialogs/naomostra.dialogue", "res://dialogs/Creditos.dialogue", "res://dialogs/jumpscare.dialogue", "res://dialogs/milaSai.dialogue", "res://dialogs/dialog6.dialogue", "res://dialogs/dialog7.dialogue", "res://dialogs/cataSai.dialogue", "res://dialogs/dialog8.dialogue", "res://dialogs/milaFala.dialogue", "res://dialogs/milaMedo.dialogue", "res://dialogs/dialog9.dialogue", "res://dialogs/dialog10.dialogue", "res://dialogs/energyTrancado.dialogue", "res://dialogs/timelabTrancado.dialogue", "res://dialogs/cellCooldown.dialogue", "res://dialogs/dificuldade.dialogue", "res://dialogs/garyMorrendo.dialogue", "res://dialogs/maquinaNao.dialogue", "res://dialogs/dialog11.dialogue", "res://dialogs/dialog12.dialogue", "res://dialogs/final.dialogue", "res://dialogs/pegarOvo.dialogue")
 
 [rendering]
 

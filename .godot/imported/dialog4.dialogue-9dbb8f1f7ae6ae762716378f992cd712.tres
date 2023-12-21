@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_8tayy"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_wb7in"]
 
 [resource]
-script = ExtResource("1_8tayy")
+script = ExtResource("1_wb7in")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
 }
-character_names = PackedStringArray("Catapimbas")
+character_names = PackedStringArray("Júlia")
 first_title = "3"
 lines = {
 "1": {
@@ -17,27 +17,8 @@ lines = {
 "text": "this_is_a_node_title",
 "type": "title"
 },
-"11": {
-"id": "11",
-"is_snippet": false,
-"next_id": "end",
-"type": "goto"
-},
 "3": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
 "id": "3",
-"next_id": "4",
-"next_id_after": "11",
-"responses": PackedStringArray("3"),
-"tags": PackedStringArray(),
-"text": "Não encontrei Gary.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Não encontrei Gary.",
-"type": "response"
-},
-"4": {
-"id": "4",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -55,50 +36,35 @@ lines = {
 "value": "true"
 }])
 },
-"next_id": "5",
-"parent_id": "3",
+"next_id": "4",
 "type": "mutation"
 },
+"4": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Terminou de lavar os frascos?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Terminou de lavar os frascos?",
+"type": "dialogue"
+},
 "5": {
-"character": "Catapimbas",
+"character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
-"parent_id": "3",
+"next_id_after": "6",
+"responses": PackedStringArray("5"),
 "tags": PackedStringArray(),
-"text": "Procurou no laboratório temporal? Ele quase sempre está lá.",
+"text": "Não",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Procurou no laboratório temporal? Ele quase sempre está lá.",
-"type": "dialogue"
-},
-"6": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "6",
-"next_id": "7",
-"next_id_after": "11",
-"parent_id": "3",
-"responses": PackedStringArray("6"),
-"tags": PackedStringArray(),
-"text": "Que laboratório é esse?",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Que laboratório é esse?",
+"translation_key": "Não",
 "type": "response"
 },
-"7": {
-"character": "Catapimbas",
-"character_replacements": Array[Dictionary]([]),
-"id": "7",
-"next_id": "8",
-"parent_id": "6",
-"tags": PackedStringArray(),
-"text": "É o que tem um sinal de alerta pequeno na porta. Aqui, toma as chaves.",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "É o que tem um sinal de alerta pequeno na porta. Aqui, toma as chaves.",
-"type": "dialogue"
-},
-"8": {
-"id": "8",
+"6": {
+"id": "6",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -116,15 +82,13 @@ lines = {
 "value": "false"
 }])
 },
-"next_id": "9",
-"parent_id": "6",
+"next_id": "8",
 "type": "mutation"
 },
-"9": {
-"id": "9",
+"8": {
+"id": "8",
 "is_snippet": false,
 "next_id": "end",
-"parent_id": "6",
 "type": "goto"
 }
 }

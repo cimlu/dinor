@@ -1,0 +1,471 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ye01s"]
+
+[resource]
+script = ExtResource("1_ye01s")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Mila")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "12",
+"next_id_after": "12",
+"parent_id": "4",
+"responses": PackedStringArray("10"),
+"tags": PackedStringArray(),
+"text": "Certo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Certo.",
+"type": "response"
+},
+"12": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Viaje de volta no tempo e convença a Júlia de levar o ovo de volta pra época dos dinossauros.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Viaje de volta no tempo e convença a Júlia de levar o ovo de volta pra época dos dinossauros.",
+"type": "dialogue"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"next_id_after": "14",
+"parent_id": "4",
+"responses": PackedStringArray("13"),
+"tags": PackedStringArray(),
+"text": "Como eu faço isso?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Como eu faço isso?",
+"type": "response"
+},
+"14": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Converse com o Gary. Ele vai entender se você explicar. Ele vai te dar a chave do timelab.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Converse com o Gary. Ele vai entender se você explicar. Ele vai te dar a chave do timelab.",
+"type": "dialogue"
+},
+"15": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Não esqueça de pegar a bateria de hélio 3 no laboratório de enrgia. A chave está na maleta.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Não esqueça de pegar a bateria de hélio 3 no laboratório de enrgia. A chave está na maleta.",
+"type": "dialogue"
+},
+"16": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Está escutando esses passos? É do dinossauro que nasceu. Quanto mais alto, mais perto ele vai estar. Se ele estiver muito perto, utilize o celular para esperar ele passar.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Está escutando esses passos? É do dinossauro que nasceu. Quanto mais alto, mais perto ele vai estar. Se ele estiver muito perto, utilize o celular para esperar ele passar.",
+"type": "dialogue"
+},
+"17": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"next_id_after": "18",
+"parent_id": "4",
+"responses": PackedStringArray("17"),
+"tags": PackedStringArray(),
+"text": "Certo...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Certo...",
+"type": "response"
+},
+"18": {
+"id": "18",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "celular"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "19",
+"parent_id": "4",
+"type": "mutation"
+},
+"19": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Boa sorte. Não esqueça de pressionar a alavanca ao entrar na máquina do tempo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Boa sorte. Não esqueça de pressionar a alavanca ao entrar na máquina do tempo.",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "21",
+"parent_id": "4",
+"type": "mutation"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Dinor"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "apatrulhar"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "22",
+"parent_id": "4",
+"type": "mutation"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "need"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "32",
+"parent_id": "4",
+"type": "mutation"
+},
+"23": {
+"id": "23",
+"next_conditional_id": "32",
+"next_id": "24",
+"next_id_after": "32",
+"parent_id": "3",
+"type": "condition"
+},
+"24": {
+"id": "24",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "25",
+"parent_id": "23",
+"type": "mutation"
+},
+"25": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"parent_id": "23",
+"tags": PackedStringArray(),
+"text": "Boa sorte.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Boa sorte.",
+"type": "dialogue"
+},
+"26": {
+"id": "26",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "32",
+"parent_id": "23",
+"type": "mutation"
+},
+"27": {
+"id": "27",
+"next_conditional_id": "32",
+"next_id": "28",
+"next_id_after": "32",
+"type": "condition"
+},
+"28": {
+"id": "28",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "29",
+"parent_id": "27",
+"type": "mutation"
+},
+"29": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"parent_id": "27",
+"tags": PackedStringArray(),
+"text": "Entra...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Entra...",
+"type": "dialogue"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "local"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "dictionary_reference",
+"value": Array[Dictionary]([{
+"type": "number",
+"value": 1
+}]),
+"variable": "aparent1"
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "27",
+"next_id": "4",
+"next_id_after": "32",
+"type": "condition"
+},
+"30": {
+"id": "30",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "32",
+"parent_id": "27",
+"type": "mutation"
+},
+"32": {
+"id": "32",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "need"
+}, {
+"type": "colon"
+}])
+},
+"id": "4",
+"next_conditional_id": "23",
+"next_id": "5",
+"next_id_after": "32",
+"parent_id": "3",
+"type": "condition"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "6",
+"parent_id": "4",
+"type": "mutation"
+},
+"6": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "É a cabeça da Júlia... E o ovo de dinossauro sumiu...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "É a cabeça da Júlia... E o ovo de dinossauro sumiu...",
+"type": "dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"next_id_after": "9",
+"parent_id": "4",
+"responses": PackedStringArray("7"),
+"tags": PackedStringArray(),
+"text": "Como assim ovo de dinossauro?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Como assim ovo de dinossauro?",
+"type": "response"
+},
+"9": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Olha, não tem como eu explicar muito mas... Vou ter que te dar uma missão. Tem que cumprí-la com urgência.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Olha, não tem como eu explicar muito mas... Vou ter que te dar uma missão. Tem que cumprí-la com urgência.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

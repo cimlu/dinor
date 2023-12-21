@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3utlpu8t40kc"]
+[gd_scene load_steps=5 format=3 uid="uid://d3utlpu8t40kc"]
 
+[ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_mugm2"]
 [ext_resource type="Texture2D" uid="uid://tta6fjar8b8j" path="res://assets/bgs/timelab.png" id="1_vq2pd"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_vnmy5"]
 [ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="3_4ehfw"]
@@ -10,6 +11,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2
+script = ExtResource("1_mugm2")
 
 [node name="bg" type="TextureRect" parent="."]
 layout_mode = 1

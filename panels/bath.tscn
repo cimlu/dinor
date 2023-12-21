@@ -1,10 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://dvenshvwibs5u"]
+[gd_scene load_steps=8 format=3 uid="uid://dvenshvwibs5u"]
 
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_c8ecq"]
 [ext_resource type="Texture2D" uid="uid://crc2judpb3dqb" path="res://assets/bgs/bath.png" id="1_q4omn"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="3_3gqdq"]
 [ext_resource type="Script" path="res://scripts/cscene.gd" id="3_448du"]
-[ext_resource type="AudioStream" uid="uid://voan1oeev5hq" path="res://sounds/pickup.mp3" id="6_lklkj"]
+[ext_resource type="Texture2D" uid="uid://cgu0ois87jrht" path="res://assets/sprites/garyCorpo.png" id="4_fk5y7"]
+[ext_resource type="Script" path="res://scripts/garyCorpo.gd" id="5_sftxi"]
+[ext_resource type="PackedScene" uid="uid://bym67re5soapi" path="res://interacts/key_pu.tscn" id="6_60wjs"]
 
 [node name="bath" type="Control"]
 layout_mode = 3
@@ -33,9 +35,6 @@ texture = ExtResource("1_q4omn")
 [node name="cam" type="Camera2D" parent="."]
 zoom = Vector2(3.6, 3.6)
 
-[node name="hud" parent="." instance=ExtResource("3_3gqdq")]
-position = Vector2(0, 80)
-
 [node name="door_bath" type="Area2D" parent="."]
 script = ExtResource("3_448du")
 destiny = "hall"
@@ -43,8 +42,31 @@ destiny = "hall"
 [node name="collision" type="CollisionPolygon2D" parent="door_bath"]
 polygon = PackedVector2Array(-148, -70, -110, -46, -110, 86, -114, 90, -148, 90)
 
-[node name="pickup" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("6_lklkj")
+[node name="garyCorpo" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -26.0
+offset_right = -30.0
+offset_bottom = 59.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("4_fk5y7")
+script = ExtResource("5_sftxi")
+
+[node name="keyPu" parent="." instance=ExtResource("6_60wjs")]
+position = Vector2(-295, 35)
+
+[node name="hud" parent="." instance=ExtResource("3_3gqdq")]
+position = Vector2(0, 80)
+
+[node name="chave" type="Marker2D" parent="."]
+position = Vector2(84, 80)
 
 [connection signal="input_event" from="door_bath" to="door_bath" method="_on_input_event"]
 [connection signal="mouse_entered" from="door_bath" to="door_bath" method="_on_mouse_entered"]

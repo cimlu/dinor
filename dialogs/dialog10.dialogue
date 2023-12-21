@@ -1,0 +1,32 @@
+~ this_is_a_node_title
+
+if Globals.local == Globals.aparent1[1]:
+	if !Globals.need:
+		set Globals.milaInt = true
+		Mila: É a cabeça da Júlia... E o ovo de dinossauro sumiu...
+		- Como assim ovo de dinossauro?
+
+		Mila: Olha, não tem como eu explicar muito mas... Vou ter que te dar uma missão. Tem que cumprí-la com urgência.
+		- Certo.
+
+		Mila: Viaje de volta no tempo e convença a Júlia de levar o ovo de volta pra época dos dinossauros.
+		- Como eu faço isso?
+		Mila: Converse com o Gary. Ele vai entender se você explicar. Ele vai te dar a chave do timelab.
+		Mila: Não esqueça de pegar a bateria de hélio 3 no laboratório de enrgia. A chave está na maleta.
+		Mila: Está escutando esses passos? É do dinossauro que nasceu. Quanto mais alto, mais perto ele vai estar. Se ele estiver muito perto, utilize o celular para esperar ele passar.
+		- Certo...
+		set Globals.celular = true
+		Mila: Boa sorte. Não esqueça de pressionar a alavanca ao entrar na máquina do tempo.
+		set Globals.milaInt = false
+		set Dinor.apatrulhar = true
+		set Globals.need = true
+	else:
+		set Globals.milaInt = true
+		Mila: Boa sorte.
+		set Globals.milaInt = false
+else:
+	set Globals.milaInt = true
+	Mila: Entra...
+	set Globals.milaInt = false
+
+=> END

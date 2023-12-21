@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://cnpsv7ir23prc"]
+[gd_scene load_steps=8 format=3 uid="uid://cnpsv7ir23prc"]
 
 [ext_resource type="Texture2D" uid="uid://c1xuunoa7lm3n" path="res://assets/bgs/timeMachine.png" id="1_frfac"]
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_nj601"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="2_r8svx"]
 [ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="4_rw217"]
+[ext_resource type="Texture2D" uid="uid://bui0wn6l5f76c" path="res://assets/sprites/alavancaup.png" id="5_8cbc5"]
+[ext_resource type="Script" path="res://scripts/alavanca.gd" id="6_xmpn7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7bjw0"]
+size = Vector2(20, 33)
 
 [node name="timemachine" type="Control"]
 layout_mode = 3
@@ -37,3 +42,33 @@ position = Vector2(0, 80)
 [node name="returnArrow" parent="." instance=ExtResource("4_rw217")]
 position = Vector2(-126, 7)
 destiny = "timelab"
+
+[node name="alavanca" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -39.0
+offset_right = 20.0
+offset_bottom = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("5_8cbc5")
+script = ExtResource("6_xmpn7")
+
+[node name="area" type="Area2D" parent="alavanca"]
+position = Vector2(-42, -1)
+
+[node name="collision" type="CollisionShape2D" parent="alavanca/area"]
+position = Vector2(51, 16.5)
+shape = SubResource("RectangleShape2D_7bjw0")
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 0.4
+
+[connection signal="input_event" from="alavanca/area" to="alavanca" method="_on_area_input_event"]
+[connection signal="timeout" from="timer" to="alavanca" method="_on_timer_timeout"]

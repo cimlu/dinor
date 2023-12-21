@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_jpmqt"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_j47gb"]
 
 [resource]
-script = ExtResource("1_jpmqt")
+script = ExtResource("1_j47gb")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
 }
-character_names = PackedStringArray("Catapimbas", "Você", "Task")
+character_names = PackedStringArray("Júlia", "Você", "Task")
 first_title = "3"
 lines = {
 "1": {
@@ -24,9 +24,9 @@ lines = {
 "next_id": "11",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "* Catapimbas começa a comera a banana *",
+"text": "* Júlia começa a comera a banana *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "* Catapimbas começa a comera a banana *",
+"translation_key": "* Júlia começa a comera a banana *",
 "type": "dialogue"
 },
 "11": {
@@ -65,7 +65,7 @@ lines = {
 "type": "mutation"
 },
 "13": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "13",
 "next_id": "14",
@@ -135,7 +135,7 @@ lines = {
 "type": "mutation"
 },
 "17": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "17",
 "next_id": "18",
@@ -237,32 +237,55 @@ lines = {
 "value": "Catapimbas"
 }])
 },
-"next_id": "32",
+"next_id": "23",
 "parent_id": "6",
 "type": "mutation"
 },
 "23": {
 "id": "23",
-"next_conditional_id": "32",
-"next_id": "24",
-"next_id_after": "32",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "piaLavavel"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "33",
+"parent_id": "6",
+"type": "mutation"
+},
+"24": {
+"id": "24",
+"next_conditional_id": "33",
+"next_id": "25",
+"next_id_after": "33",
 "parent_id": "5",
 "type": "condition"
 },
-"24": {
-"character": "Catapimbas",
+"25": {
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
-"id": "24",
-"next_id": "25",
-"parent_id": "23",
+"id": "25",
+"next_id": "26",
+"parent_id": "24",
 "tags": PackedStringArray(),
 "text": "Pegou nada. Vai lá pegar.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Pegou nada. Vai lá pegar.",
 "type": "dialogue"
 },
-"25": {
-"id": "25",
+"26": {
+"id": "26",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -280,63 +303,40 @@ lines = {
 "value": "false"
 }])
 },
-"next_id": "26",
-"parent_id": "23",
+"next_id": "27",
+"parent_id": "24",
 "type": "mutation"
 },
-"26": {
-"id": "26",
+"27": {
+"id": "27",
 "is_snippet": false,
 "next_id": "end",
-"parent_id": "23",
+"parent_id": "24",
 "type": "goto"
-},
-"27": {
-"character": "",
-"character_replacements": Array[Dictionary]([]),
-"id": "27",
-"next_id": "28",
-"next_id_after": "32",
-"tags": PackedStringArray(),
-"text": "Não",
-"text_replacements": Array[Dictionary]([]),
-"translation_key": "Não",
-"type": "response"
 },
 "28": {
 "character": "",
 "character_replacements": Array[Dictionary]([]),
 "id": "28",
 "next_id": "29",
-"parent_id": "27",
+"next_id_after": "33",
+"tags": PackedStringArray(),
+"text": "Não",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Não",
+"type": "response"
+},
+"29": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"parent_id": "28",
 "tags": PackedStringArray(),
 "text": "Então vai lá pegar.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "Então vai lá pegar.",
 "type": "dialogue"
-},
-"29": {
-"id": "29",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "Globals"
-}, {
-"type": "dot"
-}, {
-"type": "variable",
-"value": "cataInt"
-}, {
-"type": "assignment",
-"value": "="
-}, {
-"type": "variable",
-"value": "false"
-}])
-},
-"next_id": "30",
-"parent_id": "27",
-"type": "mutation"
 },
 "3": {
 "id": "3",
@@ -362,19 +362,42 @@ lines = {
 },
 "30": {
 "id": "30",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "31",
+"parent_id": "28",
+"type": "mutation"
+},
+"31": {
+"id": "31",
 "is_snippet": false,
 "next_id": "end",
-"parent_id": "27",
+"parent_id": "28",
 "type": "goto"
 },
-"32": {
-"id": "32",
+"33": {
+"id": "33",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
 },
 "4": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
@@ -389,8 +412,8 @@ lines = {
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
-"next_id_after": "32",
-"responses": PackedStringArray("5", "27"),
+"next_id_after": "33",
+"responses": PackedStringArray("5", "28"),
 "tags": PackedStringArray(),
 "text": "Sim",
 "text_replacements": Array[Dictionary]([]),
@@ -416,22 +439,22 @@ lines = {
 }])
 },
 "id": "6",
-"next_conditional_id": "23",
+"next_conditional_id": "24",
 "next_id": "7",
-"next_id_after": "32",
+"next_id_after": "33",
 "parent_id": "5",
 "type": "condition"
 },
 "7": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "7",
 "next_id": "8",
 "parent_id": "6",
 "tags": PackedStringArray(),
-"text": "Obrigada!",
+"text": "Obrigada! Sabia que se você esquecer a senha da maleta é só ir ao banheiro?",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "Obrigada!",
+"translation_key": "Obrigada! Sabia que se você esquecer a senha da maleta é só ir ao banheiro?",
 "type": "dialogue"
 },
 "8": {

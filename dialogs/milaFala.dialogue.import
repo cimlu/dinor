@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c8k4h0vbtn10j"
+path="res://.godot/imported/milaFala.dialogue-6f05e2c69f193bb3f09d1a94b56e3020.tres"
+
+[deps]
+
+source_file="res://dialogs/milaFala.dialogue"
+dest_files=["res://.godot/imported/milaFala.dialogue-6f05e2c69f193bb3f09d1a94b56e3020.tres"]
+
+[params]
+
+defaults=true

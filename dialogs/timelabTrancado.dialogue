@@ -1,0 +1,9 @@
+~ this_is_a_node_title
+
+if Commands.tem("keyPu"):
+	Abriu
+	set Globals.door_timelab = "open"
+else:
+	Está trancado.
+
+=> END

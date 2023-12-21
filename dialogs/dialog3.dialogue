@@ -1,27 +1,28 @@
 ~ this_is_a_node_title
 
 set Globals.cataInt = true
-Catapimbas: Olá, pegou a banana?
+Júlia: Olá, pegou a banana?
 - Sim
 	if Commands.tem("banana"):
-		Catapimbas: Obrigada!
+		Júlia: Obrigada! Sabia que se você esquecer a senha da maleta é só ir ao banheiro?
 		set Globals.cataInt = false
 		set Commands.toCollect = "banana"
-		* Catapimbas começa a comera a banana *
+		* Júlia começa a comera a banana *
 		Você: Esso ovo é do que?
 		set Globals.cataInt = true
-		Catapimbas: Dinoss... er... galinhas são dinossauros, né? É ovo de galinha.
+		Júlia: Dinoss... er... galinhas são dinossauros, né? É ovo de galinha.
 		set Globals.cataInt = false
 		Você: Galinhas não botam ovos azuis.
 		set Globals.cataInt = true
-		Catapimbas: Claro que botam. Olha, quer lavar esses frascos para mim?
+		Júlia: Claro que botam. Olha, quer lavar esses frascos para mim?
 		- Claro.
 		set Globals.cataInt = false
 		Task: Lave os frascos.
 		set Globals.nextDialog = 4
 		set Globals.nextPerson = "Catapimbas"
+		set Globals.piaLavavel = true
 	else:
-		Catapimbas: Pegou nada. Vai lá pegar.
+		Júlia: Pegou nada. Vai lá pegar.
 		set Globals.cataInt = false
 		=> END
 - Não

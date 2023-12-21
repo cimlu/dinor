@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://di4sguj2wh8fh"]
+[gd_scene load_steps=9 format=3 uid="uid://di4sguj2wh8fh"]
 
 [ext_resource type="Script" path="res://scripts/scenReady.gd" id="1_6yx1c"]
 [ext_resource type="Texture2D" uid="uid://sho54st5jk4m" path="res://assets/bgs/hallDown.png" id="1_by3y2"]
 [ext_resource type="PackedScene" uid="uid://cxywrel1bi6i7" path="res://interacts/return_arrow.tscn" id="2_swuer"]
+[ext_resource type="PackedScene" uid="uid://wguwn68qij0w" path="res://actors/mila.tscn" id="3_ho1fq"]
 [ext_resource type="Script" path="res://scripts/cscene.gd" id="3_i4wei"]
 [ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="4_gm118"]
+[ext_resource type="Texture2D" uid="uid://bs0prd8futd77" path="res://assets/sprites/sangueBiolab.png" id="7_a636b"]
+[ext_resource type="Script" path="res://scripts/sangue.gd" id="7_s1fks"]
 
 [node name="hall3" type="Control"]
 layout_mode = 3
@@ -33,6 +36,12 @@ texture = ExtResource("1_by3y2")
 [node name="cam" type="Camera2D" parent="."]
 zoom = Vector2(3.6, 3.6)
 editor_draw_drag_margin = true
+
+[node name="mila" parent="." instance=ExtResource("3_ho1fq")]
+visible = false
+position = Vector2(-32, 23)
+scale = Vector2(0.6, 0.6)
+dimension = 0.6
 
 [node name="returnArrow" parent="." instance=ExtResource("2_swuer")]
 position = Vector2(123, 6)
@@ -75,6 +84,16 @@ destiny = "empty_room_8"
 
 [node name="collision" type="CollisionPolygon2D" parent="door_er8"]
 polygon = PackedVector2Array(-228.482, -152.575, -173.7, -103.412, -173.7, 152.575, -261.886, 152.575, -261.886, -152.575)
+
+[node name="sangue" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 47.0
+offset_right = 82.0
+offset_bottom = 89.0
+mouse_filter = 2
+texture = ExtResource("7_a636b")
+script = ExtResource("7_s1fks")
 
 [node name="hud" parent="." instance=ExtResource("4_gm118")]
 position = Vector2(0, 80)

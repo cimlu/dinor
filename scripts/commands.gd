@@ -65,5 +65,4 @@ func tem(item):
 	for i in 7:
 		if inventory[i] == item:
 			return true
-			print("TEM")
 	return false

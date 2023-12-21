@@ -1,0 +1,172 @@
+[gd_scene load_steps=8 format=3 uid="uid://didt0vfqn4lbr"]
+
+[ext_resource type="Script" path="res://scripts/ataque.gd" id="1_fvu2x"]
+[ext_resource type="Texture2D" uid="uid://sho54st5jk4m" path="res://assets/bgs/hallDown.png" id="1_h13cx"]
+[ext_resource type="Texture2D" uid="uid://dimy4pcfh1edr" path="res://assets/sprites/dinorJumpscare.png" id="4_mknat"]
+[ext_resource type="Theme" uid="uid://ctpc1dbhlcp4n" path="res://themes/menu.tres" id="4_twitc"]
+
+[sub_resource type="Animation" id="Animation_me21c"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("4_mknat")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, -10)]
+}
+
+[sub_resource type="Animation" id="Animation_uq87b"]
+resource_name = "ataque"
+length = 0.4
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.15),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [ExtResource("4_mknat")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [0, 1, 2, 3, 4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.15, 0.2, 0.25, 0.3, 0.35),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.25, 1.25), Vector2(2, 2), Vector2(2.1, 2.1), Vector2(2.5, 2.5)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.15, 0.2, 0.25),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(80, -10), Vector2(60, 10), Vector2(0, 70)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7oqmr"]
+_data = {
+"RESET": SubResource("Animation_me21c"),
+"ataque": SubResource("Animation_uq87b")
+}
+
+[node name="ataque" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("1_fvu2x")
+
+[node name="bg" type="TextureRect" parent="."]
+modulate = Color(1, 0.611765, 0.52549, 1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -110.0
+offset_right = 140.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_h13cx")
+
+[node name="cam" type="Camera2D" parent="."]
+zoom = Vector2(3.6, 3.6)
+editor_draw_drag_margin = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "ataque"
+libraries = {
+"": SubResource("AnimationLibrary_7oqmr")
+}
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(80, -10)
+texture = ExtResource("4_mknat")
+hframes = 5
+frame = 4
+
+[node name="exit_byn" type="Button" parent="."]
+layout_mode = 2
+offset_left = -37.0
+offset_top = -26.0
+offset_right = 37.0
+offset_bottom = 27.0
+theme = ExtResource("4_twitc")
+text = "EXIT"
+
+[node name="timer" type="Timer" parent="."]
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="exit_byn" to="." method="_on_exit_byn_pressed"]
+[connection signal="timeout" from="timer" to="." method="_on_timer_timeout"]

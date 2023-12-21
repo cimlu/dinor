@@ -6,7 +6,12 @@ func _on_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
 		if Globals.isAberto(self.name):
 			get_tree().change_scene_to_file("res://panels/"+destiny+".tscn")
-			
+			Globals.local = destiny
+			if Globals.cooldown != 0:
+				Globals.cooldown -= 1
+			if Dinor.patrulha:
+				Dinor.movement()
+	
 		
 
 func _on_mouse_entered():

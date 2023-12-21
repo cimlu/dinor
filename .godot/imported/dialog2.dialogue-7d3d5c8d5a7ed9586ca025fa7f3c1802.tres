@@ -1,14 +1,14 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_0t6e1"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_c2rav"]
 
 [resource]
-script = ExtResource("1_0t6e1")
+script = ExtResource("1_c2rav")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
 }
-character_names = PackedStringArray("Catapimbas")
+character_names = PackedStringArray("Júlia")
 first_title = "3"
 lines = {
 "1": {
@@ -32,7 +32,7 @@ lines = {
 "type": "response"
 },
 "11": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "11",
 "next_id": "16",
@@ -69,7 +69,7 @@ lines = {
 "type": "response"
 },
 "14": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "14",
 "next_id": "16",
@@ -81,7 +81,7 @@ lines = {
 "type": "dialogue"
 },
 "16": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "16",
 "next_id": "17",
@@ -92,7 +92,7 @@ lines = {
 "type": "dialogue"
 },
 "17": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "17",
 "next_id": "18",
@@ -210,7 +210,7 @@ lines = {
 "type": "mutation"
 },
 "4": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "4",
 "next_id": "5",
@@ -221,7 +221,7 @@ lines = {
 "type": "dialogue"
 },
 "5": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "5",
 "next_id": "6",
@@ -232,14 +232,14 @@ lines = {
 "type": "dialogue"
 },
 "6": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "6",
 "next_id": "8",
 "tags": PackedStringArray(),
-"text": "* Catapimbas mostra um ovo azul gigante *",
+"text": "* Júlia mostra um ovo azul gigante *",
 "text_replacements": Array[Dictionary]([]),
-"translation_key": "* Catapimbas mostra um ovo azul gigante *",
+"translation_key": "* Júlia mostra um ovo azul gigante *",
 "type": "dialogue"
 },
 "8": {
@@ -256,7 +256,7 @@ lines = {
 "type": "response"
 },
 "9": {
-"character": "Catapimbas",
+"character": "Júlia",
 "character_replacements": Array[Dictionary]([]),
 "id": "9",
 "next_id": "10",
