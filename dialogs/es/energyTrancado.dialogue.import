@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://wilhdkfccv5"
+path="res://.godot/imported/energyTrancado.dialogue-2a98a3e587b14263eecd22d397ae087d.tres"
+
+[deps]
+
+source_file="res://dialogs/es/energyTrancado.dialogue"
+dest_files=["res://.godot/imported/energyTrancado.dialogue-2a98a3e587b14263eecd22d397ae087d.tres"]
+
+[params]
+
+defaults=true

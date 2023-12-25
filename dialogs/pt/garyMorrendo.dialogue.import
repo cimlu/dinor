@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://deojiw5idtvum"
+path="res://.godot/imported/garyMorrendo.dialogue-4c2794ba8941b80823ba0df74e3d879f.tres"
+
+[deps]
+
+source_file="res://dialogs/pt/garyMorrendo.dialogue"
+dest_files=["res://.godot/imported/garyMorrendo.dialogue-4c2794ba8941b80823ba0df74e3d879f.tres"]
+
+[params]
+
+defaults=true

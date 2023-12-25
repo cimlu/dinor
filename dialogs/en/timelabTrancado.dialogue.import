@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://chip1nm3n5qr"
+path="res://.godot/imported/timelabTrancado.dialogue-2744820c63c9e146720572fc858d3566.tres"
+
+[deps]
+
+source_file="res://dialogs/en/timelabTrancado.dialogue"
+dest_files=["res://.godot/imported/timelabTrancado.dialogue-2744820c63c9e146720572fc858d3566.tres"]
+
+[params]
+
+defaults=true

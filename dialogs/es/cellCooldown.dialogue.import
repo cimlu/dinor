@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://br7jgs4lhni5y"
+path="res://.godot/imported/cellCooldown.dialogue-c7a1c9e6cb2133efca588f701decbe2d.tres"
+
+[deps]
+
+source_file="res://dialogs/es/cellCooldown.dialogue"
+dest_files=["res://.godot/imported/cellCooldown.dialogue-c7a1c9e6cb2133efca588f701decbe2d.tres"]
+
+[params]
+
+defaults=true

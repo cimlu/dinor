@@ -1,0 +1,18 @@
+~ this_is_a_node_title
+
+set Globals.garyInt = true
+Gary: Hola, Jack.
+Gary: Como estás?
+- sí
+- [[que buen|buen]]	
+Gary: Ok.
+Gary: Júlia necesita ayuda. Ella está en el bio lab.
+Gary: Ve a ayudarla.
+
+set Globals.nextDialog = 2
+set Globals.nextPerson = "Catapimbas"
+set Globals.door_stairsdown = "open"
+set Globals.garyInt = false
+set Globals.aparent1 = ["catapimbas", "biolab"]
+
+=> END

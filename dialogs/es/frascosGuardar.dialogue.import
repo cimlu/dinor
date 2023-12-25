@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://qyr43tpk8vv6"
+path="res://.godot/imported/frascosGuardar.dialogue-96d6ff177105c437d0138b7fdc129e88.tres"
+
+[deps]
+
+source_file="res://dialogs/es/frascosGuardar.dialogue"
+dest_files=["res://.godot/imported/frascosGuardar.dialogue-96d6ff177105c437d0138b7fdc129e88.tres"]
+
+[params]
+
+defaults=true

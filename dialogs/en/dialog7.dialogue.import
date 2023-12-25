@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dgjgc1sk4iqtr"
+path="res://.godot/imported/dialog7.dialogue-e644830a9c4c2207d5ad7a15f4bd45f9.tres"
+
+[deps]
+
+source_file="res://dialogs/en/dialog7.dialogue"
+dest_files=["res://.godot/imported/dialog7.dialogue-e644830a9c4c2207d5ad7a15f4bd45f9.tres"]
+
+[params]
+
+defaults=true

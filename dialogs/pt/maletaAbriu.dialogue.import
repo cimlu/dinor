@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ctnj4sffn05p3"
+path="res://.godot/imported/maletaAbriu.dialogue-9a2db63faf30ce8b92fe0af8ae712fda.tres"
+
+[deps]
+
+source_file="res://dialogs/pt/maletaAbriu.dialogue"
+dest_files=["res://.godot/imported/maletaAbriu.dialogue-9a2db63faf30ce8b92fe0af8ae712fda.tres"]
+
+[params]
+
+defaults=true

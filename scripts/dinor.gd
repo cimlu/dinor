@@ -8,7 +8,7 @@ var bg
 
 var apatrulhar = false
 
-func _process(delta):
+func _process(_delta):
 	if apatrulhar:
 		Sound.playSong("foots")
 		patrulha = true

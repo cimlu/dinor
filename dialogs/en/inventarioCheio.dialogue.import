@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c71fqks3tpem6"
+path="res://.godot/imported/inventarioCheio.dialogue-17a18b2e9bf99c7f9d725f5434318582.tres"
+
+[deps]
+
+source_file="res://dialogs/en/inventarioCheio.dialogue"
+dest_files=["res://.godot/imported/inventarioCheio.dialogue-17a18b2e9bf99c7f9d725f5434318582.tres"]
+
+[params]
+
+defaults=true

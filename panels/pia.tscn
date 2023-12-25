@@ -67,6 +67,9 @@ scale = Vector2(2, 2)
 position = Vector2(-101, 60)
 scale = Vector2(2, 2)
 
+[node name="frascoPlace" type="Marker2D" parent="."]
+position = Vector2(341, -204)
+
 [node name="agua" type="Marker2D" parent="."]
 position = Vector2(0, 44)
 script = ExtResource("5_ejdln")

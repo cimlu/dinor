@@ -11,10 +11,13 @@ func _ready():
 		visible = true
 	else:
 		visible = false
+		
+	if Globals.celular and !Commands.tem("cell"):
+		cell.position = celular.position
+		Globals.cellPosicionado = true
 
-func _process(delta):
+func _process(_delta):
 	if Globals.celular and !Globals.cellPosicionado:
-		DialogueManager.show_example_dialogue_balloon(load("res://dialogs/dificuldade.dialogue"))
 		cell.position = celular.position
 		Globals.cellPosicionado = true
 	if Globals.ovo and !Globals.ovoPosicionado:

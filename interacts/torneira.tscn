@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://but2r7oglrmrc" path="res://assets/sprites/torneira.png" id="1_ji6vh"]
 [ext_resource type="Script" path="res://scripts/torneira.gd" id="1_xj54t"]
-[ext_resource type="Texture2D" uid="uid://bjuo7ixijuogd" path="res://assets/sprites/frascos.png" id="3_g83s4"]
+[ext_resource type="Texture2D" uid="uid://c4edgitmkxtln" path="res://assets/sprites/frascosSujos.png" id="3_l4wjh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8hg32"]
 radius = 17.0
@@ -38,7 +38,7 @@ offset_right = -16.2
 offset_bottom = -1.6
 grow_horizontal = 0
 grow_vertical = 0
-texture = ExtResource("3_g83s4")
+texture = ExtResource("3_l4wjh")
 
 [node name="area" type="Area2D" parent="."]
 

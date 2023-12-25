@@ -1,0 +1,32 @@
+~ this_is_a_node_title
+
+if Globals.local == Globals.aparent1[1]:
+	if !Globals.need:
+		set Globals.milaInt = true
+		Mila: "It's Júlia's head... And the dinosaur egg disappeared..."
+
+		- What do you mean, dinosaur egg?
+		Mila: Look, I can't explain much, but... I'll have to give you a mission. You have to complete it urgently.
+		- Okay.
+		Mila: Travel back in time and convince Júlia to take the egg back to the time of the dinosaurs.
+		- How do I do that?
+		Mila: Talk to Gary. He'll understand if you explain. He'll give you the key to the timelab.
+		Mila: Don't forget to grab the helium-3 battery from the energy lab. The key is in the briefcase.
+		Mila: Do you hear those footsteps? It's from the dinosaur that hatched. The louder they get, the closer it'll be. If it's too close, use your cell phone to wait for it to pass.
+		- Alright...
+		
+		set Globals.celular = true
+		Mila: Good luck. Don't forget to press the lever when entering the time machine.
+		set Globals.milaInt = false
+		set Dinor.apatrulhar = true
+		set Globals.need = true
+	else:
+		set Globals.milaInt = true
+		Mila: Good luck.
+		set Globals.milaInt = false
+else:
+	set Globals.milaInt = true
+	Mila: Get in...
+	set Globals.milaInt = false
+
+=> END

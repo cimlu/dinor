@@ -28,11 +28,11 @@ func _on_area_input_event(_viewport, event, _shape_idx):
 		collect(self)
 
 func collect(item):
-	Commands.collect(item, pickup)
+	Commands.collect(item)
 	
 	if Commands.invfull:
 		print("LIBERE ESPAÇO")
-		DialogueManager.show_example_dialogue_balloon(load("res://dialogs/inventarioCheio.dialogue"))
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogs/"+Globals.language+"/inventarioCheio.dialogue"))
 	else:
 		slot = hud.get_child(1).get_child(Commands.slotsel)
 		slot.selectf(false)

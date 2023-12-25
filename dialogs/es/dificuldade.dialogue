@@ -1,0 +1,11 @@
+~ this_is_a_node_title
+
+Seleccione dificultad:
+- Fácil
+	set Globals.dificuldade = 1
+- Imposible
+	set Globals.dificuldade = 2
+- DIVINO
+	set Globals.dificuldade = 3
+
+=> END

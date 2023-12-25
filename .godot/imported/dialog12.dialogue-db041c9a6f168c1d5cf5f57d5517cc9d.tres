@@ -1,0 +1,269 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ujfdq"]
+
+[resource]
+script = ExtResource("1_ujfdq")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Júlia")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"id": "10",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Commands"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "toCollect"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "banana"
+}])
+},
+"next_id": "17",
+"parent_id": "6",
+"type": "mutation"
+},
+"11": {
+"id": "11",
+"next_conditional_id": "17",
+"next_id": "12",
+"next_id_after": "17",
+"parent_id": "5",
+"type": "condition"
+},
+"12": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "Pegou nada. Vai lá pegar",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Pegou nada. Vai lá pegar",
+"type": "dialogue"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "17",
+"parent_id": "11",
+"type": "mutation"
+},
+"14": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"next_id_after": "17",
+"tags": PackedStringArray(),
+"text": "Não",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Não",
+"type": "response"
+},
+"15": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "Então vai lá pegar.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Então vai lá pegar.",
+"type": "dialogue"
+},
+"16": {
+"id": "16",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "17",
+"parent_id": "14",
+"type": "mutation"
+},
+"17": {
+"id": "17",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "4",
+"type": "mutation"
+},
+"4": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Olá, pegou a banana?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Olá, pegou a banana?",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "17",
+"responses": PackedStringArray("5", "14"),
+"tags": PackedStringArray(),
+"text": "Sim",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sim",
+"type": "response"
+},
+"6": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Commands"
+}, {
+"type": "dot"
+}, {
+"function": "tem",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "banana"
+}])])
+}, {
+"type": "colon"
+}])
+},
+"id": "6",
+"next_conditional_id": "11",
+"next_id": "7",
+"next_id_after": "17",
+"parent_id": "5",
+"type": "condition"
+},
+"7": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Tó o ovo. Nem quero mais.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tó o ovo. Nem quero mais.",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "9",
+"parent_id": "6",
+"type": "mutation"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "ovo"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "10",
+"parent_id": "6",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

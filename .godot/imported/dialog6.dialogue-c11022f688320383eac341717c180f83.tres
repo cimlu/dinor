@@ -1,0 +1,261 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_7wpko"]
+
+[resource]
+script = ExtResource("1_7wpko")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Mila", "Milá")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"next_id_after": "11",
+"responses": PackedStringArray("10"),
+"tags": PackedStringArray(),
+"text": "Sí.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sí.",
+"type": "response"
+},
+"11": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "13",
+"tags": PackedStringArray(),
+"text": "Yo también voy para allá. Vamos juntos.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yo también voy para allá. Vamos juntos.",
+"type": "dialogue"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "15",
+"next_id_after": "15",
+"responses": PackedStringArray("13"),
+"tags": PackedStringArray(),
+"text": "Ok.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Ok.",
+"type": "response"
+},
+"15": {
+"id": "15",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "door_biolab"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "guardarFrascos"
+}])
+},
+"next_id": "16",
+"type": "mutation"
+},
+"16": {
+"id": "16",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "17",
+"type": "mutation"
+},
+"17": {
+"id": "17",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 7
+}])
+},
+"next_id": "18",
+"type": "mutation"
+},
+"18": {
+"id": "18",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Mila"
+}])
+},
+"next_id": "19",
+"type": "mutation"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "aparent1"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "array",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "mila"
+}]), Array[Dictionary]([{
+"type": "string",
+"value": "hall"
+}])])
+}])
+},
+"next_id": "21",
+"type": "mutation"
+},
+"21": {
+"id": "21",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "4",
+"type": "mutation"
+},
+"4": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Hola, boy. Como estás?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hola, boy. Como estás?",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "6",
+"responses": PackedStringArray("5"),
+"tags": PackedStringArray(),
+"text": "Bien, y tú?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bien, y tú?",
+"type": "response"
+},
+"6": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"tags": PackedStringArray(),
+"text": "Bien también.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bien también.",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "9",
+"responses": PackedStringArray("8"),
+"tags": PackedStringArray(),
+"text": "¿Tienes la llave del Almacén?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¿Tienes la llave del Almacén?",
+"type": "response"
+},
+"9": {
+"character": "Milá",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"tags": PackedStringArray(),
+"text": "sí, lo hago. ¿Lo necesitas ahora?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "sí, lo hago. ¿Lo necesitas ahora?",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

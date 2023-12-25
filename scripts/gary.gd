@@ -13,7 +13,7 @@ func _ready():
 	sprite_dialog.size.x = (128/dimension)
 	sprite_dialog.size.y = (128/dimension)
 
-func _process(delta):
+func _process(_delta):
 	if Globals.garyInt:
 		sprite_dialog.visible = true
 	else:
@@ -22,6 +22,6 @@ func _process(delta):
 func _on_area_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
 		if Globals.nextPerson == "Gary":
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/dialog"+str(Globals.nextDialog)+".dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/"+Globals.language+"/dialog"+str(Globals.nextDialog)+".dialogue"))
 		else:
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/garySai.dialogue"))
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/"+Globals.language+"/garySai.dialogue"))

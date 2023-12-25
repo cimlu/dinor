@@ -9,6 +9,7 @@ func _on_input_event(_viewport, event, _shape_idx):
 			Globals.local = destiny
 			if Globals.cooldown != 0:
 				Globals.cooldown -= 1
+				print(Globals.cooldown)
 			if Dinor.patrulha:
 				Dinor.movement()
 	

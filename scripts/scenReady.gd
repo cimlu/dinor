@@ -9,11 +9,6 @@ func _ready():
 		for i in self.get_child_count():
 			if self.get_child(i).name == Globals.aparent1[0]:
 				self.get_child(i).visible = true
-	
-#	for i in get_child_count():
-#		if get_child(i).name == "bg":
-#			bg = get_child(i)
-#			break
 
 	for i in 7:
 		if Commands.inventory[i] != null:

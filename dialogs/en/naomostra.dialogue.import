@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://4swj1ib7rnkr"
+path="res://.godot/imported/naomostra.dialogue-957d44cf009a35674b33413c2d9e7018.tres"
+
+[deps]
+
+source_file="res://dialogs/en/naomostra.dialogue"
+dest_files=["res://.godot/imported/naomostra.dialogue-957d44cf009a35674b33413c2d9e7018.tres"]
+
+[params]
+
+defaults=true

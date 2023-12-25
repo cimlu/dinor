@@ -1,5 +1,38 @@
-[gd_resource type="Theme" format=3 uid="uid://ctpc1dbhlcp4n"]
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ctpc1dbhlcp4n"]
+
+[ext_resource type="FontFile" uid="uid://b1yeh3uy1x2b0" path="res://assets/fonts/RevMiniPixel.ttf" id="1_yxagl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yi5x5"]
+bg_color = Color(0.529412, 0.0862745, 0.27451, 0.709804)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_luhw8"]
+content_margin_top = 9.0
+bg_color = Color(0, 0.262745, 0.517647, 0.764706)
+border_color = Color(0.8, 0.8, 0.8, 0)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3ofm"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
 
 [resource]
+default_font_size = 55
+Button/colors/font_color = Color(0.415686, 0.678431, 1, 1)
+Button/colors/font_hover_color = Color(0.6, 0.392157, 0.976471, 1)
 Button/font_sizes/font_size = 32
-Button/fonts/font = null
+Button/fonts/font = ExtResource("1_yxagl")
+Button/styles/hover = SubResource("StyleBoxFlat_yi5x5")
+Button/styles/normal = SubResource("StyleBoxFlat_luhw8")
+Label/font_sizes/font_size = 64
+Label/fonts/font = ExtResource("1_yxagl")
+TextEdit/colors/font_color = Color(1, 1, 1, 1)
+TextEdit/constants/line_spacing = 20
+TextEdit/font_sizes/font_size = 64
+TextEdit/fonts/font = ExtResource("1_yxagl")
+TextEdit/styles/normal = SubResource("StyleBoxFlat_s3ofm")

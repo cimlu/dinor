@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://d1u381h5nbgy4"
+path="res://.godot/imported/pegarOvo.dialogue-a1c0eab23d2e189430733edd856f32c8.tres"
+
+[deps]
+
+source_file="res://dialogs/es/pegarOvo.dialogue"
+dest_files=["res://.godot/imported/pegarOvo.dialogue-a1c0eab23d2e189430733edd856f32c8.tres"]
+
+[params]
+
+defaults=true

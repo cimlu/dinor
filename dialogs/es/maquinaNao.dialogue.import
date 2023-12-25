@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://byalj40wgpctr"
+path="res://.godot/imported/maquinaNao.dialogue-92f4534a873837cccd45fa375e6269a4.tres"
+
+[deps]
+
+source_file="res://dialogs/es/maquinaNao.dialogue"
+dest_files=["res://.godot/imported/maquinaNao.dialogue-92f4534a873837cccd45fa375e6269a4.tres"]
+
+[params]
+
+defaults=true

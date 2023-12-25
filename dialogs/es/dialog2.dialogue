@@ -1,0 +1,26 @@
+~ this_is_a_node_title
+
+set Globals.cataInt = true
+Júlia: [[OIEEEEE! Hola aprendiz.|Buenos dias, aprendiz!]]
+Júlia: Mire lo que encontré!
+Júlia: * Júlia muestra un huevo gigante *
+
+- Donde es este huevo?
+	Júlia: Lo encontré en el laboratorio confidencial. No le digas a Gary que lo tomé, ¿vale?
+	- ¿Qué es ese laboratorio confidencial?
+			Júlia: Estás haciendo demasiadas preguntas.
+			- De acuerdo...
+
+- ¿Me pasas tu número?
+	Júlia: ?
+
+Júlia: Te llamé aquí porque necesito que me consigas un plátano. ¡Tengo hambre :3!
+Júlia: ¿Puedes hacerlo por mí, becario?
+
+¡Por supuesto!
+
+set Globals.nextDialog = 3
+set Globals.nextPerson = "Catapimbas"
+set Globals.cataInt = false
+
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://d4f7ef5nn53so"
+path="res://.godot/imported/milaSai.dialogue-b462e44e7e201f41abaf2833cf4a7518.tres"
+
+[deps]
+
+source_file="res://dialogs/en/milaSai.dialogue"
+dest_files=["res://.godot/imported/milaSai.dialogue-b462e44e7e201f41abaf2833cf4a7518.tres"]
+
+[params]
+
+defaults=true

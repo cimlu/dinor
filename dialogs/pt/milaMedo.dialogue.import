@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://xi03wa2f1s3k"
+path="res://.godot/imported/milaMedo.dialogue-952982c977548f775657bf6ef2327dfc.tres"
+
+[deps]
+
+source_file="res://dialogs/pt/milaMedo.dialogue"
+dest_files=["res://.godot/imported/milaMedo.dialogue-952982c977548f775657bf6ef2327dfc.tres"]
+
+[params]
+
+defaults=true

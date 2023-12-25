@@ -22,7 +22,7 @@ func _on_area_input_event(_viewport, event, _shape_idx):
 func textureClear():
 	texture.texture = null
 
-func _process(delta):
+func _process(_delta):
 	if Commands.inventory[id] == null and texture.texture != null:
 		texture.texture = null
 	

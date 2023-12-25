@@ -1,0 +1,13 @@
+~ this_is_a_node_title
+
+Mila: Let's go to the laboratory.
+- Ok.
+
+set Globals.door_stairsdown = "open"
+set Globals.nextPerson = "Mila"
+set Globals.sangue = true
+set Globals.nextDialog = 9
+set Globals.milaInt = false
+set Globals.aparent1 = ["mila", "hall3"]
+
+=> END

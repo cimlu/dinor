@@ -1,0 +1,16 @@
+~ this_is_a_node_title
+
+set Globals.cataInt = true
+Júlia: [[Heyyyy! Good morning, intern.|Good morning newbie!]]
+Júlia: Look what I found!
+Júlia: * Júlia shows a giant blue egg *
+- You need to return this in the time machine.
+	Júlia: W-what do you mean? What time machine are you talking about?
+	- If you return the egg, I'll give you a banana.
+		Júlia: Really? THAT'S WHAT I NEEDED FOR MY RESEARCH! I'll wait for you to give me the banana.
+		set Globals.nextPerson = "Catapimbas"
+		set Globals.nextDialog = 12
+		set Globals.cataInt = false
+		set Globals.aparent1 = ["catapimbas", "biolab"]
+
+=> END

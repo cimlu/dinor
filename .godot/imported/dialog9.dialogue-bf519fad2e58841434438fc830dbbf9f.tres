@@ -1,0 +1,254 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_4dkhm"]
+
+[resource]
+script = ExtResource("1_4dkhm")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Mila")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"id": "10",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "door_biolab"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "open"
+}])
+},
+"next_id": "11",
+"parent_id": "3",
+"type": "mutation"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Mila"
+}])
+},
+"next_id": "12",
+"parent_id": "3",
+"type": "mutation"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 10
+}])
+},
+"next_id": "13",
+"parent_id": "3",
+"type": "mutation"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "14",
+"parent_id": "3",
+"type": "mutation"
+},
+"14": {
+"id": "14",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "aparent1"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "array",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "mila"
+}]), Array[Dictionary]([{
+"type": "string",
+"value": "biolab"
+}])])
+}])
+},
+"next_id": "16",
+"parent_id": "3",
+"type": "mutation"
+},
+"16": {
+"id": "16",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "local"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "dictionary_reference",
+"value": Array[Dictionary]([{
+"type": "number",
+"value": 1
+}]),
+"variable": "aparent1"
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "16",
+"next_id": "4",
+"next_id_after": "16",
+"type": "condition"
+},
+"4": {
+"id": "4",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "5",
+"parent_id": "3",
+"type": "mutation"
+},
+"5": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "AAAAAAAAAAAH",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "AAAAAAAAAAAH",
+"type": "dialogue"
+},
+"6": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "¿qué es esto?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¿qué es esto?",
+"type": "dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "* Mila comienza a llorar *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Mila comienza a llorar *",
+"type": "dialogue"
+},
+"8": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "10",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Entremos, tal vez no sea sangre...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Entremos, tal vez no sea sangre...",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

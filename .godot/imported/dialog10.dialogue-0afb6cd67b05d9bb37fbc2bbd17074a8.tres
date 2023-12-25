@@ -1,0 +1,471 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_dupkv"]
+
+[resource]
+script = ExtResource("1_dupkv")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Mila")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"next_id_after": "11",
+"parent_id": "4",
+"responses": PackedStringArray("10"),
+"tags": PackedStringArray(),
+"text": "Okay.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Okay.",
+"type": "response"
+},
+"11": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Travel back in time and convince Júlia to take the egg back to the time of the dinosaurs.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Travel back in time and convince Júlia to take the egg back to the time of the dinosaurs.",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"next_id_after": "13",
+"parent_id": "4",
+"responses": PackedStringArray("12"),
+"tags": PackedStringArray(),
+"text": "How do I do that?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How do I do that?",
+"type": "response"
+},
+"13": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Talk to Gary. He'll understand if you explain. He'll give you the key to the timelab.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Talk to Gary. He'll understand if you explain. He'll give you the key to the timelab.",
+"type": "dialogue"
+},
+"14": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Don't forget to grab the helium-3 battery from the energy lab. The key is in the briefcase.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Don't forget to grab the helium-3 battery from the energy lab. The key is in the briefcase.",
+"type": "dialogue"
+},
+"15": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Do you hear those footsteps? It's from the dinosaur that hatched. The louder they get, the closer it'll be. If it's too close, use your cell phone to wait for it to pass.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you hear those footsteps? It's from the dinosaur that hatched. The louder they get, the closer it'll be. If it's too close, use your cell phone to wait for it to pass.",
+"type": "dialogue"
+},
+"16": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "18",
+"next_id_after": "18",
+"parent_id": "4",
+"responses": PackedStringArray("16"),
+"tags": PackedStringArray(),
+"text": "Alright...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Alright...",
+"type": "response"
+},
+"18": {
+"id": "18",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "celular"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "19",
+"parent_id": "4",
+"type": "mutation"
+},
+"19": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Good luck. Don't forget to press the lever when entering the time machine.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Good luck. Don't forget to press the lever when entering the time machine.",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "21",
+"parent_id": "4",
+"type": "mutation"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Dinor"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "apatrulhar"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "22",
+"parent_id": "4",
+"type": "mutation"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "need"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "32",
+"parent_id": "4",
+"type": "mutation"
+},
+"23": {
+"id": "23",
+"next_conditional_id": "32",
+"next_id": "24",
+"next_id_after": "32",
+"parent_id": "3",
+"type": "condition"
+},
+"24": {
+"id": "24",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "25",
+"parent_id": "23",
+"type": "mutation"
+},
+"25": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"parent_id": "23",
+"tags": PackedStringArray(),
+"text": "Good luck.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Good luck.",
+"type": "dialogue"
+},
+"26": {
+"id": "26",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "32",
+"parent_id": "23",
+"type": "mutation"
+},
+"27": {
+"id": "27",
+"next_conditional_id": "32",
+"next_id": "28",
+"next_id_after": "32",
+"type": "condition"
+},
+"28": {
+"id": "28",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "29",
+"parent_id": "27",
+"type": "mutation"
+},
+"29": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"parent_id": "27",
+"tags": PackedStringArray(),
+"text": "Get in...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Get in...",
+"type": "dialogue"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "local"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "dictionary_reference",
+"value": Array[Dictionary]([{
+"type": "number",
+"value": 1
+}]),
+"variable": "aparent1"
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "27",
+"next_id": "4",
+"next_id_after": "32",
+"type": "condition"
+},
+"30": {
+"id": "30",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "32",
+"parent_id": "27",
+"type": "mutation"
+},
+"32": {
+"id": "32",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "not"
+}, {
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "need"
+}, {
+"type": "colon"
+}])
+},
+"id": "4",
+"next_conditional_id": "23",
+"next_id": "5",
+"next_id_after": "32",
+"parent_id": "3",
+"type": "condition"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "milaInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "6",
+"parent_id": "4",
+"type": "mutation"
+},
+"6": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "\"It's Júlia's head... And the dinosaur egg disappeared...\"",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "\"It's Júlia's head... And the dinosaur egg disappeared...\"",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "9",
+"parent_id": "4",
+"responses": PackedStringArray("8"),
+"tags": PackedStringArray(),
+"text": "What do you mean, dinosaur egg?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What do you mean, dinosaur egg?",
+"type": "response"
+},
+"9": {
+"character": "Mila",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Look, I can't explain much, but... I'll have to give you a mission. You have to complete it urgently.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Look, I can't explain much, but... I'll have to give you a mission. You have to complete it urgently.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

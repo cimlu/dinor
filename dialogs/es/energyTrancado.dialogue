@@ -1,0 +1,9 @@
+~ this_is_a_node_title
+
+if Commands.tem("keyYe"):
+	Abrió
+	set Globals.door_energylab = "open"
+else:
+	Trenzado.
+
+=> END

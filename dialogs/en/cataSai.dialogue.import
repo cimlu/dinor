@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://c7wd60bdadwjo"
+path="res://.godot/imported/cataSai.dialogue-26dab5474c6df500a03efc117b455d3b.tres"
+
+[deps]
+
+source_file="res://dialogs/en/cataSai.dialogue"
+dest_files=["res://.godot/imported/cataSai.dialogue-26dab5474c6df500a03efc117b455d3b.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,13 @@
+~ this_is_a_node_title
+
+Gary Muriendo: Jack... No tengo mucho tiempo para explicar.
+Gary Muriendo: Hace unos minutos salió un dinosaurio de esa máquina.
+Gary Muriendo: Toma el huevo azul y llévalo al pasado.
+set Dinor.apatrulhar = true
+
+set Globals.nextPerson = "Catapimbas"
+set Globals.nextDialog = 11
+set Globals.milaInt = false
+set Globals.aparent1 = ["catapimbas", "biolab"]
+
+=> END

@@ -1,0 +1,272 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_iql3s"]
+
+[resource]
+script = ExtResource("1_iql3s")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Júlia")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"parent_id": "9",
+"tags": PackedStringArray(),
+"text": "I found it in the confidential laboratory. Don't tell Gary I took it, okay!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I found it in the confidential laboratory. Don't tell Gary I took it, okay!",
+"type": "dialogue"
+},
+"11": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"next_id_after": "12",
+"parent_id": "9",
+"responses": PackedStringArray("11"),
+"tags": PackedStringArray(),
+"text": "What's this confidential laboratory?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What's this confidential laboratory?",
+"type": "response"
+},
+"12": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"parent_id": "9",
+"tags": PackedStringArray(),
+"text": "You're asking too many questions.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You're asking too many questions.",
+"type": "dialogue"
+},
+"13": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "16",
+"next_id_after": "16",
+"parent_id": "9",
+"responses": PackedStringArray("13"),
+"tags": PackedStringArray(),
+"text": "Alright...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Alright...",
+"type": "response"
+},
+"14": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"next_id_after": "16",
+"tags": PackedStringArray(),
+"text": "Can I have your number?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Can I have your number?",
+"type": "response"
+},
+"15": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "?",
+"type": "dialogue"
+},
+"16": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"tags": PackedStringArray(),
+"text": "I called you here because I need you to get a banana for me. I'm hungry :3.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I called you here because I need you to get a banana for me. I'm hungry :3.",
+"type": "dialogue"
+},
+"17": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"tags": PackedStringArray(),
+"text": "Can you do that for me, intern?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Can you do that for me, intern?",
+"type": "dialogue"
+},
+"18": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "20",
+"next_id_after": "20",
+"responses": PackedStringArray("18"),
+"tags": PackedStringArray(),
+"text": "Of course...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Of course...",
+"type": "response"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 3
+}])
+},
+"next_id": "21",
+"type": "mutation"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Catapimbas"
+}])
+},
+"next_id": "22",
+"type": "mutation"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "24",
+"type": "mutation"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "5",
+"type": "mutation"
+},
+"5": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "[[Heyyyy! Good morning, intern.|Good morning newbie!]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Heyyyy! Good morning, intern.|Good morning newbie!]]",
+"type": "dialogue"
+},
+"6": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"tags": PackedStringArray(),
+"text": "Look what I found!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Look what I found!",
+"type": "dialogue"
+},
+"7": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "9",
+"tags": PackedStringArray(),
+"text": "* Júlia shows a giant blue egg *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Júlia shows a giant blue egg *",
+"type": "dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"next_id_after": "16",
+"responses": PackedStringArray("9", "14"),
+"tags": PackedStringArray(),
+"text": "Where did you get that?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Where did you get that?",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

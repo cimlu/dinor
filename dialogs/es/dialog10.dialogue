@@ -1,0 +1,30 @@
+~ this_is_a_node_title
+
+if Globals.local == Globals.aparent1[1]:
+	if !Globals.need:
+		set Globals.milaInt = true
+		Mila: Es la cabeza de Júlia... Y el huevo de dinosaurio desapareció...
+		- ¿Cómo que huevo de dinosaurio?
+		Mila: Mira, no puedo explicar mucho, pero... Tendré que darte una misión. Tienes que cumplirla con urgencia.
+		- De acuerdo.
+		Mila: Viaja de regreso en el tiempo y convence a Júlia de llevar el huevo de vuelta a la época de los dinosaurios.
+		- ¿Cómo hago eso?
+		Mila: Habla con Gary. Él entenderá si explicás. Él te dará la llave del timelab.
+		Mila: No olvides tomar la batería de helio-3 en el laboratorio de energía. La llave está en el maletín.
+		Mila: ¿Escuchas esos pasos? Es del dinosaurio que ha nacido. Cuanto más alto, más cerca estará. Si está muy cerca, usa el celular para esperar a que pase.
+		- De acuerdo...
+		set Globals.celular = true
+		Mila: Suerte. No olvides presionar la palanca al ingresar a la máquina del tiempo.
+		set Globals.milaInt = false
+		set Dinor.apatrulhar = true
+		set Globals.need = true
+	else:
+		set Globals.milaInt = true
+		Mila: Suerte.
+		set Globals.milaInt = false
+else:
+	set Globals.milaInt = true
+	Mila: Entre...
+	set Globals.milaInt = false
+
+=> END

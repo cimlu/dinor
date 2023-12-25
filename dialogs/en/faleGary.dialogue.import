@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dkvk8fi8xlog0"
+path="res://.godot/imported/faleGary.dialogue-ea2486c5debdee19c8ebaba8957d4e85.tres"
+
+[deps]
+
+source_file="res://dialogs/en/faleGary.dialogue"
+dest_files=["res://.godot/imported/faleGary.dialogue-ea2486c5debdee19c8ebaba8957d4e85.tres"]
+
+[params]
+
+defaults=true

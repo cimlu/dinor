@@ -18,5 +18,5 @@ func _on_animation_player_animation_finished(_anim_name):
 
 func _on_timer_timeout():
 	if jumpscare:
-		DialogueManager.show_example_dialogue_balloon(load("res://dialogs/jumpscare.dialogue"))
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogs/"+Globals.language+"/jumpscare.dialogue"))
 		jumpscare = false

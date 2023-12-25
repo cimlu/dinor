@@ -1,0 +1,245 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_f7qgg"]
+
+[resource]
+script = ExtResource("1_f7qgg")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Gary")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "Gary",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "12",
+"tags": PackedStringArray(),
+"text": "Vá lá ajudá-la.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Vá lá ajudá-la.",
+"type": "dialogue"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 2
+}])
+},
+"next_id": "13",
+"type": "mutation"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Catapimbas"
+}])
+},
+"next_id": "14",
+"type": "mutation"
+},
+"14": {
+"id": "14",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "door_stairsdown"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "open"
+}])
+},
+"next_id": "15",
+"type": "mutation"
+},
+"15": {
+"id": "15",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "garyInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "16",
+"type": "mutation"
+},
+"16": {
+"id": "16",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "aparent1"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "array",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "catapimbas"
+}]), Array[Dictionary]([{
+"type": "string",
+"value": "biolab"
+}])])
+}])
+},
+"next_id": "18",
+"type": "mutation"
+},
+"18": {
+"id": "18",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "garyInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "4",
+"type": "mutation"
+},
+"4": {
+"character": "Gary",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Olá, Jack.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Olá, Jack.",
+"type": "dialogue"
+},
+"5": {
+"character": "Gary",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "Como você está?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Como você está?",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"next_id_after": "8",
+"responses": PackedStringArray("6", "7"),
+"tags": PackedStringArray(),
+"text": "sim",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "sim",
+"type": "response"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"next_id_after": "8",
+"tags": PackedStringArray(),
+"text": "[[ótimo|bem]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[ótimo|bem]]",
+"type": "response"
+},
+"8": {
+"character": "Gary",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"tags": PackedStringArray(),
+"text": "Tá.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tá.",
+"type": "dialogue"
+},
+"9": {
+"character": "Gary",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"tags": PackedStringArray(),
+"text": "Júlia está precisando de ajuda. Ela está no laboratório de Biologia.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Júlia está precisando de ajuda. Ela está no laboratório de Biologia.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

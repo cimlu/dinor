@@ -1,0 +1,11 @@
+~ this_is_a_node_title
+
+Felicidades! Las botellas se han salvado. Ahora regresa al laboratorio de biología indicando que guardaste los viales.
+
+set Globals.door_storage = "open"
+set Globals.door_stairsdown = "milaFala"
+set Globals.door_biolab = "milaMedo"
+set Globals.task_frascos_complete = true
+set Globals.nextDialog = 8
+
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cryltup3a56ft"
+path="res://.godot/imported/dificuldade.dialogue-7e2c16a7aeaeadb8c99867874e8bbebf.tres"
+
+[deps]
+
+source_file="res://dialogs/pt/dificuldade.dialogue"
+dest_files=["res://.godot/imported/dificuldade.dialogue-7e2c16a7aeaeadb8c99867874e8bbebf.tres"]
+
+[params]
+
+defaults=true

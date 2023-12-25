@@ -4,3 +4,5 @@ extends Node2D
 
 func _on_lavando_timeout():
 	Globals.lavou = true
+	Globals.lavando = false
+	Globals.alavar = null

@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_cyahs"]
+
+[resource]
+script = ExtResource("1_cyahs")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "Congratulations!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Congratulations!",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "After pressing the lever you traveled to the time of the dinosaurs and left the egg back there.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "After pressing the lever you traveled to the time of the dinosaurs and left the egg back there.",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "And everything went back to normal.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "And everything went back to normal.",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"tags": PackedStringArray(),
+"text": "Click on the egg to go to the credits.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Click on the egg to go to the credits.",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

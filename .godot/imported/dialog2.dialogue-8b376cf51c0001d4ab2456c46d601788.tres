@@ -1,0 +1,270 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ym1gr"]
+
+[resource]
+script = ExtResource("1_ym1gr")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Júlia")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"next_id_after": "17",
+"parent_id": "8",
+"responses": PackedStringArray("10"),
+"tags": PackedStringArray(),
+"text": "¿Qué es ese laboratorio confidencial?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¿Qué es ese laboratorio confidencial?",
+"type": "response"
+},
+"11": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"parent_id": "10",
+"tags": PackedStringArray(),
+"text": "Estás haciendo demasiadas preguntas.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Estás haciendo demasiadas preguntas.",
+"type": "dialogue"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "17",
+"next_id_after": "17",
+"parent_id": "10",
+"responses": PackedStringArray("12"),
+"tags": PackedStringArray(),
+"text": "De acuerdo...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "De acuerdo...",
+"type": "response"
+},
+"14": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"next_id_after": "17",
+"tags": PackedStringArray(),
+"text": "¿Me pasas tu número?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¿Me pasas tu número?",
+"type": "response"
+},
+"15": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "17",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "?",
+"type": "dialogue"
+},
+"17": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"tags": PackedStringArray(),
+"text": "Te llamé aquí porque necesito que me consigas un plátano. ¡Tengo hambre :3!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Te llamé aquí porque necesito que me consigas un plátano. ¡Tengo hambre :3!",
+"type": "dialogue"
+},
+"18": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "20",
+"tags": PackedStringArray(),
+"text": "¿Puedes hacerlo por mí, becario?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¿Puedes hacerlo por mí, becario?",
+"type": "dialogue"
+},
+"20": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "22",
+"tags": PackedStringArray(),
+"text": "¡Por supuesto!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¡Por supuesto!",
+"type": "dialogue"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 3
+}])
+},
+"next_id": "23",
+"type": "mutation"
+},
+"23": {
+"id": "23",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Catapimbas"
+}])
+},
+"next_id": "24",
+"type": "mutation"
+},
+"24": {
+"id": "24",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "26",
+"type": "mutation"
+},
+"26": {
+"id": "26",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "4",
+"type": "mutation"
+},
+"4": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "[[OIEEEEE! Hola aprendiz.|Buenos dias, aprendiz!]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[OIEEEEE! Hola aprendiz.|Buenos dias, aprendiz!]]",
+"type": "dialogue"
+},
+"5": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "Mire lo que encontré!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mire lo que encontré!",
+"type": "dialogue"
+},
+"6": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"tags": PackedStringArray(),
+"text": "* Júlia muestra un huevo gigante *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Júlia muestra un huevo gigante *",
+"type": "dialogue"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "17",
+"responses": PackedStringArray("8", "14"),
+"tags": PackedStringArray(),
+"text": "Donde es este huevo?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Donde es este huevo?",
+"type": "response"
+},
+"9": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"parent_id": "8",
+"tags": PackedStringArray(),
+"text": "Lo encontré en el laboratorio confidencial. No le digas a Gary que lo tomé, ¿vale?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lo encontré en el laboratorio confidencial. No le digas a Gary que lo tomé, ¿vale?",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

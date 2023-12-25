@@ -3,12 +3,15 @@ extends Marker2D
 @onready var agua = $agua
 @onready var spawn_frascos = $"../spawnFrascos"
 @onready var frascos = $"../frascos"
+@onready var frasco_place = $"../frascoPlace"
 
 func _ready():
-	if Globals.lavados == 5:
+	if Globals.lavados == 5 and !Globals.task_frascos_complete:
 		frascos.set_position(spawn_frascos.position)
+	elif  Globals.lavados == 5 and !Globals.task_frascos_complete:
+		frascos.set_position(frasco_place.position)
 
-func _process(delta):
+func _process(_delta):
 	if Globals.alavar != null:
 		Globals.lavado = Globals.alavar
 		if Globals.lavou == false:
@@ -21,7 +24,6 @@ func _process(delta):
 		
 	Globals.lavar()
 	
-	
 	if Globals.lavados == 4:
 		addFrascos()
 	
@@ -30,3 +32,4 @@ func addFrascos():
 	Globals.nextDialog = 5
 	Globals.door_storage = "open"
 	Globals.lavados = 5
+	Globals.lavou = true

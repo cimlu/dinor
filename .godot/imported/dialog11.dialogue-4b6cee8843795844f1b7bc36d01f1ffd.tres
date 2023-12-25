@@ -1,0 +1,231 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_h6k2n"]
+
+[resource]
+script = ExtResource("1_h6k2n")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Júlia")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"parent_id": "9",
+"tags": PackedStringArray(),
+"text": "¿En serio? ¡ERA LO QUE NECESITABA PARA MI INVESTIGACIÓN! Voy a esperar a que me des el plátano.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¿En serio? ¡ERA LO QUE NECESITABA PARA MI INVESTIGACIÓN! Voy a esperar a que me des el plátano.",
+"type": "dialogue"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Catapimbas"
+}])
+},
+"next_id": "12",
+"parent_id": "9",
+"type": "mutation"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 12
+}])
+},
+"next_id": "13",
+"parent_id": "9",
+"type": "mutation"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "14",
+"parent_id": "9",
+"type": "mutation"
+},
+"14": {
+"id": "14",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "aparent1"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "array",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "catapimbas"
+}]), Array[Dictionary]([{
+"type": "string",
+"value": "biolab"
+}])])
+}])
+},
+"next_id": "16",
+"parent_id": "9",
+"type": "mutation"
+},
+"16": {
+"id": "16",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "4",
+"type": "mutation"
+},
+"4": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "[[¡Holaaaa! Buenos días, pasante.|¡Buenos días novato!]]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[¡Holaaaa! Buenos días, pasante.|¡Buenos días novato!]]",
+"type": "dialogue"
+},
+"5": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "¡Mira lo que encontré!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¡Mira lo que encontré!",
+"type": "dialogue"
+},
+"6": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"tags": PackedStringArray(),
+"text": "* Júlia muestra un huevo azul gigante *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Júlia muestra un huevo azul gigante *",
+"type": "dialogue"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"next_id_after": "16",
+"responses": PackedStringArray("7"),
+"tags": PackedStringArray(),
+"text": "Necesitas devolver esto en la máquina del tiempo.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Necesitas devolver esto en la máquina del tiempo.",
+"type": "response"
+},
+"8": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"parent_id": "7",
+"tags": PackedStringArray(),
+"text": "¿C-cómo así? ¿De qué máquina del tiempo estás hablando?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "¿C-cómo así? ¿De qué máquina del tiempo estás hablando?",
+"type": "dialogue"
+},
+"9": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"next_id_after": "16",
+"parent_id": "7",
+"responses": PackedStringArray("9"),
+"tags": PackedStringArray(),
+"text": "Si devuelves el huevo, te daré un plátano.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Si devuelves el huevo, te daré un plátano.",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

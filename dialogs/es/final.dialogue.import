@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ccemdlugawuhu"
+path="res://.godot/imported/final.dialogue-37ad5a1fa5f1cbda46edf179bc7d269a.tres"
+
+[deps]
+
+source_file="res://dialogs/es/final.dialogue"
+dest_files=["res://.godot/imported/final.dialogue-37ad5a1fa5f1cbda46edf179bc7d269a.tres"]
+
+[params]
+
+defaults=true

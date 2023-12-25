@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://k42y4vqo77kd"
+path="res://.godot/imported/dificuldade.dialogue-edf66cb0b56e1d77a2d7c436c1231403.tres"
+
+[deps]
+
+source_file="res://dialogs/en/dificuldade.dialogue"
+dest_files=["res://.godot/imported/dificuldade.dialogue-edf66cb0b56e1d77a2d7c436c1231403.tres"]
+
+[params]
+
+defaults=true

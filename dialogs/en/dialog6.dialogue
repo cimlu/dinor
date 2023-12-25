@@ -1,0 +1,19 @@
+~ this_is_a_node_title
+
+set Globals.milaInt = true
+Mila: Hi, boy. How're you?
+- I'm fine, and you?
+Mila: The same.
+- Do you have the storage key?
+Mila: I have. Do you need this now?
+- Yes.
+Mila: I'm going there too. Let's go.
+- Ok.
+
+set Globals.door_biolab = "guardarFrascos"
+set Globals.milaInt = false
+set Globals.nextDialog = 7
+set Globals.nextPerson = "Mila"
+set Globals.aparent1 = ["mila", "hall"]
+
+=> END

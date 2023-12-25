@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://ciprafvihgrlv"
+path="res://.godot/imported/Creditos.dialogue-f7566e6e9654162782cc3c1bae615b44.tres"
+
+[deps]
+
+source_file="res://dialogs/es/Creditos.dialogue"
+dest_files=["res://.godot/imported/Creditos.dialogue-f7566e6e9654162782cc3c1bae615b44.tres"]
+
+[params]
+
+defaults=true

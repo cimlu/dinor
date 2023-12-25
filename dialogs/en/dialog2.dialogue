@@ -1,0 +1,24 @@
+~ this_is_a_node_title
+
+set Globals.cataInt = true
+
+Júlia: [[Heyyyy! Good morning, intern.|Good morning newbie!]]
+Júlia: Look what I found!
+Júlia: * Júlia shows a giant blue egg *
+
+- Where did you get that?
+	Júlia: I found it in the confidential laboratory. Don't tell Gary I took it, okay!
+	- What's this confidential laboratory?
+	Júlia: You're asking too many questions.
+	- Alright...
+- Can I have your number?
+	Júlia: ?
+Júlia: I called you here because I need you to get a banana for me. I'm hungry :3.
+Júlia: Can you do that for me, intern?
+- Of course...
+
+set Globals.nextDialog = 3
+set Globals.nextPerson = "Catapimbas"
+set Globals.cataInt = false
+
+=> END

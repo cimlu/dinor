@@ -1,0 +1,71 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_qd8wk"]
+
+[resource]
+script = ExtResource("1_qd8wk")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "Parabéns!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Parabéns!",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Após apertar a alavanca você viajou para a época dos dinossauros e deixou o ovo de volta lá.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Após apertar a alavanca você viajou para a época dos dinossauros e deixou o ovo de volta lá.",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "E tudo voltou ao normal.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "E tudo voltou ao normal.",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"tags": PackedStringArray(),
+"text": "Clique no ovo para ir pros créditos.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Clique no ovo para ir pros créditos.",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

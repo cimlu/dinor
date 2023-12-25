@@ -1,0 +1,144 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_eqau4"]
+
+[resource]
+script = ExtResource("1_eqau4")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray()
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"11": {
+"id": "11",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "Seleccione dificultad:",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Seleccione dificultad:",
+"type": "dialogue"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"next_id_after": "11",
+"responses": PackedStringArray("4", "6", "8"),
+"tags": PackedStringArray(),
+"text": "Fácil",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Fácil",
+"type": "response"
+},
+"5": {
+"id": "5",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dificuldade"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "11",
+"parent_id": "4",
+"type": "mutation"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"next_id_after": "11",
+"tags": PackedStringArray(),
+"text": "Imposible",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Imposible",
+"type": "response"
+},
+"7": {
+"id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dificuldade"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 2
+}])
+},
+"next_id": "11",
+"parent_id": "6",
+"type": "mutation"
+},
+"8": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"next_id_after": "11",
+"tags": PackedStringArray(),
+"text": "DIVINO",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "DIVINO",
+"type": "response"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "dificuldade"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 3
+}])
+},
+"next_id": "11",
+"parent_id": "8",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

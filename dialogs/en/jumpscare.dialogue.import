@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bxo0ygbp6sp2"
+path="res://.godot/imported/jumpscare.dialogue-f21d04f5bba6708d8d1f828ca09b2afd.tres"
+
+[deps]
+
+source_file="res://dialogs/en/jumpscare.dialogue"
+dest_files=["res://.godot/imported/jumpscare.dialogue-f21d04f5bba6708d8d1f828ca09b2afd.tres"]
+
+[params]
+
+defaults=true

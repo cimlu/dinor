@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bsqkuq1j6p366"
+path="res://.godot/imported/frascosLavados.dialogue-e56955a86d5a5e02332f7128ae88b64d.tres"
+
+[deps]
+
+source_file="res://dialogs/pt/frascosLavados.dialogue"
+dest_files=["res://.godot/imported/frascosLavados.dialogue-e56955a86d5a5e02332f7128ae88b64d.tres"]
+
+[params]
+
+defaults=true

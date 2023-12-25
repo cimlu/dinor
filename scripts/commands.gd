@@ -12,7 +12,7 @@ signal toClear
 func _ready():
 	Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
 
-func _process(delta):
+func _process(_delta):
 	if toCollect != null:
 		discollect(toCollect)
 
@@ -20,7 +20,7 @@ func _unhandled_input(event):
 	if event.is_action_pressed("pause"):
 		pass
 
-func collect(item, pickup):
+func collect(item):
 	for i in 7:
 		if inventory[i] == null:
 			slotsel = i

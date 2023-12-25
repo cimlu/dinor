@@ -1,0 +1,33 @@
+~ this_is_a_node_title
+
+set Globals.cataInt = true
+Júlia: Hola, has sacado la banana?
+- Sí
+	if Commands.tem("banana"):
+		Júlia: Obrigada! Sabías que si olvidas la contraseña de el maletín sólo tienes que ir al baño
+		set Globals.cataInt = false
+		set Commands.toCollect = "banana"
+		* Júlia empieza a comer la banana *
+		Tú: De que es ese huevo?
+		set Globals.cataInt = true
+		Júlia: Dinos... er... Las gallinas son dinosaurios, ¿no? Es un huevo de gallina..
+		set Globals.cataInt = false
+		Tú: Las gallinas no ponen huevos azules.
+		set Globals.cataInt = true
+		Júlia: Por supuesto que lo hacen. Mira, ¿me lavarás estas botellas?
+		- Claro.
+		set Globals.cataInt = false
+		Task: Lavar las botellas.
+		set Globals.nextDialog = 4
+		set Globals.nextPerson = "Catapimbas"
+		set Globals.piaLavavel = true
+	else:
+		Júlia: Mentiroso. Ve a buscarlo.
+		set Globals.cataInt = false
+		=> END
+- No
+	Ve a buscarlo.
+	set Globals.cataInt = false
+	=> END
+
+=> END

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://bbkmfenn571v2"
+path="res://.godot/imported/milaSai.dialogue-e5718fee2856a6a3d176c93e7ae8e331.tres"
+
+[deps]
+
+source_file="res://dialogs/es/milaSai.dialogue"
+dest_files=["res://.godot/imported/milaSai.dialogue-e5718fee2856a6a3d176c93e7ae8e331.tres"]
+
+[params]
+
+defaults=true

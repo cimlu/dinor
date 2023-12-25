@@ -1,0 +1,507 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_s8bsu"]
+
+[resource]
+script = ExtResource("1_s8bsu")
+using_states = PackedStringArray()
+titles = {
+"this_is_a_node_title": "3"
+}
+character_names = PackedStringArray("Júlia", "You", "Task")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "this_is_a_node_title",
+"type": "title"
+},
+"10": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "* Júlia starts to eat the banana *",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "* Júlia starts to eat the banana *",
+"type": "dialogue"
+},
+"11": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "This egg is from which animal?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This egg is from which animal?",
+"type": "dialogue"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "13",
+"parent_id": "6",
+"type": "mutation"
+},
+"13": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Dinos... er... chickens are dinosaurs, right? This is chicken egg.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Dinos... er... chickens are dinosaurs, right? This is chicken egg.",
+"type": "dialogue"
+},
+"14": {
+"id": "14",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "15",
+"parent_id": "6",
+"type": "mutation"
+},
+"15": {
+"character": "You",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Chickens don't lay blue eggs.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Chickens don't lay blue eggs.",
+"type": "dialogue"
+},
+"16": {
+"id": "16",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "17",
+"parent_id": "6",
+"type": "mutation"
+},
+"17": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Of course they do. Look, will you wash these bottles for me?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Of course they do. Look, will you wash these bottles for me?",
+"type": "dialogue"
+},
+"18": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"next_id_after": "19",
+"parent_id": "6",
+"responses": PackedStringArray("18"),
+"tags": PackedStringArray(),
+"text": "Of course.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Of course.",
+"type": "response"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "20",
+"parent_id": "6",
+"type": "mutation"
+},
+"20": {
+"character": "Task",
+"character_replacements": Array[Dictionary]([]),
+"id": "20",
+"next_id": "21",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Wash the bottles.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wash the bottles.",
+"type": "dialogue"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextDialog"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 4
+}])
+},
+"next_id": "22",
+"parent_id": "6",
+"type": "mutation"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "nextPerson"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "Catapimbas"
+}])
+},
+"next_id": "23",
+"parent_id": "6",
+"type": "mutation"
+},
+"23": {
+"id": "23",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "piaLavavel"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "33",
+"parent_id": "6",
+"type": "mutation"
+},
+"24": {
+"id": "24",
+"next_conditional_id": "33",
+"next_id": "25",
+"next_id_after": "33",
+"parent_id": "5",
+"type": "condition"
+},
+"25": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"parent_id": "24",
+"tags": PackedStringArray(),
+"text": "Lie. Go get it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Lie. Go get it.",
+"type": "dialogue"
+},
+"26": {
+"id": "26",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "27",
+"parent_id": "24",
+"type": "mutation"
+},
+"27": {
+"id": "27",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "24",
+"type": "goto"
+},
+"28": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"next_id_after": "33",
+"tags": PackedStringArray(),
+"text": "No",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No",
+"type": "response"
+},
+"29": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "29",
+"next_id": "30",
+"parent_id": "28",
+"tags": PackedStringArray(),
+"text": "So, go get it.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So, go get it.",
+"type": "dialogue"
+},
+"3": {
+"id": "3",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "true"
+}])
+},
+"next_id": "4",
+"type": "mutation"
+},
+"30": {
+"id": "30",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "31",
+"parent_id": "28",
+"type": "mutation"
+},
+"31": {
+"id": "31",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "28",
+"type": "goto"
+},
+"33": {
+"id": "33",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Hi, did you get the banana?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Hi, did you get the banana?",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"next_id_after": "33",
+"responses": PackedStringArray("5", "28"),
+"tags": PackedStringArray(),
+"text": "Yes",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes",
+"type": "response"
+},
+"6": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Commands"
+}, {
+"type": "dot"
+}, {
+"function": "tem",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "banana"
+}])])
+}, {
+"type": "colon"
+}])
+},
+"id": "6",
+"next_conditional_id": "24",
+"next_id": "7",
+"next_id_after": "33",
+"parent_id": "5",
+"type": "condition"
+},
+"7": {
+"character": "Júlia",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "Thank you! Did you know that if you forget the briefcase password, you just have to go to the bathroom?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you! Did you know that if you forget the briefcase password, you just have to go to the bathroom?",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "cataInt"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "variable",
+"value": "false"
+}])
+},
+"next_id": "9",
+"parent_id": "6",
+"type": "mutation"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Commands"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
+"value": "toCollect"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "banana"
+}])
+},
+"next_id": "10",
+"parent_id": "6",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.31.0"

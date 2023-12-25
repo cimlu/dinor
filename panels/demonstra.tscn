@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://o45kgjclucr1"]
+
+[ext_resource type="Texture2D" uid="uid://p11xevevam0k" path="res://assets/bgs/bgCam.png" id="1_v4bog"]
+[ext_resource type="PackedScene" uid="uid://bjyq6lc50uyc2" path="res://interacts/banana.tscn" id="2_iecyt"]
+[ext_resource type="PackedScene" uid="uid://g3ahjd2ix47l" path="res://interf/hud.tscn" id="3_468gi"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 328.0
+offset_top = 173.0
+offset_right = 368.0
+offset_bottom = 213.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -130.0
+offset_top = -73.0
+offset_right = 135.0
+offset_bottom = 76.0
+mouse_filter = 2
+texture = ExtResource("1_v4bog")
+
+[node name="banana" parent="." instance=ExtResource("2_iecyt")]
+position = Vector2(65, -2)
+
+[node name="hud" parent="." instance=ExtResource("3_468gi")]
+position = Vector2(0, 58)

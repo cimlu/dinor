@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cep6xg4riwy12"
+path="res://.godot/imported/trancado.dialogue-b99e909905d4b9721cc41d9dbc8838c9.tres"
+
+[deps]
+
+source_file="res://dialogs/en/trancado.dialogue"
+dest_files=["res://.godot/imported/trancado.dialogue-b99e909905d4b9721cc41d9dbc8838c9.tres"]
+
+[params]
+
+defaults=true

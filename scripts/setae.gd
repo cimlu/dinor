@@ -5,14 +5,15 @@ var bgs = ["credits", "credits1", "credits2", "credits3"]
 var bgnumber = 0
 
 func _on_area_input_event(viewport, event, shape_idx):
-	if event.is_action_pressed("click"):
-		if bgnumber == 0:
-			bgnumber = 3
-		else:
-			bgnumber -= 1
-		bg.texture = load("res://assets/bgs/credits"+str(bgnumber)+".png")
-		Sound.playSong("arrow")
-		if bgnumber == 2:
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/naomostra.dialogue"))
-		if bgnumber == 3:
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/creditos.dialogue"))
+	pass
+#	if event.is_action_pressed("click"):
+#		if bgnumber == 0:
+#			bgnumber = 3
+#		else:
+#			bgnumber -= 1
+#		bg.texture = load("res://assets/bgs/credits"+str(bgnumber)+".png")
+#		Sound.playSong("arrow")
+#		if bgnumber == 2:
+#			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/"+Globals.language+"/naomostra.dialogue"))
+#		if bgnumber == 3:
+#			DialogueManager.show_example_dialogue_balloon(load("res://dialogs/"+Globals.language+"/creditos.dialogue"))

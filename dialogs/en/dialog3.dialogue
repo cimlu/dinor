@@ -1,0 +1,33 @@
+~ this_is_a_node_title
+
+set Globals.cataInt = true
+Júlia: Hi, did you get the banana?
+- Yes
+	if Commands.tem("banana"):
+		Júlia: Thank you! Did you know that if you forget the briefcase password, you just have to go to the bathroom?
+		set Globals.cataInt = false
+		set Commands.toCollect = "banana"
+		* Júlia starts to eat the banana *
+		You: This egg is from which animal?
+		set Globals.cataInt = true
+		Júlia: Dinos... er... chickens are dinosaurs, right? This is chicken egg.
+		set Globals.cataInt = false
+		You: Chickens don't lay blue eggs.
+		set Globals.cataInt = true
+		Júlia: Of course they do. Look, will you wash these bottles for me?
+		- Of course.
+		set Globals.cataInt = false
+		Task: Wash the bottles.
+		set Globals.nextDialog = 4
+		set Globals.nextPerson = "Catapimbas"
+		set Globals.piaLavavel = true
+	else:
+		Júlia: Lie. Go get it.
+		set Globals.cataInt = false
+		=> END
+- No
+	Júlia: So, go get it.
+	set Globals.cataInt = false
+	=> END
+
+=> END

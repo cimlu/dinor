@@ -1,0 +1,8 @@
+~ this_is_a_node_title
+
+set Globals.cataInt = true
+Júlia: ¿Terminaste de lavar las botellas?
+- No
+set Globals.cataInt = false
+
+=> END

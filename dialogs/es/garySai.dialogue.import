@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://d35j0b8kcy7gc"
+path="res://.godot/imported/garySai.dialogue-a3c799a8d3460173ff5c47ce25e5fb1f.tres"
+
+[deps]
+
+source_file="res://dialogs/es/garySai.dialogue"
+dest_files=["res://.godot/imported/garySai.dialogue-a3c799a8d3460173ff5c47ce25e5fb1f.tres"]
+
+[params]
+
+defaults=true

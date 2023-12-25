@@ -1,0 +1,14 @@
+~ this_is_a_node_title
+
+if Globals.local == Globals.aparent1[1]:
+	set Globals.milaInt = true
+	Mila: Now it's open.
+	set Globals.door_storage = "open"
+	set Globals.milaInt = false
+	set Globals.door_stairsdown = "guardarFrascos"
+else:
+	set Globals.milaInt = true
+	Mila: Let's go to the storage.
+	set Globals.milaInt = false
+
+=> END

@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_1naj8"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_fa0lr"]
 
 [resource]
-script = ExtResource("1_1naj8")
+script = ExtResource("1_fa0lr")
 using_states = PackedStringArray()
 titles = {
 "this_is_a_node_title": "3"
@@ -51,6 +51,28 @@ lines = {
 "type": "dot"
 }, {
 "type": "variable",
+"value": "door_biolab"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "string",
+"value": "guardarFrascos"
+}])
+},
+"next_id": "14",
+"type": "mutation"
+},
+"14": {
+"id": "14",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "Globals"
+}, {
+"type": "dot"
+}, {
+"type": "variable",
 "value": "milaInt"
 }, {
 "type": "assignment",
@@ -60,11 +82,11 @@ lines = {
 "value": "false"
 }])
 },
-"next_id": "14",
+"next_id": "15",
 "type": "mutation"
 },
-"14": {
-"id": "14",
+"15": {
+"id": "15",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -82,11 +104,11 @@ lines = {
 "value": 7
 }])
 },
-"next_id": "15",
+"next_id": "16",
 "type": "mutation"
 },
-"15": {
-"id": "15",
+"16": {
+"id": "16",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -104,11 +126,11 @@ lines = {
 "value": "Mila"
 }])
 },
-"next_id": "16",
+"next_id": "17",
 "type": "mutation"
 },
-"16": {
-"id": "16",
+"17": {
+"id": "17",
 "mutation": {
 "expression": Array[Dictionary]([{
 "type": "variable",
@@ -132,11 +154,11 @@ lines = {
 }])])
 }])
 },
-"next_id": "18",
+"next_id": "19",
 "type": "mutation"
 },
-"18": {
-"id": "18",
+"19": {
+"id": "19",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"
