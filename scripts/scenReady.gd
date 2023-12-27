@@ -9,10 +9,9 @@ func _ready():
 		for i in self.get_child_count():
 			if self.get_child(i).name == Globals.aparent1[0]:
 				self.get_child(i).visible = true
-
 	for i in 7:
 		if Commands.inventory[i] != null:
 			var texture = load("res://assets/sprites/"+Commands.inventory[i]+".png")
 			hud.get_child(1).get_child(i).spritechange(texture)
-
+	Globals.save_data()
 	Dinor.bg = bg.texture

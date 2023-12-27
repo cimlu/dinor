@@ -5,7 +5,6 @@ var distancia = 0
 var rgn = RandomNumberGenerator.new()
 var vindo = false
 var bg
-
 var apatrulhar = false
 
 func _process(_delta):
@@ -44,6 +43,7 @@ func movement():
 		
 	if distancia >= 3:
 		get_tree().change_scene_to_file("res://panels/ataque.tscn")
+		Sound.pauseSong("foots")
 		Sound.pauseSong("foots")
 		Sound.aumenta("bgmusic")
 		Sound.aumenta("bgmusic")

@@ -10,6 +10,10 @@ extends Control
 @onready var seta_return = $setaReturn
 
 func _ready():
+	Globals.menu = true
+	
+	Input.set_custom_mouse_cursor(preload("res://assets/sprites/hand.png"))
+	
 	if config.visible:
 		config.visible = false
 		lang_level.visible = false
@@ -17,17 +21,31 @@ func _ready():
 		seta_return.visible = false
 	if !index.visible:
 		index.visible = true
+	
+	if Globals.dificuldade == 1:
+		dif_level.text = "Easy"
+	elif Globals.dificuldade == 2:
+		dif_level.text = "Impossible"
+	elif Globals.dificuldade == 3:
+		dif_level.text = "God"
+	
+	if Globals.language == "pt":
+		lang_level.text = "Português"
+	elif Globals.language == "es":
+		lang_level.text = "Español"
+	elif Globals.language == "en":
+		lang_level.text = "English"
 
 func _on_exit_byn_pressed():
 	get_tree().quit()
 
 func _on_play_btn_pressed():
 	anim.play("transition")
+	Globals.menu = false
 
 func _on_anim_animation_finished(_anim_name):
-	get_tree().change_scene_to_file("res://panels/bath.tscn")
+	get_tree().change_scene_to_file("res://panels/"+Globals.local+".tscn")
 	Sound.playSong("bgmusic")
-
 
 func _on_config_btn_pressed():
 	index.visible = false

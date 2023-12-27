@@ -11,10 +11,8 @@ func _ready():
 func _on_exit_byn_pressed():
 	get_tree().quit()
 
-
 func _on_animation_player_animation_finished(_anim_name):
 	timer.start()
-
 
 func _on_timer_timeout():
 	if jumpscare:
