@@ -13,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 color = Color(0, 0, 0, 0.392157)
 
 [node name="menu_holder" type="VBoxContainer" parent="."]
@@ -28,10 +29,12 @@ offset_bottom = 74.5
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
+mouse_filter = 2
 
 [node name="reset_btn" type="Button" parent="menu_holder"]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 1
 theme = ExtResource("1_30077")
 theme_override_font_sizes/font_size = 64
 text = "RESET PROGRESS"
@@ -39,6 +42,7 @@ text = "RESET PROGRESS"
 [node name="resume_btn" type="Button" parent="menu_holder"]
 layout_mode = 2
 size_flags_horizontal = 4
+mouse_filter = 1
 theme = ExtResource("1_30077")
 theme_override_font_sizes/font_size = 64
 text = "RESUME"
@@ -47,6 +51,7 @@ text = "RESUME"
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+mouse_filter = 1
 theme = ExtResource("1_30077")
 theme_override_font_sizes/font_size = 64
 text = "MENU"

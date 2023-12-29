@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://dv7k2k2bcwyhg"]
+
+[ext_resource type="Script" path="res://scripts/slider.gd" id="1_f7aal"]
+
+[node name="HSlider" type="HSlider"]
+custom_minimum_size = Vector2(100, 0)
+offset_left = -50.0
+offset_top = -8.0
+offset_right = 50.0
+offset_bottom = 8.0
+size_flags_vertical = 1
+step = 0.001
+value = 50.0
+script = ExtResource("1_f7aal")
+
+[connection signal="value_changed" from="." to="." method="_on_value_changed"]

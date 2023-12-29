@@ -3,6 +3,7 @@ extends Node
 const SAVE_FILE = "user://savefile.dat"
 var data = {}
 var menu
+var paused = false
 
 func _ready():
 	load_data()

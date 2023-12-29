@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dfqbot3pat1jb"]
+[gd_scene load_steps=18 format=3 uid="uid://dfqbot3pat1jb"]
 
 [ext_resource type="Script" path="res://scripts/menu.gd" id="1_og6mx"]
 [ext_resource type="Texture2D" uid="uid://tta6fjar8b8j" path="res://assets/bgs/timelab.png" id="2_njlbe"]
@@ -10,6 +10,9 @@
 [ext_resource type="Texture2D" uid="uid://dqfhe0vypdk4n" path="res://assets/sprites/aviso.png" id="7_4m2jk"]
 [ext_resource type="Texture2D" uid="uid://dx1k8krt3ycex" path="res://assets/sprites/difficul.png" id="8_gdcae"]
 [ext_resource type="Texture2D" uid="uid://djytoo7qs07v3" path="res://assets/sprites/setaAviso.png" id="8_lewh8"]
+[ext_resource type="PackedScene" uid="uid://dv7k2k2bcwyhg" path="res://interf/slider.tscn" id="9_q2csh"]
+[ext_resource type="Script" path="res://scripts/lang_level.gd" id="9_yvwvm"]
+[ext_resource type="Script" path="res://scripts/dif_level.gd" id="10_hkw6c"]
 
 [sub_resource type="Animation" id="Animation_vgwhg"]
 length = 0.001
@@ -225,7 +228,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-mouse_filter = 2
+mouse_filter = 1
 script = ExtResource("1_og6mx")
 
 [node name="bg" type="TextureRect" parent="."]
@@ -288,20 +291,24 @@ texture = ExtResource("4_dbn75")
 [node name="play_btn" type="Button" parent="index"]
 layout_mode = 2
 size_flags_vertical = 4
+mouse_filter = 1
 theme = ExtResource("4_utwco")
 text = "PLAY"
 
 [node name="config_btn" type="Button" parent="index"]
 layout_mode = 2
+mouse_filter = 1
 theme = ExtResource("4_utwco")
 text = "SETTINGS"
 
 [node name="exit_byn" type="Button" parent="index"]
 layout_mode = 2
+mouse_filter = 1
 theme = ExtResource("4_utwco")
 text = "EXIT"
 
 [node name="config" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -317,80 +324,39 @@ grow_vertical = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 
-[node name="lang" type="TextureRect" parent="config"]
-layout_mode = 2
-size_flags_vertical = 3
-texture = ExtResource("7_0r07n")
-
-[node name="pt_btn" type="Button" parent="config"]
-layout_mode = 2
-theme = ExtResource("4_utwco")
-text = "PORTUGUÊS"
-
-[node name="es_btn" type="Button" parent="config"]
-layout_mode = 2
-theme = ExtResource("4_utwco")
-text = "ESPAÑOL"
-
-[node name="en_btn" type="Button" parent="config"]
-layout_mode = 2
-theme = ExtResource("4_utwco")
-text = "ENGLISH"
-
-[node name="dificul" type="TextureRect" parent="config"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 3
-texture = ExtResource("8_gdcae")
-
-[node name="easy_btn" type="Button" parent="config"]
-layout_mode = 2
-theme = ExtResource("4_utwco")
-text = "EASY (NOOB)"
-
-[node name="impo_btn" type="Button" parent="config"]
-layout_mode = 2
-theme = ExtResource("4_utwco")
-text = "IMPOSSIBLE (PRO)"
-
-[node name="god_btn" type="Button" parent="config"]
-layout_mode = 2
-theme = ExtResource("4_utwco")
-text = "GOD LEVEL (HACKER)"
-
 [node name="anim" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_7fmfg")
 }
 
 [node name="aviso" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 848.0
 offset_top = 357.0
 offset_right = 948.0
 offset_bottom = 441.0
 scale = Vector2(3, 3)
-mouse_filter = 2
 texture = ExtResource("7_4m2jk")
 
 [node name="setaAviso" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 750.0
 offset_top = 507.0
 offset_right = 804.0
 offset_bottom = 524.0
 scale = Vector2(3, 3)
-mouse_filter = 2
 texture = ExtResource("8_lewh8")
 
 [node name="setaReturn" type="TextureRect" parent="."]
+visible = false
 layout_mode = 0
 offset_left = 42.0
 offset_top = 596.0
 offset_right = 96.0
 offset_bottom = 613.0
 scale = Vector2(3, -3)
-mouse_filter = 2
 texture = ExtResource("8_lewh8")
 
 [node name="area" type="Area2D" parent="setaReturn"]
@@ -401,31 +367,163 @@ shape = SubResource("RectangleShape2D_fe2p0")
 
 [node name="lang_level" type="Label" parent="."]
 layout_mode = 2
-offset_left = 730.0
-offset_top = 189.0
-offset_right = 1114.0
-offset_bottom = 268.0
+offset_left = 659.0
+offset_top = 325.0
+offset_right = 1011.0
+offset_bottom = 392.0
+mouse_filter = 1
 theme = ExtResource("4_utwco")
 text = "Português
 "
+script = ExtResource("9_yvwvm")
+
+[node name="lang" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 152.0
+offset_top = 113.0
+offset_right = 517.0
+offset_bottom = 548.0
+
+[node name="lang" type="TextureRect" parent="lang"]
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("7_0r07n")
+
+[node name="pt_btn" type="Button" parent="lang"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_utwco")
+text = "PORTUGUÊS"
+
+[node name="es_btn" type="Button" parent="lang"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_utwco")
+text = "ESPAÑOL"
+
+[node name="en_btn" type="Button" parent="lang"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_utwco")
+text = "ENGLISH"
 
 [node name="dif_level" type="Label" parent="."]
 layout_mode = 2
-offset_left = 730.0
-offset_top = 288.0
-offset_right = 1114.0
-offset_bottom = 367.0
+offset_left = 659.0
+offset_top = 325.0
+offset_right = 1025.0
+offset_bottom = 392.0
+mouse_filter = 1
 theme = ExtResource("4_utwco")
 text = "Easy"
+script = ExtResource("10_hkw6c")
+
+[node name="difficulty" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 151.0
+offset_top = 281.0
+offset_right = 517.0
+offset_bottom = 548.0
+
+[node name="dificul" type="TextureRect" parent="difficulty"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+texture = ExtResource("8_gdcae")
+
+[node name="easy_btn" type="Button" parent="difficulty"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_utwco")
+text = "EASY (NOOB)"
+
+[node name="impo_btn" type="Button" parent="difficulty"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_utwco")
+text = "IMPOSSIBLE (PRO)"
+
+[node name="god_btn" type="Button" parent="difficulty"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_utwco")
+text = "GOD LEVEL (HACKER)"
+
+[node name="sound" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 525.0
+offset_top = 352.0
+offset_right = 625.0
+offset_bottom = 368.0
+
+[node name="slider" parent="sound" instance=ExtResource("9_q2csh")]
+layout_mode = 2
+mouse_filter = 1
+
+[node name="reset" type="VBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 524.0
+offset_top = 304.0
+offset_right = 628.0
+offset_bottom = 345.0
+
+[node name="reset" type="Button" parent="reset"]
+layout_mode = 2
+mouse_filter = 1
+theme = ExtResource("4_utwco")
+text = "RESET
+"
+
+[node name="navbar" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 275.0
+offset_top = 8.0
+offset_right = 919.0
+offset_bottom = 49.0
+
+[node name="back_btn" type="Button" parent="navbar"]
+layout_mode = 2
+theme = ExtResource("4_utwco")
+text = "BACK"
+
+[node name="lang_btn" type="Button" parent="navbar"]
+layout_mode = 2
+theme = ExtResource("4_utwco")
+text = "LANGUAGE"
+
+[node name="dif_btn" type="Button" parent="navbar"]
+layout_mode = 2
+theme = ExtResource("4_utwco")
+text = "DIFFICULTY"
+
+[node name="sound_btn" type="Button" parent="navbar"]
+layout_mode = 2
+theme = ExtResource("4_utwco")
+text = "SOUND"
+
+[node name="reset_btn" type="Button" parent="navbar"]
+layout_mode = 2
+theme = ExtResource("4_utwco")
+text = "RESET"
 
 [connection signal="pressed" from="index/play_btn" to="." method="_on_play_btn_pressed"]
 [connection signal="pressed" from="index/config_btn" to="." method="_on_config_btn_pressed"]
 [connection signal="pressed" from="index/exit_byn" to="." method="_on_exit_byn_pressed"]
-[connection signal="pressed" from="config/pt_btn" to="." method="_on_pt_btn_pressed"]
-[connection signal="pressed" from="config/es_btn" to="." method="_on_es_btn_pressed"]
-[connection signal="pressed" from="config/en_btn" to="." method="_on_en_btn_pressed"]
-[connection signal="pressed" from="config/easy_btn" to="." method="_on_easy_btn_pressed"]
-[connection signal="pressed" from="config/impo_btn" to="." method="_on_impo_btn_pressed"]
-[connection signal="pressed" from="config/god_btn" to="." method="_on_god_btn_pressed"]
 [connection signal="animation_finished" from="anim" to="." method="_on_anim_animation_finished"]
 [connection signal="input_event" from="setaReturn/area" to="." method="_on_area_input_event"]
+[connection signal="pressed" from="lang/pt_btn" to="." method="_on_pt_btn_pressed"]
+[connection signal="pressed" from="lang/es_btn" to="." method="_on_es_btn_pressed"]
+[connection signal="pressed" from="lang/en_btn" to="." method="_on_en_btn_pressed"]
+[connection signal="pressed" from="difficulty/easy_btn" to="." method="_on_easy_btn_pressed"]
+[connection signal="pressed" from="difficulty/impo_btn" to="." method="_on_impo_btn_pressed"]
+[connection signal="pressed" from="difficulty/god_btn" to="." method="_on_god_btn_pressed"]
+[connection signal="pressed" from="reset/reset" to="." method="_on_reset_btn_pressed"]
+[connection signal="pressed" from="reset/reset" to="." method="_on_reset_pressed"]
+[connection signal="pressed" from="navbar/back_btn" to="." method="_on_back_btn_pressed"]
+[connection signal="pressed" from="navbar/lang_btn" to="." method="_on_lang_btn_pressed"]
+[connection signal="pressed" from="navbar/dif_btn" to="." method="_on_dif_btn_pressed"]
+[connection signal="pressed" from="navbar/sound_btn" to="." method="_on_sound_btn_pressed"]
+[connection signal="pressed" from="navbar/reset_btn" to="." method="_on_reset_btn_pressed"]

@@ -7,15 +7,22 @@ func _process(delta):
 	if Input.is_action_just_pressed("esc"):
 		if !Globals.menu:
 			if visible:
-				visible = false
-				get_tree().paused = false
+				despause()
 			else:
-				visible = true
-				get_tree().paused = true
+				pause()
+
+func despause():
+	visible = false
+	Globals.paused = false
+
+func pause():
+	visible = true
+	Globals.paused = true
+	Input.set_custom_mouse_cursor(preload("res://assets/sprites/hand.png"))
+	print(Commands.inventory)
 
 func _on_resume_btn_pressed():
-	visible = false
-	get_tree().paused = false
+	despause()
 
 func _on_menu_btn_pressed():
 	Sound.pauseSong("foots")

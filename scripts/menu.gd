@@ -5,14 +5,28 @@ extends Control
 @onready var anim = $anim
 @onready var aviso = $aviso
 @onready var seta_aviso = $setaAviso
+@onready var seta_return = $setaReturn
 @onready var lang_level = $lang_level
 @onready var dif_level = $dif_level
-@onready var seta_return = $setaReturn
+@onready var lang = $lang
+@onready var difficulty = $difficulty
+@onready var sound = $sound
+@onready var reset = $reset
+@onready var navbar = $navbar
 
 func _ready():
 	Globals.menu = true
 	
+	get_tree().paused = false
+	
 	Input.set_custom_mouse_cursor(preload("res://assets/sprites/hand.png"))
+	
+	index.visible = true
+	lang.visible = false
+	reset.visible = false
+	sound.visible = false
+	difficulty.visible = false
+	navbar.visible = false
 	
 	if config.visible:
 		config.visible = false
@@ -49,12 +63,10 @@ func _on_anim_animation_finished(_anim_name):
 
 func _on_config_btn_pressed():
 	index.visible = false
-	config.visible = true
 	aviso.visible = false
 	seta_aviso.visible = false
-	lang_level.visible = true
-	dif_level.visible = true
-	seta_return.visible = true
+	lang.visible = true
+	navbar.visible = true
 
 func _on_easy_btn_pressed():
 	Globals.dificuldade = 1
@@ -87,3 +99,41 @@ func _on_area_input_event(viewport, event, shape_idx):
 		lang_level.visible = false
 		dif_level.visible = false
 		seta_return.visible = false
+
+
+func _on_back_btn_pressed():
+	index.visible = true
+	lang.visible = false
+	reset.visible = false
+	sound.visible = false
+	difficulty.visible = false
+	navbar.visible = false
+
+func _on_lang_btn_pressed():
+	lang.visible = true
+	reset.visible = false
+	sound.visible = false
+	difficulty.visible = false
+
+
+func _on_dif_btn_pressed():
+	lang.visible = false
+	reset.visible = false
+	sound.visible = false
+	difficulty.visible = true
+
+func _on_sound_btn_pressed():
+	lang.visible = false
+	reset.visible = false
+	sound.visible = true
+	difficulty.visible = false
+
+func _on_reset_btn_pressed():
+	lang.visible = false
+	reset.visible = true
+	sound.visible = false
+	difficulty.visible = false
+
+
+func _on_reset_pressed():
+	Globals.clear()

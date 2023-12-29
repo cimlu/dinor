@@ -25,9 +25,6 @@ func textureClear():
 func _process(_delta):
 	if Commands.inventory[id] == null and texture.texture != null:
 		texture.texture = null
-	
-	if Input.is_action_pressed("ui_cancel"):
-		Commands.discollect(Commands.inventory[id])
 
 func spritechange(sprite):
 	texture.texture = sprite

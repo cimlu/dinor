@@ -1,4 +1,7 @@
+HBoxContainer
 Button
+HSlider
+VSplitContainer
 VBoxContainer
 ColorRect
 CanvasLayer
@@ -21,7 +24,6 @@ Camera2D
 Container
 Panel
 GridContainer
-HBoxContainer
 MarginContainer
 CanvasGroup
 Node
