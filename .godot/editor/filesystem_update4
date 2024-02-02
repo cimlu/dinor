@@ -4,10 +4,7 @@ res://scripts/agua.gd
 res://scripts/item.gd
 res://interf/slider.tscn
 res://interf/pause.tscn
-res://scripts/pause.gd
-res://scripts/menu.gd
-res://scripts/dif_level.gd
-res://scripts/lang_level.gd
-res://scripts/slider.gd
-res://scripts/sound.gd
 res://sounds/sound.tscn
+res://scripts/globals.gd
+res://scripts/pause.gd
+res://scripts/cscene.gd

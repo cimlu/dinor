@@ -4,6 +4,7 @@ extends Area2D
 
 func _on_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
+		print("suspeito")
 		if !Globals.paused:
 			Input.set_custom_mouse_cursor(preload("res://assets/sprites/cursorExit.png"))
 			if Globals.isAberto(self.name):

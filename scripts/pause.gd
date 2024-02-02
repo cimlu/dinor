@@ -30,6 +30,8 @@ func _on_menu_btn_pressed():
 	get_tree().change_scene_to_file("res://panels/menu.tscn")
 	visible = false
 	get_tree().paused = false
+	Globals.paused = false
 
 func _on_reset_btn_pressed():
 	Globals.clear()
+	despause()
