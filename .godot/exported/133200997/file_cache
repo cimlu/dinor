@@ -66,7 +66,7 @@ res://panels/hall_end.tscn::23259ac77c68b0be69be893b6a6ebb56::1702843379::res://
 res://panels/inventory.tscn::501e16e256b8ee16608049a151cd6a50::1702385091::res://.godot/exported/133200997/export-c8103fb51be497f1d0114a1c7c9cc1b7-inventory.scn
 res://panels/janta.tscn::9194b1a8e375b13314e7f23b4516115e::1703100296::res://.godot/exported/133200997/export-b0fc09e16667057c3354dbf8eee9410b-janta.scn
 res://panels/maleta.tscn::143490cb72085916bfcb82f14f615640::1703449062::res://.godot/exported/133200997/export-b85b85c4518da57fa0d42aa670a8e145-maleta.scn
-res://panels/menu.tscn::4d73fabc5e923a025c81ea06ce7316a1::1703874419::res://.godot/exported/133200997/export-8219f6c4ac0937b3c6daacf315b29ab8-menu.scn
+res://panels/menu.tscn::4d73fabc5e923a025c81ea06ce7316a1::1706906866::res://.godot/exported/133200997/export-8219f6c4ac0937b3c6daacf315b29ab8-menu.scn
 res://panels/pia.tscn::626dfd09ab55f95a5c46d581d693f472::1703449062::res://.godot/exported/133200997/export-84ad24c2a753f21586eeefeedbe2b72a-pia.scn
 res://panels/storage.tscn::c4d7edc6347d18b5c39768d80e250fff::1703449062::res://.godot/exported/133200997/export-4143ef5d562436fdb24345d1bee04bfa-storage.scn
 res://panels/storage_front.tscn::77f27735e2ba9661ba71d7438a08d035::1703124591::res://.godot/exported/133200997/export-cffd9e5371d5b24a55c681b18f3c6125-storage_front.scn
@@ -75,9 +75,9 @@ res://panels/timelab.tscn::79729daf8d5cea85b935644c603266a9::1703449062::res://.
 res://panels/timemachine.tscn::f9e75605de8ddf3756733ce464abcca8::1703449062::res://.godot/exported/133200997/export-877ae00e84b24eb39ab40514bee030ab-timemachine.scn
 res://panels/treeroom.tscn::4c616932b843a7f4a7078fbcbeb64f8b::1702551074::res://.godot/exported/133200997/export-690efe0c0e1e50775cd6433e1b26ef76-treeroom.scn
 res://panels/_3.tscn::76368bebe59bd30b247cf0f5f251e30b::1702753739::res://.godot/exported/133200997/export-7cb47e99df684676676587dda653a3b3-_3.scn
-res://sounds/sound.tscn::494da25df7382cae462a56947f91f277::1703874419::res://.godot/exported/133200997/export-5fed42c2306501cf1ee6981994aa3940-sound.scn
+res://sounds/sound.tscn::494da25df7382cae462a56947f91f277::1706906867::res://.godot/exported/133200997/export-5fed42c2306501cf1ee6981994aa3940-sound.scn
 res://themes/inv.tres::534ff3d21f27858c6c479553aec69d42::1703125717::res://.godot/exported/133200997/export-422720f875e1d866bd38d5ab65938418-inv.res
-res://themes/menu.tres::e558efb19df6434ce53dea35ac80e955::1703871084::res://.godot/exported/133200997/export-53887d14cf9053f0d3a66a75a8b1011e-menu.res
-res://interf/pause.tscn::f8796a27f52ff6cf73371d0c37e9bfc4::1703874419::res://.godot/exported/133200997/export-bbe9f2087c8bb20a6be6153982571458-pause.scn
-res://interf/slider.tscn::1972262c7eca19f1c920e9b55dffad44::1703874419::res://.godot/exported/133200997/export-94f9abe541fe15a1d3fcf0a587aa9f5e-slider.scn
+res://themes/menu.tres::e558efb19df6434ce53dea35ac80e955::1706969175::res://.godot/exported/133200997/export-53887d14cf9053f0d3a66a75a8b1011e-menu.res
+res://interf/pause.tscn::f8796a27f52ff6cf73371d0c37e9bfc4::1706969175::res://.godot/exported/133200997/export-bbe9f2087c8bb20a6be6153982571458-pause.scn
+res://interf/slider.tscn::1972262c7eca19f1c920e9b55dffad44::1706906866::res://.godot/exported/133200997/export-94f9abe541fe15a1d3fcf0a587aa9f5e-slider.scn
 res://panels/demonstra.tscn::cad6e079ce2f5ba461a52394d1b52202::1703170137::res://.godot/exported/133200997/export-a2d32cbc3fa99327194b9cb0f262be55-demonstra.scn

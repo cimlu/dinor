@@ -29,6 +29,7 @@ Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("1_yxagl")
 Button/styles/hover = SubResource("StyleBoxFlat_yi5x5")
 Button/styles/normal = SubResource("StyleBoxFlat_luhw8")
+HSlider/icons/grabber = null
 Label/font_sizes/font_size = 64
 Label/fonts/font = ExtResource("1_yxagl")
 TextEdit/colors/font_color = Color(1, 1, 1, 1)

@@ -1,10 +1,9 @@
-res://panels/menu.tscn
+res://interf/pause.tscn
 res://themes/menu.tres
 res://scripts/agua.gd
 res://scripts/item.gd
-res://interf/slider.tscn
-res://interf/pause.tscn
 res://sounds/sound.tscn
-res://scripts/globals.gd
-res://scripts/pause.gd
-res://scripts/cscene.gd
+res://scripts/sound.gd
+res://panels/menu.tscn
+res://scripts/slider.gd
+res://interf/slider.tscn
