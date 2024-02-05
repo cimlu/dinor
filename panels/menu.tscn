@@ -450,7 +450,6 @@ theme = ExtResource("4_utwco")
 text = "GOD LEVEL (HACKER)"
 
 [node name="sound" type="VBoxContainer" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 525.0
 offset_top = 352.0
