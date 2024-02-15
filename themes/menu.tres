@@ -1,7 +1,7 @@
-[gd_resource type="Theme" load_steps=9 format=3 uid="uid://ctpc1dbhlcp4n"]
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://ctpc1dbhlcp4n"]
 
 [ext_resource type="FontFile" uid="uid://b1yeh3uy1x2b0" path="res://assets/fonts/RevMiniPixel.ttf" id="1_yxagl"]
-[ext_resource type="Texture2D" uid="uid://b1f44ajn8vmrh" path="res://assets/sprites/blueEgg.png" id="2_ambfq"]
+[ext_resource type="Texture2D" uid="uid://kwso416o6mhy" path="res://assets/sprites/grab.png" id="2_rrw0q"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yi5x5"]
 bg_color = Color(0.529412, 0.0862745, 0.27451, 0.709804)
@@ -19,20 +19,20 @@ corner_radius_top_right = 5
 corner_radius_bottom_right = 5
 corner_radius_bottom_left = 5
 
+[sub_resource type="ImageTexture" id="ImageTexture_8yatq"]
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j5mtp"]
 bg_color = Color(0.909804, 0.345098, 0.768627, 1)
-corner_radius_top_left = 5
-corner_radius_top_right = 5
-corner_radius_bottom_right = 5
-corner_radius_bottom_left = 5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vv2xp"]
 bg_color = Color(0.741176, 0.498039, 0.764706, 1)
 
 [sub_resource type="StyleBoxLine" id="StyleBoxLine_436yl"]
-color = Color(0, 0, 0, 0.741176)
-grow_begin = 5.0
-thickness = 10
+content_margin_top = 19.0
+color = Color(0.501961, 0.619608, 0.764706, 0.741176)
+grow_begin = 0.0
+grow_end = -1.0
+thickness = 38
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s3ofm"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
@@ -45,8 +45,8 @@ Button/font_sizes/font_size = 32
 Button/fonts/font = ExtResource("1_yxagl")
 Button/styles/hover = SubResource("StyleBoxFlat_yi5x5")
 Button/styles/normal = SubResource("StyleBoxFlat_luhw8")
-HSlider/icons/grabber = ExtResource("2_ambfq")
-HSlider/icons/grabber_highlight = ExtResource("2_ambfq")
+HSlider/icons/grabber = SubResource("ImageTexture_8yatq")
+HSlider/icons/grabber_highlight = ExtResource("2_rrw0q")
 HSlider/styles/grabber_area = SubResource("StyleBoxFlat_j5mtp")
 HSlider/styles/grabber_area_highlight = SubResource("StyleBoxFlat_vv2xp")
 HSlider/styles/slider = SubResource("StyleBoxLine_436yl")

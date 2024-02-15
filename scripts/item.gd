@@ -16,7 +16,6 @@ func _ready():
 	for i in pickup.size():
 		if pickup[i].name == "pickup":
 			pickup = pickup[i]
-			print("a     ",pickup)
 			break
 
 	for i in 7:
@@ -31,7 +30,6 @@ func collect(item):
 	Commands.collect(item)
 	
 	if Commands.invfull:
-		print("LIBERE ESPAÇO")
 		DialogueManager.show_example_dialogue_balloon(load("res://dialogs/"+Globals.language+"/inventarioCheio.dialogue"))
 	else:
 		slot = hud.get_child(1).get_child(Commands.slotsel)

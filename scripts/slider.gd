@@ -1,9 +1,15 @@
 extends HSlider
 
 func _ready():
-	value = Sound.vol
+	if Sound.vol < -30:
+		value = -30
+	else:
+		value = Sound.vol
+	
 
 func _on_value_changed(value):
-	Sound.vol = value
-	print(value)
+	if value > -30:
+		Sound.vol = value
+	else:
+		Sound.vol = -80
 	pass

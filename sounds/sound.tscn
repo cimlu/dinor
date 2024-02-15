@@ -34,7 +34,6 @@ volume_db = 5.0
 
 [node name="jumpscare" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("7_w5o2n")
-volume_db = 5.0
 
 [node name="foots" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("8_uakdl")

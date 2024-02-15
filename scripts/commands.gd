@@ -29,14 +29,8 @@ func collect(item):
 			i=i+1
 		else:
 			invfull = true
-			break
-	
+			break	
 	inventory[slotsel] = item.name
-
-	if invfull == true:
-		print("INVENTORY FULL")
-	else:
-		print(inventory)
 
 func discollect(item):
 	for i in 7:
@@ -56,7 +50,6 @@ func mousechange(item):
 		else:
 			Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))
 			texture = load("res://assets/sprites/hand.png")
-		print(item.texture)
 		
 	if selectedSlot == null:
 		Input.set_custom_mouse_cursor(load("res://assets/sprites/hand.png"))

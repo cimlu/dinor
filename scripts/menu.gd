@@ -55,11 +55,17 @@ func _on_exit_byn_pressed():
 
 func _on_play_btn_pressed():
 	anim.play("transition")
+	Globals.garyInt = false
+	Globals.cataInt = false
+	Globals.milaInt = false
 	Globals.menu = false
 
 func _on_anim_animation_finished(_anim_name):
-	get_tree().change_scene_to_file("res://panels/"+Globals.local+".tscn")
 	Sound.playSong("bgmusic")
+	if Dinor.patrulha:
+		Dinor.apatrulhar = true
+	get_tree().change_scene_to_file("res://panels/"+Globals.local+".tscn")
+	
 
 func _on_config_btn_pressed():
 	index.visible = false

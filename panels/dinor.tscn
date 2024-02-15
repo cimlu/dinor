@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://ck35uhod5bd7s"]
+[gd_scene load_steps=3 format=3 uid="uid://ck35uhod5bd7s"]
 
 [ext_resource type="Script" path="res://scripts/dinor.gd" id="1_5rmp4"]
+[ext_resource type="AudioStream" uid="uid://b5jg8w83dqrri" path="res://sounds/foots.mp3" id="2_v1sal"]
 
 [node name="dinor" type="Node2D"]
 script = ExtResource("1_5rmp4")
+
+[node name="foots" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_v1sal")

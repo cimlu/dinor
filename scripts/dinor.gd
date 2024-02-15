@@ -7,46 +7,74 @@ var vindo = false
 var bg
 var apatrulhar = false
 
+@onready var foots = $foots
+
+func pauseFoots():
+	foots.playing = false
+
 func _process(_delta):
 	if apatrulhar:
-		Sound.playSong("foots")
+		foots.volume_db = distancia * 6
+		foots.play()
 		patrulha = true
 		apatrulhar = false
-
-func patrulhando():
-	Sound.playSong("foots")
+		vindo = true
 
 func cell():
-	if distancia != 0:
-		Sound.diminui("foots")
-		distancia -= 1
-		print("alivio")
+	afasta(1)
 
 func movement():
-	var value = rgn.randi_range(0,1000)
-	
-	if !vindo:
-		if value < 50:
-			distancia -= 1
-			vindo = true
-			Sound.diminui("foots")
-		elif value < 150:
-			print("nada")
-		else:
-			distancia += 1
-			print("se aproxima")
-			Sound.aumenta("foots")
-	else:
-		distancia += 1
-		Sound.aumenta("foots")
-		print("se aproxima")
-		
-	if distancia >= 3:
+	if distancia > 3:
 		get_tree().change_scene_to_file("res://panels/ataque.tscn")
-		Sound.pauseSong("foots")
-		Sound.pauseSong("foots")
 		Sound.aumenta("bgmusic")
 		Sound.aumenta("bgmusic")
-	
-	print(value)
-	
+	else:
+		var value = rgn.randi_range(0,1000)
+		if Globals.dificuldade == 1:
+			easyMovement(value)
+		elif Globals.dificuldade == 2:
+			impMovement(value)
+		elif Globals.dificuldade == 3:
+			godMovement(value)
+		else:
+			easyMovement(value)
+
+func easyMovement(value):
+	if value < 200:
+		afasta(1)
+	elif value < 500:
+		pass
+	elif value < 683:
+		aproxima(1)
+	else:
+		aproxima(2)
+
+func impMovement(value):
+	if value < 100:
+		afasta(1)
+	elif value < 300:
+		pass
+	elif value < 800:
+		aproxima(1)
+	else:
+		aproxima(2)
+
+func godMovement(value):
+	if value < 50:
+		afasta(1)
+	elif value < 150:
+		pass
+	else:
+		aproxima(1)
+
+func aproxima(val):
+	distancia += val
+	changeVolumeFoots()
+
+func afasta(val):
+	if distancia >= 0:
+		distancia -= val
+		changeVolumeFoots()
+
+func changeVolumeFoots():
+	foots.volume_db = 6*distancia

@@ -23,7 +23,7 @@ func clear():
 		"local" = "bath",
 		"language" = "pt",
 		"garyFalou" = false,
-		"dificuldade" = 0,
+		"dificuldade" = 1,
 		"cooldown" = 0,
 		"celular" = false,
 		"cellPosicionado" = false,
@@ -54,7 +54,8 @@ func clear():
 		"distancia" = 0,
 		"vindo" = false,
 		"bg" = null,
-		"apatrulhar" = false
+		"apatrulhar" = false,
+		"vol" = -13
 	}
 	file.store_var(data)
 	file = null
@@ -103,14 +104,11 @@ func save_data():
 		"distancia" = Dinor.distancia,
 		"vindo" = Dinor.vindo,
 		"bg" = Dinor.bg,
-		"apatrulhar" = Dinor.apatrulhar
+		"apatrulhar" = Dinor.apatrulhar,
+		"vol" = Sound.vol
 	}
 	file.store_var(data)
 	file = null
-	print("salvou")
-	if Dinor.patrulha == true:
-		Dinor.apatrulhar = true
-	print(local)
 
 func load_data():
 	if !FileAccess.file_exists(SAVE_FILE):
@@ -124,7 +122,7 @@ func load_data():
 			"local" = "bath",
 			"language" = "pt",
 			"garyFalou" = false,
-			"dificuldade" = 0,
+			"dificuldade" = 1,
 			"cooldown" = 0,
 			"celular" = false,
 			"cellPosicionado" = false,
@@ -155,7 +153,8 @@ func load_data():
 			"distancia" = 0,
 			"vindo" = false,
 			"bg" = null,
-			"apatrulhar" = false
+			"apatrulhar" = false,
+			"vol" = -13
 		}
 		save_data()
 	var file = FileAccess.open(SAVE_FILE, FileAccess.READ)
@@ -205,10 +204,7 @@ func load_previous_data(file):
 	Dinor.vindo = data.vindo
 	Dinor.bg = data.bg
 	Dinor.apatrulhar = data.apatrulhar
-	
-	print(data.nextPerson)
-	print(data.aparent1)
-	print(data.local)
+	Sound.vol = data.vol
 
 #Variáveis
 var nextDialog = 1
@@ -223,7 +219,7 @@ var language = "pt"
 
 var garyFalou = false
 
-var dificuldade = 0
+var dificuldade = 1
 
 var cooldown = 0
 

@@ -4,19 +4,22 @@ extends Node2D
 
 func _on_area_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
-		get_tree().change_scene_to_file("res://panels/"+destiny+".tscn")
-		Sound.playSong("arrow")
-		Globals.local = destiny
-		if Globals.cooldown != 0:
-			Globals.cooldown -= 1
-		if Dinor.patrulha:
-			Dinor.movement()
+		if !Globals.paused:
+			get_tree().change_scene_to_file("res://panels/"+destiny+".tscn")
+			Sound.playSong("arrow")
+			Globals.local = destiny
+			if Globals.cooldown != 0:
+				Globals.cooldown -= 1
+			if Dinor.patrulha:
+				Dinor.movement()
 
 func _on_area_mouse_entered():
-	Input.set_custom_mouse_cursor(preload("res://assets/sprites/cursorExit.png"))
+	if !Globals.paused:
+		Input.set_custom_mouse_cursor(preload("res://assets/sprites/cursorExit.png"))
 
 func _on_area_mouse_exited():
-	if Commands.selectedSlot == null:
-		Input.set_custom_mouse_cursor(preload("res://assets/sprites/hand.png"))
-	else:
-		Input.set_custom_mouse_cursor(Commands.texture)
+	if !Globals.paused:
+		if Commands.selectedSlot == null:
+			Input.set_custom_mouse_cursor(preload("res://assets/sprites/hand.png"))
+		else:
+			Input.set_custom_mouse_cursor(Commands.texture)

@@ -30,6 +30,5 @@ func _process(_delta):
 func addFrascos():
 	frascos.set_position(spawn_frascos.position)
 	Globals.nextDialog = 5
-	Globals.door_storage = "open"
 	Globals.lavados = 5
 	Globals.lavou = true

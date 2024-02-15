@@ -9,7 +9,7 @@ func _ready():
 	Sound.playSong("jumpscare")
 
 func _on_exit_byn_pressed():
-	get_tree().quit()
+	Globals.clear()
 
 func _on_animation_player_animation_finished(_anim_name):
 	timer.start()

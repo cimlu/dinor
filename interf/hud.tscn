@@ -1,15 +1,34 @@
-[gd_scene load_steps=7 format=3 uid="uid://g3ahjd2ix47l"]
+[gd_scene load_steps=13 format=3 uid="uid://g3ahjd2ix47l"]
 
 [ext_resource type="Script" path="res://scripts/hud.gd" id="1_cgwg7"]
 [ext_resource type="PackedScene" uid="uid://bde24qcg1xugo" path="res://interf/slot.tscn" id="1_g8khb"]
 [ext_resource type="Script" path="res://scripts/tempoCell.gd" id="3_knb63"]
 [ext_resource type="Texture2D" uid="uid://dm6736j6aus7e" path="res://assets/sprites/cell.png" id="4_ie6wx"]
+[ext_resource type="Texture2D" uid="uid://7weaqmkarb3b" path="res://assets/sprites/pauseButton.png" id="5_thqgn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4od70"]
 size = Vector2(125.333, 21.3333)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_lxv3q"]
 radius = 24.0208
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3vx1l"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fnfnb"]
+bg_color = Color(0.694118, 0.552941, 0.635294, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u7vea"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_cqj0a"]
+bg_color = Color(0.529412, 0.619608, 0.631373, 0)
+
+[sub_resource type="Theme" id="Theme_p1xgw"]
+Button/styles/focus = SubResource("StyleBoxFlat_3vx1l")
+Button/styles/hover = SubResource("StyleBoxFlat_fnfnb")
+Button/styles/normal = SubResource("StyleBoxFlat_u7vea")
+Button/styles/pressed = SubResource("StyleBoxFlat_cqj0a")
 
 [node name="hud" type="Node2D"]
 script = ExtResource("1_cgwg7")
@@ -74,4 +93,14 @@ texture = ExtResource("4_ie6wx")
 position = Vector2(132, -140)
 shape = SubResource("CircleShape2D_lxv3q")
 
+[node name="pauseButton" type="Button" parent="."]
+offset_left = -158.0
+offset_top = -166.0
+offset_right = -94.0
+offset_bottom = -102.0
+scale = Vector2(0.5, 0.5)
+theme = SubResource("Theme_p1xgw")
+icon = ExtResource("5_thqgn")
+
 [connection signal="input_event" from="tempoCell/area" to="tempoCell" method="_on_area_input_event"]
+[connection signal="pressed" from="pauseButton" to="." method="_on_pause_button_pressed"]

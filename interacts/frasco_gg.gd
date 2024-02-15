@@ -10,8 +10,6 @@ func _on_area_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
 		lavar()
 
-			
 func lavar():
 	if Globals.alavar == null:
 		Globals.alavar = self
-		print(Globals.alavar)

@@ -2,7 +2,7 @@ extends Node2D
 
 @onready var pickup = $pickup
 
-var vol = 0
+var vol = -13
 
 func pauseSong(songName):
 	for i in get_children().size():
@@ -31,3 +31,4 @@ func diminui(songName):
 		if get_child(i).name == songName:
 			var song = get_child(i)
 			song.volume_db = song.volume_db - 15
+			

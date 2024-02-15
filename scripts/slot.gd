@@ -51,4 +51,3 @@ func selectf(sel):
 		border.visible = true
 		Commands.selectedSlot = self
 		selected.emit()
-	Commands.mousechange(texture)

@@ -19,13 +19,12 @@ func pause():
 	visible = true
 	Globals.paused = true
 	Input.set_custom_mouse_cursor(preload("res://assets/sprites/hand.png"))
-	print(Commands.inventory)
 
 func _on_resume_btn_pressed():
 	despause()
 
 func _on_menu_btn_pressed():
-	Sound.pauseSong("foots")
+	Dinor.pauseFoots()
 	Sound.pauseSong("bgmusic")
 	get_tree().change_scene_to_file("res://panels/menu.tscn")
 	visible = false

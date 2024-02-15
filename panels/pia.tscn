@@ -48,7 +48,7 @@ zoom = Vector2(3.6, 3.6)
 position = Vector2(0, 80)
 
 [node name="returnArrow" parent="." instance=ExtResource("3_sje4r")]
-position = Vector2(-132, -66)
+position = Vector2(-101, -66)
 destiny = "biolab"
 
 [node name="frascoGG" parent="." instance=ExtResource("4_5dpvi")]
