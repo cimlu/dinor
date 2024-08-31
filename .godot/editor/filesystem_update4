@@ -1,4 +1,4 @@
-res://panels/dinor.tscn
+res://panels/credits.tscn
 res://themes/menu.tres
 res://scripts/agua.gd
 res://scripts/item.gd
@@ -9,18 +9,9 @@ res://sounds/sound.tscn
 res://panels/bath.tscn
 res://interf/hud.tscn
 res://panels/pia.tscn
+res://panels/dinor.tscn
 res://panels/ataque.tscn
-res://scripts/sound.gd
-res://scripts/alavanca.gd
 res://panels/timemachine.tscn
-res://scripts/chaveEnergia.gd
-res://scripts/globals.gd
 res://panels/timelab.tscn
 res://panels/empty_room_5.tscn
 res://panels/maleta.tscn
-res://interacts/frasco_gg.gd
-res://scripts/dinor.gd
-res://scripts/ataque.gd
-res://scripts/credits.gd
-res://panels/credits.tscn
-res://scripts/slot.gd

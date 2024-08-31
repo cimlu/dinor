@@ -13,7 +13,7 @@ config_version=5
 config/name="Dinor"
 run/main_scene="res://panels/menu.tscn"
 config/features=PackedStringArray("4.1", "GL Compatibility")
-config/icon="res://icon.svg"
+config/windows_native_icon="res://Dinor.ico"
 
 [autoload]
 
@@ -27,7 +27,6 @@ Pause="*res://interf/pause.tscn"
 
 [display]
 
-window/size/mode=3
 window/stretch/mode="viewport"
 
 [dotnet]
